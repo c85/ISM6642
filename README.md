@@ -101,7 +101,6 @@ The syllabus lists the following point structure:
 - [`Week 1/`](Week%201/) - introductory lecture materials, a peer-programming lab, presentation files, and Python code.
 - [`Week 1/README.md`](Week%201/README.md) - instructions for the descriptive-statistics peer-programming lab.
 - [`Week 1/business_review.py`](Week%201/business_review.py) - the Week 1 Python exercise.
-- [Course syllabus](Fall-Term-2026-ISM-6642-RG6-Machine-Learning-for-Business-Applications.pdf) - the full Fall 2026 syllabus.
 
 ## Important Reminder
 
