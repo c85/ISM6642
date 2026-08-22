@@ -20,6 +20,8 @@ For planning, managers should avoid treating the mean as a guaranteed result bec
 
 ### Box Plot Interpretation
 
+![Box plot of quarterly sales revenue](Figure_1.png)
+
 The box plot summarizes the center and spread of quarterly sales. The line inside the box represents the **$53.50 thousand median**. The box extends from **Q1 at $48.75 thousand** to **Q3 at $59.50 thousand**, so the middle 50% of quarterly sales falls within this range. The box's length represents an **IQR of $10.75 thousand**.
 
 The whiskers extend to the minimum of **$45 thousand** and the maximum of **$64 thousand**. Using the 1.5 × IQR rule gives a lower outlier boundary of $32.63 thousand and an upper boundary of $75.63 thousand. All observations fall within these boundaries, so the plot shows **no apparent outliers**.
