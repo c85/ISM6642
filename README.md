@@ -16,7 +16,7 @@ Course materials, Python code, assignments, and project work for **ISM 6642, Sec
 | Office hours | Thursday and Friday, 11:00 a.m.-1:00 p.m. |
 | Department | Information Systems and Business Analytics (ISBA) |
 
-The complete course document is available in the [official syllabus](Fall-Term-2026-ISM-6642-RG6-Machine-Learning-for-Business-Applications.pdf). Canvas remains the source of truth for announcements, assignment instructions, due dates, and schedule changes.
+The complete course document is available in the official syllabus. Canvas remains the source of truth for announcements, assignment instructions, due dates, and schedule changes.
 
 ## Course Overview
 
