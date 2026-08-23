@@ -1,631 +1,472 @@
+"""Assignment 1: Laptop Price Prediction."""
+
 from pathlib import Path
-import pandas as pd
+
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 import statsmodels.api as sm
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
-#data ingestion
+# The script saves figures instead of opening interactive plot windows.
+plt.switch_backend("Agg")
+
+
+# File locations
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "LaptopSalesJanuary2008.csv"
+OUTPUT_DIR = BASE_DIR / "outputs"
+
+# Column names used throughout the analysis
+PRICE = "Retail Price"
+CONFIGURATION = "Configuration"
+HD_SIZE = "HD Size (GB)"
+RAM = "RAM (GB)"
+BATTERY = "Battery Life (Hours)"
+PROCESSOR = "Processor Speeds (GHz)"
+WIRELESS = "Integrated Wireless?"
+APPLICATIONS = "Bundled Applications?"
+
+PHASE1_FEATURES = [HD_SIZE]
+PHASE2_FEATURES = [HD_SIZE, RAM, BATTERY]
+
+
+# -----------------------------------------------------------------------------
+# Data ingestion and preprocessing
+# -----------------------------------------------------------------------------
 def load_data(filepath):
-    """
-    load the laptop sales csv file into a pandas dataframe.
-    """
+    """Load the CSV and check that the assignment columns are available."""
+    required_columns = [
+        PRICE,
+        CONFIGURATION,
+        HD_SIZE,
+        RAM,
+        BATTERY,
+        PROCESSOR,
+        WIRELESS,
+        APPLICATIONS,
+    ]
+
+    if not filepath.exists():
+        raise FileNotFoundError(f"Dataset not found: {filepath}")
+
     df = pd.read_csv(filepath)
+    missing_columns = [column for column in required_columns if column not in df]
+    if missing_columns:
+        raise ValueError(f"Missing required columns: {missing_columns}")
 
-    print("\n--- data preview ---")
-    print(df.head())
-
-    print("\n--- columns ---")
-    print(df.columns)
-
+    print("\n--- data ingestion ---")
+    print(f"Rows: {len(df):,}")
+    print(f"Columns: {len(df.columns)}")
+    print(f"Unique configurations: {df[CONFIGURATION].nunique()}")
+    print("\nMissing values in assignment columns:")
+    print(df[required_columns].isna().sum().to_string())
     return df
 
 
-# data processing
-def preprocess_data(df):
-    """
-    inspect the dataset for missing values and verify that the
-    variables used in Phase 1 are usable for regression.
-    """
+def prepare_data(df, features):
+    """Keep complete rows for a model and convert its variables to numbers."""
+    columns = [PRICE, CONFIGURATION, *features]
+    model_data = df[columns].copy()
 
-    print("\n--- data types ---")
-    print(df.dtypes)
+    for column in [PRICE, *features]:
+        model_data[column] = pd.to_numeric(model_data[column], errors="coerce")
 
-    print("\n--- missing values ---")
-    print(df.isnull().sum())
+    rows_before = len(model_data)
+    model_data = model_data.dropna()
+    rows_dropped = rows_before - len(model_data)
+    if rows_dropped:
+        print(f"Dropped {rows_dropped:,} incomplete rows for {features}.")
 
-    # keep rows where both Phase 1 variables are present
-    phase1_data = df[["HD Size (GB)", "Retail Price"]].dropna()
-
-    print("\n--- phase 1 stats ---")
-    print(phase1_data.describe())
-
-    return phase1_data
-
-# phase 1
-def phase1_eda(df):
-    """
-    Explore the relationship between hard drive size and retail price.
-    """
-
-    x = df["HD Size (GB)"]
-    y = df["Retail Price"]
-
-    plt.scatter(x, y)
-
-    plt.xlabel("Hard Drive Size (GB)")
-    plt.ylabel("Retail Price ($)")
-    plt.title("Retail Price vs. Hard Drive Size")
-
-    plt.show()
-
-    # eda observation:
-    # the scatterplot shows a general upward trend, meaning that larger hard
-    # drives tend to be associated with higher retail prices
-    # however, retail price can vary considerably even when the hard drive
-    # size remains the same. this suggests that storage capacity alone
-    # does not fully explain laptop price
+    return model_data
 
 
-# phase 1 - modeling
-def build_phase1_model(df):
-    """
-    build a simple linear regression model using hd size (gb)
-    to predict retail price
-    """
+def fit_model(data, features):
+    """Fit an ordinary least squares regression with an intercept."""
+    X = sm.add_constant(data[features], has_constant="add")
+    return sm.OLS(data[PRICE], X).fit()
 
-    x = df["HD Size (GB)"]
-    y = df["Retail Price"]
 
-    # add a constant so the model can estimate the intercept.
-    X = sm.add_constant(x)
+def save_figure(fig, filename):
+    """Save a figure that can be inserted into the executive summary."""
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    output_path = OUTPUT_DIR / filename
+    fig.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.close(fig)
+    print(f"Saved figure: {output_path.name}")
 
-    # ols regression.
-    model1 = sm.OLS(y, X).fit()
-    return model1
 
-# phase 1 - model evaluation
+def format_p_value(p_value):
+    """Display very small p-values without rounding them to zero."""
+    return "< 0.001" if p_value < 0.001 else f"{p_value:.4f}"
+
+
+# -----------------------------------------------------------------------------
+# Phase 1: simple linear regression
+# -----------------------------------------------------------------------------
+def phase1_eda(data, model):
+    """Plot retail price against storage, including the fitted regression line."""
+    line_x = np.linspace(data[HD_SIZE].min(), data[HD_SIZE].max(), 200)
+    line_data = pd.DataFrame({"const": 1.0, HD_SIZE: line_x})
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+    ax.scatter(data[HD_SIZE], data[PRICE], alpha=0.2, s=18, label="Sales")
+    ax.plot(
+        line_x,
+        model.predict(line_data),
+        color="firebrick",
+        linewidth=2.5,
+        label="Fitted regression line",
+    )
+    ax.set_xlabel("Hard Drive Size (GB)")
+    ax.set_ylabel("Retail Price ($)")
+    ax.set_title("Retail Price vs. Hard Drive Size")
+    ax.legend()
+    fig.tight_layout()
+    save_figure(fig, "phase1_price_vs_storage.png")
+
+
 def evaluate_phase1_model(model):
-    """
-    Eealuate the hhase 1 regression model using the coefficient,
-    r-squared, and p-value.
-    """
-
-    print("\n--- phase 1 regression results ---")
-    print(model.summary())
-
-    coefficient = model.params["HD Size (GB)"]
-    intercept = model.params["const"]
+    """Report Phase 1 statistics and their business meaning."""
+    coefficient = model.params[HD_SIZE]
     r_squared = model.rsquared
-    p_value = model.pvalues["HD Size (GB)"]
-
-    print("\n--- phase 1 key results ---")
-    print(f"Intercept: {intercept:.4f}")
-    print(f"HD Size Coefficient: {coefficient:.4f}")
-    print(f"R-squared: {r_squared:.4f}")
-    print(f"P-value: {p_value:.6f}")
-
-    """
-    PHASE 1 INTERPRETATION
-
-    Business Hypothesis:
-
-    H0:
-    Hard drive size has no statistically significant linear
-    relationship with retail price.
-
-    H1:
-    Larger hard drive sizes are associated with higher retail prices.
-
-
-    Regression Equation:
-    Retail Price = 444.0708 + 0.2917(HD Size)
-
-
-    Coefficient:
-    The coefficient for HD Size is approximately 0.2917.
-    This means that each additional 1 GB of hard drive storage is
-    associated with approximately a $0.29 increase in predicted
-    retail price.
-
-    An additional 100 GB is therefore associated with approximately:
-    100 * 0.2917 = $29.17
-    higher predicted retail price.
-
-
-    R-Squared:
-    R^2 = 0.236
-
-    Hard drive size explains approximately 23.6% of the variation
-    in retail price.
-
-    The remaining 76.4% of variation is not explained by this
-    one-variable model. This suggests that other variables or sources
-    of variation also influence retail price.
-
-    P-Value:
-    The p-value for HD Size is extremely small and is displayed
-    as 0.000 in the statsmodels output.
-
-    Therefore:
-    p < 0.001
-    Since this is below the commonly used significance level of 0.05,
-    the null hypothesis is rejected.
-
-    There is strong statistical evidence that hard drive size has a
-    positive linear relationship with retail price.
-
-
-    Important Distinction:
-    The p-value tells us whether there is statistical evidence that
-    the relationship exists.
-
-    R-squared tells us how much of the variation in retail price is
-    explained by the model.
-
-    In this case, hard drive size is statistically significant, but
-    it is not a strong standalone predictor because it explains only
-    about 23.6% of price variation.
-
-    Business Conclusion:
-    Larger hard drive sizes are generally associated with higher
-    laptop retail prices.
-    However, storage capacity alone does not explain most of the
-    variation in price.
-    This motivates Phase 2, where additional laptop specifications
-    will be included in the model to determine whether predictive
-    performance improves.
-    """
-
-# phase 2 - data preparation
-def prepare_phase2_data(df):
-    """
-    prepare the variables used for the multivariate regression model
-    """
-
-    phase2_columns = [
-        "Retail Price",
-        "HD Size (GB)",
-        "RAM (GB)",
-        "Battery Life (Hours)"
-    ]
-
-    phase2_data = df[phase2_columns].dropna()
-
-    print("\n--- phase 2 stats ---")
-    print(phase2_data.describe())
-
-    return phase2_data
-
-# phase 2 - exploratory data analysis
-def phase2_eda(df):
-    """
-    visualize the relationship between each Phase 2 predictor
-    and retail price.
-    """
-
-    # ram vs retail price
-    plt.scatter(df["RAM (GB)"], df["Retail Price"])
-    plt.xlabel("RAM (GB)")
-    plt.ylabel("Retail Price ($)")
-    plt.title("Retail Price vs. RAM")
-    plt.show()
-
-    # battery life vs retail price
-    plt.scatter(df["Battery Life (Hours)"], df["Retail Price"])
-    plt.xlabel("Battery Life (Hours)")
-    plt.ylabel("Retail Price ($)")
-    plt.title("Retail Price vs. Battery Life")
-    plt.show()
-
-    # fyi:
-    # hd Size       -> positive relationship with price
-    # ram           -> higher RAM generally associated with higher price
-    # battery life  -> longer battery life generally associated with higher price
-
-# phase 2 - multicollinearity check
-def check_multicollinearity(df):
-    """
-    check correlations among the independent variables used in Model 2.
-    """
-
-    predictors = df[
-        ["HD Size (GB)", "RAM (GB)", "Battery Life (Hours)"]
-    ]
-
-    print("\n--- phase 2 predictor correlations ---")
-    print(predictors.corr())
-
-    # multicollinearity observation:
-    # the correlations among HD Size, RAM, and Battery Life are all weak
-    # none of the pairwise correlations are close to common concern levels
-    # such as 0.70 or higher which suggests that serious multicollinearity
-    # is unlikely among these predictors.
-
-# phase 2 - modeling
-def build_phase2_model(df):
-    """
-    build a multiple linear regression model using HD Size, RAM,
-    and Battery Life to predict Retail Price.
-    """
-
-    X = df[
-        ["HD Size (GB)", "RAM (GB)", "Battery Life (Hours)"]
-    ]
-
-    y = df["Retail Price"]
-
-    X = sm.add_constant(X)
-
-    model2 = sm.OLS(y, X).fit()
-
-    return model2
-
-    """
-    PHASE 2 SUMMARY
-
-    The multivariate model includes HD Size, RAM, and Battery Life
-    as predictors of Retail Price.
-
-    Model Performance:
-    R^2 = 0.711
-    Adjusted R^2 = 0.711
-
-    This means that the model explains approximately 71.1% of the
-    variation in retail price, which is a substantial improvement
-    over Model 1, which explained only 23.6%.
-
-    Because Adjusted R^2 is nearly identical to R^2, the additional
-    predictors appear to provide meaningful explanatory value rather
-    than simply increasing model complexity.
-
-    Coefficient Interpretation:
-
-    HD Size coefficient = 0.3672
-    Holding RAM and battery life constant, each additional 1 GB of
-    storage is associated with approximately a $0.37 increase in
-    predicted retail price.
-
-    RAM coefficient = 46.2889
-    Holding storage and battery life constant, each additional 1 GB
-    of RAM is associated with approximately a $46.29 increase in
-    predicted retail price.
-
-    Battery Life coefficient = 47.0215
-    Holding storage and RAM constant, each additional hour of battery
-    life is associated with approximately a $47.02 increase in
-    predicted retail price.
-
-    P-Values:
-    All predictors have p-values below 0.001, indicating that HD Size,
-    RAM, and Battery Life are all statistically significant predictors
-    of retail price in this model.
-
-    Multicollinearity:
-    Pairwise correlations among the independent variables were weak,
-    so there is no obvious evidence of serious multicollinearity.
-
-    Business Conclusion:
-    Adding RAM and Battery Life significantly improves the model.
-    The multivariate model explains much more of the variation in
-    retail price than storage alone, making it a substantially stronger
-    pricing model.
-
-    The coefficient signs are intuitive: greater storage, more RAM,
-    and longer battery life are all associated with higher retail price.
-    """
-
-# phase 3 - predictive task 1 - prediction using only hard drive size
-def predict_model1(model):
-    """
-    Use Model 1 to predict the retail price of a laptop
-    with 2000 GB of storage.
-    """
-
-    new_laptop = pd.DataFrame({
-        "const": [1],
-        "HD Size (GB)": [2000]
-    })
-
-    prediction = model.predict(new_laptop)
-
-    predicted_price = prediction.iloc[0]
-
-    print("\n--- phase 3: model 1 prediction ---")
-    print(f"Predicted price for 2000 GB storage: ${predicted_price:.2f}")
-
-    return predicted_price
-
-# phase 3 - predictive task 2 - prediction using HD Size, RAM, and Battery Life
-def predict_model2(model):
-    """
-    Use Model 2 to predict the retail price of a laptop with:
-    - 2000 GB storage
-    - 44 GB RAM
-    - 4 hours battery life
-    """
-
-    new_laptop = pd.DataFrame({
-        "const": [1],
-        "HD Size (GB)": [2000],
-        "RAM (GB)": [44],
-        "Battery Life (Hours)": [4]
-    })
-
-    prediction = model.predict(new_laptop)
-
-    predicted_price = prediction.iloc[0]
-
-    print("\n--- phase 3: model 2 prediction ---")
+    p_value = model.pvalues[HD_SIZE]
+
+    print("\n--- phase 1: simple linear regression ---")
+    print("H0: Hard-drive size has no linear relationship with retail price.")
+    print("H1: Larger hard drives are associated with higher retail prices.")
     print(
-        f"Predicted price for 2000 GB storage, "
-        f"44 GB RAM, and 4 hours battery life: "
-        f"${predicted_price:.2f}"
+        f"Regression equation: Price = {model.params['const']:.4f} "
+        f"+ {coefficient:.4f}(HD Size)"
+    )
+    print(f"R-squared: {r_squared:.4f}")
+    print(f"P-value for HD Size: {format_p_value(p_value)}")
+    print(
+        f"Each additional 100 GB is associated with a ${coefficient * 100:,.2f} "
+        "increase in predicted price."
+    )
+    print(
+        f"Storage explains {r_squared:.1%} of price variation. It is statistically "
+        "significant, but it is not a strong standalone predictor."
     )
 
-    return predicted_price
+
+# -----------------------------------------------------------------------------
+# Phase 2: multiple linear regression
+# -----------------------------------------------------------------------------
+def phase2_eda(data):
+    """Plot each Phase 2 predictor against retail price."""
+    fig, axes = plt.subplots(1, 3, figsize=(15, 4.5))
+
+    for ax, feature in zip(axes, PHASE2_FEATURES):
+        ax.scatter(data[feature], data[PRICE], alpha=0.2, s=15)
+        ax.set_xlabel(feature)
+        ax.set_ylabel("Retail Price ($)")
+        ax.set_title(f"Price vs. {feature}")
+
+    fig.suptitle("Phase 2 Predictor Relationships", fontsize=14)
+    fig.tight_layout()
+    save_figure(fig, "phase2_predictor_relationships.png")
 
 
-# phase 3 - model comparison
-def compare_predictions(model1_prediction, model2_prediction):
-    """
-    Compare the forecasts produced by Model 1 and Model 2.
-    """
+def check_multicollinearity(data):
+    """Check predictor correlations and variance inflation factors (VIFs)."""
+    predictors = data[PHASE2_FEATURES].astype(float)
+    X = sm.add_constant(predictors, has_constant="add")
 
-    difference = model2_prediction - model1_prediction
+    vif_results = pd.DataFrame(
+        {
+            "Predictor": PHASE2_FEATURES,
+            "VIF": [
+                variance_inflation_factor(X.to_numpy(), column_number)
+                for column_number in range(1, X.shape[1])
+            ],
+        }
+    )
 
-    print("\n--- phase 3: prediction comparison ---")
-    print(f"Model 1 prediction: ${model1_prediction:.2f}")
-    print(f"Model 2 prediction: ${model2_prediction:.2f}")
-    print(f"Difference: ${difference:.2f}")
+    print("\n--- phase 2: predictor correlations ---")
+    print(predictors.corr().round(3).to_string())
+    print("\n--- phase 2: variance inflation factors ---")
+    print(vif_results.to_string(index=False, formatters={"VIF": "{:.3f}".format}))
 
-    """
-    Model 2 should generally provide a more informed prediction
-    because it incorporates multiple laptop specifications instead
-    of relying only on storage capacity.
-
-    Model 1 explained only about 23.6% of retail price variation,
-    while Model 2 explained approximately 71.1%.
-
-    However, both predictions require caution because the requested
-    laptop configuration contains values far outside the ranges
-    represented in the original dataset.
-
-    In particular:
-    - Training HD Size is approximately 40-300 GB
-    - The requested HD Size is 2000 GB
-    - Training RAM is approximately 1-2 GB
-    - The requested RAM is 44 GB
-
-    Therefore, these predictions involve extrapolation.
-    """
+    if vif_results["VIF"].max() < 5:
+        print("All VIFs are below 5, so multicollinearity is not a concern.")
+    else:
+        print("At least one VIF is 5 or higher and should be investigated.")
 
 
-# phase 3 - optimization
-def optimize_model(df):
-    """
-    compare several regression models using test-set mean squared
-    error (mse) and select the model with the lowest prediction error.
-    """
+def evaluate_phase2_model(model1, model2):
+    """Compare the two models and interpret the Phase 2 coefficients."""
+    print("\n--- phase 2: multiple linear regression ---")
+    print(f"Model 1 adjusted R-squared: {model1.rsquared_adj:.4f}")
+    print(f"Model 2 adjusted R-squared: {model2.rsquared_adj:.4f}")
+    print(
+        f"Improvement in adjusted R-squared: "
+        f"{model2.rsquared_adj - model1.rsquared_adj:.4f}"
+    )
 
-    feature_sets = {
-        "hd only": [
-            "HD Size (GB)"
-        ],
-
-        "phase 2 model": [
-            "HD Size (GB)",
-            "RAM (GB)",
-            "Battery Life (Hours)"
-        ],
-
-        "expanded hardware model": [
-            "HD Size (GB)",
-            "RAM (GB)",
-            "Battery Life (Hours)",
-            "Processor Speeds (GHz)"
-        ]
+    descriptions = {
+        HD_SIZE: "one additional GB of storage",
+        RAM: "one additional GB of RAM",
+        BATTERY: "one additional hour of battery life",
     }
 
-    y = df["Retail Price"]
+    print("\nCoefficients, holding the other variables constant:")
+    negative_features = []
+    for feature in PHASE2_FEATURES:
+        coefficient = model2.params[feature]
+        print(
+            f"- {descriptions[feature]}: ${coefficient:,.2f}; "
+            f"p-value {format_p_value(model2.pvalues[feature])}"
+        )
+        if coefficient < 0:
+            negative_features.append(feature)
+
+    if negative_features:
+        print(f"Counterintuitive negative coefficients: {', '.join(negative_features)}")
+    else:
+        print("There are no counterintuitive signs; all three coefficients are positive.")
+
+    print(
+        f"Model 2 explains {model2.rsquared_adj:.1%} of adjusted price variation, "
+        "so it is more useful for pricing decisions within the observed data range."
+    )
+
+
+def save_model_diagnostics(model1, model2):
+    """Save residual plots for both required models."""
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
+
+    for ax, model, title in zip(
+        axes,
+        [model1, model2],
+        ["Model 1", "Model 2"],
+    ):
+        ax.scatter(model.fittedvalues, model.resid, alpha=0.2, s=15)
+        ax.axhline(0, color="firebrick", linestyle="--")
+        ax.set_xlabel("Fitted Retail Price ($)")
+        ax.set_ylabel("Residual ($)")
+        ax.set_title(title)
+
+    fig.suptitle("Regression Diagnostics: Residuals vs. Fitted Values", fontsize=14)
+    fig.tight_layout()
+    save_figure(fig, "regression_diagnostics.png")
+
+
+# -----------------------------------------------------------------------------
+# Phase 3: required forecasts
+# -----------------------------------------------------------------------------
+def make_forecast(model, values):
+    """Return a point forecast and a 95% prediction interval."""
+    new_laptop = pd.DataFrame([values])
+    new_laptop = sm.add_constant(new_laptop, has_constant="add")
+    result = model.get_prediction(new_laptop).summary_frame(alpha=0.05).iloc[0]
+    return result
+
+
+def print_range_warnings(training_data, values):
+    """Warn when a requested specification is outside the training range."""
+    outside_range = False
+
+    for feature, requested_value in values.items():
+        minimum = training_data[feature].min()
+        maximum = training_data[feature].max()
+        if requested_value < minimum or requested_value > maximum:
+            outside_range = True
+            print(
+                f"WARNING: {feature} request is {requested_value:g}; "
+                f"training range is {minimum:g}-{maximum:g}."
+            )
+
+    return outside_range
+
+
+def predict_model1(model, training_data):
+    """Forecast a laptop price using 2,000 GB of storage."""
+    values = {HD_SIZE: 2000}
+    forecast = make_forecast(model, values)
+
+    print("\n--- phase 3: Model 1 forecast ---")
+    print(f"Predicted price: ${forecast['mean']:,.2f}")
+    print(
+        f"95% prediction interval: ${forecast['obs_ci_lower']:,.2f} to "
+        f"${forecast['obs_ci_upper']:,.2f}"
+    )
+    print_range_warnings(training_data, values)
+    return forecast
+
+
+def predict_model2(model, training_data):
+    """Forecast using 2,000 GB storage, 44 GB RAM, and four-hour battery life."""
+    values = {HD_SIZE: 2000, RAM: 44, BATTERY: 4}
+    forecast = make_forecast(model, values)
+
+    print("\n--- phase 3: Model 2 forecast ---")
+    print(f"Predicted price: ${forecast['mean']:,.2f}")
+    print(
+        f"95% prediction interval: ${forecast['obs_ci_lower']:,.2f} to "
+        f"${forecast['obs_ci_upper']:,.2f}"
+    )
+    print_range_warnings(training_data, values)
+    return forecast
+
+
+def compare_predictions(model1_forecast, model2_forecast, model1, model2):
+    """Compare the forecasts and explain which model deserves more confidence."""
+    difference = model2_forecast["mean"] - model1_forecast["mean"]
+
+    print("\n--- phase 3: forecast comparison ---")
+    print(f"Model 1 prediction: ${model1_forecast['mean']:,.2f}")
+    print(f"Model 2 prediction: ${model2_forecast['mean']:,.2f}")
+    print(f"Difference: ${difference:,.2f}")
+    print(
+        f"Model 2 is stronger within the observed data because its adjusted "
+        f"R-squared is {model2.rsquared_adj:.3f}, compared with "
+        f"{model1.rsquared_adj:.3f} for Model 1."
+    )
+    print(
+        "However, neither specific forecast is dependable because 2,000 GB of "
+        "storage and 44 GB of RAM are far outside the training ranges. The "
+        "prediction intervals do not remove that extrapolation risk."
+    )
+
+
+# -----------------------------------------------------------------------------
+# Phase 3: model optimization
+# -----------------------------------------------------------------------------
+def optimize_model(df):
+    """Compare feature sets on one configuration-aware train/test split."""
+    columns = [
+        PRICE,
+        CONFIGURATION,
+        HD_SIZE,
+        RAM,
+        BATTERY,
+        PROCESSOR,
+        WIRELESS,
+        APPLICATIONS,
+    ]
+    model_data = df[columns].dropna().copy()
+
+    # Convert the two Yes/No product options into model-ready numeric features.
+    model_data["Wireless Included"] = model_data[WIRELESS].map({"No": 0, "Yes": 1})
+    model_data["Applications Included"] = model_data[APPLICATIONS].map(
+        {"No": 0, "Yes": 1}
+    )
+
+    feature_sets = {
+        "HD only": [HD_SIZE],
+        "Phase 2 model": [HD_SIZE, RAM, BATTERY],
+        "Expanded hardware model": [HD_SIZE, RAM, BATTERY, PROCESSOR],
+        "Full product model": [
+            HD_SIZE,
+            RAM,
+            BATTERY,
+            PROCESSOR,
+            "Wireless Included",
+            "Applications Included",
+        ],
+    }
+
+    # Split by configuration so the same laptop configuration cannot appear in
+    # both the training and test sets.
+    configurations = model_data[CONFIGURATION].unique().copy()
+    random_generator = np.random.default_rng(42)
+    random_generator.shuffle(configurations)
+    test_count = int(np.ceil(len(configurations) * 0.20))
+    test_configurations = configurations[:test_count]
+
+    test_mask = model_data[CONFIGURATION].isin(test_configurations)
+    train_data = model_data.loc[~test_mask]
+    test_data = model_data.loc[test_mask]
 
     results = []
-
-    best_model = None
-    best_features = None
-    best_mse = float("inf")
-
     for model_name, features in feature_sets.items():
-
-        # Keep only the required columns and remove missing rows
-        model_data = df[features + ["Retail Price"]].dropna()
-
-        X = model_data[features]
-        y = model_data["Retail Price"]
-
-        # Split the data so that the model is evaluated on observations
-        # it was not trained on.
-        X_train, X_test, y_train, y_test = train_test_split(
-            X,
-            y,
-            test_size=0.20,
-            random_state=42
-        )
-
-        # Add intercept
-        X_train = sm.add_constant(X_train, has_constant="add")
-        X_test = sm.add_constant(X_test, has_constant="add")
-
-        # Train model
-        model = sm.OLS(y_train, X_train).fit()
-
-        # Predict test-set prices
+        model = fit_model(train_data, features)
+        X_test = sm.add_constant(test_data[features], has_constant="add")
         predictions = model.predict(X_test)
+        mse = np.mean((test_data[PRICE] - predictions) ** 2)
 
-        # Calculate Mean Squared Error
-        mse = mean_squared_error(y_test, predictions)
+        results.append(
+            {
+                "Model": model_name,
+                "Features": features,
+                "Test MSE": mse,
+                "Training Adjusted R-Squared": model.rsquared_adj,
+            }
+        )
+    best_result = min(results, key=lambda result: result["Test MSE"])
+    best_features = best_result["Features"]
 
-        results.append({
-            "Model": model_name,
-            "Features": features,
-            "MSE": mse,
-            "Adjusted R-Squared": model.rsquared_adj
-        })
+    # Refit the selected model on all available rows after model selection.
+    final_model = fit_model(model_data, best_features)
 
-        # Track the model with the lowest MSE
-        if mse < best_mse:
-            best_mse = mse
-            best_model = model
-            best_features = features
-
-    print("\n--- phase 3: model optimization results ---")
+    print("\n--- phase 3: model optimization ---")
+    print(
+        f"Training configurations: {train_data[CONFIGURATION].nunique()}; "
+        f"test configurations: {test_data[CONFIGURATION].nunique()}"
+    )
 
     for result in results:
         print(f"\nModel: {result['Model']}")
         print(f"Features: {result['Features']}")
-        print(f"MSE: {result['MSE']:.2f}")
+        print(f"Test MSE: {result['Test MSE']:.2f}")
         print(
-            f"Adjusted R-squared: "
-            f"{result['Adjusted R-Squared']:.4f}"
+            f"Training adjusted R-squared: "
+            f"{result['Training Adjusted R-Squared']:.4f}"
         )
 
-    print("\n--- optimal model ---")
-    print(f"Selected Features: {best_features}")
-    print(f"Lowest Test MSE: {best_mse:.2f}")
+    print("\nSelected model:")
+    print(f"{best_result['Model']} with a test MSE of {best_result['Test MSE']:.2f}")
+    print(f"The final model was refit using all {len(model_data):,} complete rows.")
+    print(
+        "The product options were engineered from Yes/No values into 1/0 values. "
+        "Configuration was used only to create a fair split, not as a predictor."
+    )
 
-    return best_model, best_features, results
+    # Save the MSE comparison for the executive summary.
+    fig, ax = plt.subplots(figsize=(9, 5))
+    names = [result["Model"] for result in results]
+    mses = [result["Test MSE"] for result in results]
+    ax.bar(names, mses, color="#4C78A8")
+    ax.set_ylabel("Test Mean Squared Error")
+    ax.set_title("Model Optimization Results (Lower Is Better)")
+    ax.tick_params(axis="x", rotation=20)
+    fig.tight_layout()
+    save_figure(fig, "phase3_model_optimization.png")
 
-    """
-    PHASE 3 OPTIMIZATION SUMMARY
+    return final_model, best_features, results
 
-    Three models were compared using an 80/20 train-test split.
 
-    1. HD Only Model
-    Adjusted R^2 = 0.2385
-    Test MSE = 2927.65
-
-    2. Phase 2 Model
-    Predictors:
-    - HD Size
-    - RAM
-    - Battery Life
-
-    Adjusted R^2 = 0.7113
-    Test MSE = 1095.33
-
-    3. Expanded Hardware Model
-    Predictors:
-    - HD Size
-    - RAM
-    - Battery Life
-    - Processor Speed
-
-    Adjusted R^2 = 0.7459
-    Test MSE = 941.25
-
-    The expanded hardware model produced the lowest test MSE and the
-    highest Adjusted R-squared of the candidate models.
-
-    This suggests that Processor Speed contributes additional predictive
-    information beyond HD Size, RAM, and Battery Life.
-
-    Because the model was evaluated on a separate test set rather than
-    the same observations used for training, the MSE provides a better
-    measure of predictive performance on unseen data.
-
-    Among the tested models, the expanded hardware model is therefore
-    the preferred model for predicting retail price.
-    """
-
-# main
+# -----------------------------------------------------------------------------
+# Main program
+# -----------------------------------------------------------------------------
 def main():
-    # Load the dataset from the same folder as this script
-    file_path = Path(__file__).resolve().parent / "LaptopSalesJanuary2008.csv"
-    df = pd.read_csv(file_path)
+    """Run all assignment phases in order."""
+    df = load_data(DATA_PATH)
 
-    # data processing
-    phase1_data = preprocess_data(df)
-
-    # phase 1 eda
-    phase1_eda(phase1_data)
-
-    # phase 1 modeling
-    model1 = build_phase1_model(phase1_data)
-
-    # phase 1 eval
+    # Phase 1
+    phase1_data = prepare_data(df, PHASE1_FEATURES)
+    model1 = fit_model(phase1_data, PHASE1_FEATURES)
+    phase1_eda(phase1_data, model1)
     evaluate_phase1_model(model1)
 
-    # phase 2 data preparation
-    phase2_data = prepare_phase2_data(df)
-
-    # phase 2 eda
+    # Phase 2
+    phase2_data = prepare_data(df, PHASE2_FEATURES)
     phase2_eda(phase2_data)
-
-    # phase 2 multicollinearity check
     check_multicollinearity(phase2_data)
+    model2 = fit_model(phase2_data, PHASE2_FEATURES)
+    evaluate_phase2_model(model1, model2)
+    save_model_diagnostics(model1, model2)
 
-    # phase 2 modeling
-    model2 = build_phase2_model(phase2_data)
+    # Phase 3
+    model1_forecast = predict_model1(model1, phase1_data)
+    model2_forecast = predict_model2(model2, phase2_data)
+    compare_predictions(model1_forecast, model2_forecast, model1, model2)
+    optimize_model(df)
 
-    print(model2.summary())
+    print(f"\nAnalysis complete. Figures were saved to: {OUTPUT_DIR}")
 
-    # phase 3 - predictive task 1
-    model1_prediction = predict_model1(model1)
 
-    # phase 3 - predictive task 2
-    model2_prediction = predict_model2(model2)
-
-    # phase 3 - compare predictions
-    compare_predictions(model1_prediction, model2_prediction)
-
-    # phase 3 - optimization
-    optimal_model, optimal_features, optimization_results = optimize_model(df)
-
-# main for run
 if __name__ == "__main__":
     main()
-
-"""
-PHASE 3 FORECAST COMPARISON
-
-Model 1 predicted price:
-$1027.45
-
-Model 2 predicted price:
-$3078.57
-
-Difference:
-$2051.12
-
-The large difference occurs because Model 2 incorporates additional
-hardware specifications, especially RAM.
-
-The RAM coefficient in Model 2 is approximately $46.29 per GB.
-Using 44 GB of RAM therefore contributes more than $2,000 to the
-predicted price.
-
-Model 2 is generally the stronger predictive model because it explains
-approximately 71.1% of retail price variation compared with 23.6%
-for Model 1.
-
-However, caution is required when interpreting these specific forecasts.
-
-The historical dataset contains approximately:
-- 40 to 300 GB of storage
-- 1 to 2 GB of RAM
-- 4 to 6 hours of battery life
-
-The requested configuration contains:
-- 2000 GB storage
-- 44 GB RAM
-- 4 hours battery life
-
-Therefore, the predictions for storage and RAM involve substantial
-extrapolation beyond the range of the training data.
-
-Conclusion:
-Model 2 is more informative and performs substantially better within
-the observed dataset, but confidence in the specific $3078.57 forecast
-is limited because the requested hardware configuration is far outside
-the historical data used to estimate the model.
-"""
