@@ -1,4 +1,4 @@
-# import
+from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
@@ -539,9 +539,9 @@ def optimize_model(df):
 
 # main
 def main():
-
-    # data ingestion
-    df = load_data("LaptopSalesJanuary2008.csv")
+    # Load the dataset from the same folder as this script
+    file_path = Path(__file__).resolve().parent / "LaptopSalesJanuary2008.csv"
+    df = pd.read_csv(file_path)
 
     # data processing
     phase1_data = preprocess_data(df)
