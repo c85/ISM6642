@@ -1,0 +1,30 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        MembershipPrice   R-squared:                       0.567
+Model:                            OLS   Adj. R-squared:                  0.539
+Method:                 Least Squares   F-statistic:                     20.26
+Date:                Sat, 29 Aug 2026   Prob (F-statistic):           1.03e-10
+Time:                        09:12:47   Log-Likelihood:                -150.93
+No. Observations:                  67   AIC:                             311.9
+Df Residuals:                      62   BIC:                             322.9
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+const                    -0.1724      9.794     -0.018      0.986     -19.750      19.406
+LAFitnessLocations        0.3841      0.135      2.850      0.006       0.115       0.653
+MedianHouseholdIncome  8.801e-05   2.67e-05      3.296      0.002    3.46e-05       0.000
+PopulationDensity         0.0017      0.001      2.189      0.032       0.000       0.003
+AvgGymRating              7.2466      2.214      3.273      0.002       2.821      11.673
+==============================================================================
+Omnibus:                        4.875   Durbin-Watson:                   1.602
+Prob(Omnibus):                  0.087   Jarque-Bera (JB):                3.994
+Skew:                           0.555   Prob(JB):                        0.136
+Kurtosis:                       3.445   Cond. No.                     1.98e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.98e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

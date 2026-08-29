@@ -1,0 +1,6 @@
+Dataset,Status,Vintage,Variable,URL,Notes
+County population,Observed,2020 Census PL 94-171,P1_001N,https://api.census.gov/data/2020/dec/pl,Total population for all Florida counties.
+Median household income,Observed estimate,2021 ACS 5-year,B19013_001E,https://api.census.gov/data/2021/acs/acs5,Income is expressed in 2021 inflation-adjusted dollars.
+County land area and internal point,Observed,2020 Census Gazetteer,"ALAND_SQMI, INTPTLAT, INTPTLONG",https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2020_Gazetteer/2020_Gaz_counties_national.zip,Land area is used to derive population density.
+"Gym locations, ratings, and reviews",Observed API results,Google Places API (New); retrieval date recorded in run metadata,"Place ID, name, county, coordinates, rating, and rating count",https://developers.google.com/maps/documentation/places/web-service/text-search,County-by-county branded Text Search with exact-county filtering and Place ID deduplication. Results reflect Google's response at retrieval time and may not be exhaustive.
+Membership price,SIMULATED,Assignment scenario,MembershipPrice,https://www.lafitness.com/Pages/MembershipSignUpRate.aspx,County estimates are generated from a transparent model anchored to public chain price points; they are not surveyed county averages.

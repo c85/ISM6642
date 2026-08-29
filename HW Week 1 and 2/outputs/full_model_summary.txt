@@ -1,0 +1,32 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        MembershipPrice   R-squared:                       0.573
+Model:                            OLS   Adj. R-squared:                  0.530
+Method:                 Least Squares   F-statistic:                     13.40
+Date:                Sat, 29 Aug 2026   Prob (F-statistic):           1.43e-09
+Time:                        09:12:47   Log-Likelihood:                -150.46
+No. Observations:                  67   AIC:                             314.9
+Df Residuals:                      60   BIC:                             330.3
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+const                    -0.8103      9.989     -0.081      0.936     -20.790      19.170
+CountyPopulation       7.529e-07   2.61e-06      0.289      0.774   -4.46e-06    5.96e-06
+LAFitnessLocations        0.5270      0.291      1.810      0.075      -0.055       1.109
+CompetitorLocations      -0.1439      0.174     -0.828      0.411      -0.492       0.204
+MedianHouseholdIncome  9.539e-05   2.82e-05      3.385      0.001     3.9e-05       0.000
+PopulationDensity         0.0018      0.001      2.308      0.024       0.000       0.003
+AvgGymRating              7.3306      2.253      3.254      0.002       2.824      11.837
+==============================================================================
+Omnibus:                        4.601   Durbin-Watson:                   1.560
+Prob(Omnibus):                  0.100   Jarque-Bera (JB):                3.720
+Skew:                           0.534   Prob(JB):                        0.156
+Kurtosis:                       3.436   Cond. No.                     2.06e+07
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.06e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.

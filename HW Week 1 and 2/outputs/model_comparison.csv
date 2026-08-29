@@ -1,0 +1,3 @@
+Model,Predictors,N,R2,AdjustedR2,AIC,BIC,RMSE
+Full,"CountyPopulation, LAFitnessLocations, CompetitorLocations, MedianHouseholdIncome, PopulationDensity, AvgGymRating",67,0.5726199568148332,0.5298819524963165,314.9154756477643,330.3483239835011,2.2857617641028125
+Refined,"LAFitnessLocations, MedianHouseholdIncome, PopulationDensity, AvgGymRating",67,0.566609633850909,0.5386489650670967,311.85114485489527,322.87460795185007,2.3017781910888475

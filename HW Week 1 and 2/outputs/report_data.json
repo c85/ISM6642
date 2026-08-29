@@ -1,0 +1,394 @@
+{
+  "metadata": {
+    "title": "Fitness Market Analysis: LA Fitness Expansion Strategy",
+    "geography": "All 67 Florida counties",
+    "random_seed": 6642,
+    "data_mode": "Observed demographics and Google Places data plus estimated prices",
+    "retrieved_at_utc": "2026-08-29T13:12:47.694968+00:00"
+  },
+  "dataset": {
+    "rows": 67,
+    "columns": 8,
+    "location_rows": 387,
+    "price_mean": 37.98059701492538,
+    "price_median": 37.45,
+    "price_min": 31.58,
+    "price_max": 46.46,
+    "top_correlation_variable": "PopulationDensity",
+    "top_correlation_value": 0.59751478063088
+  },
+  "models": {
+    "full": {
+      "r2": 0.5726199568148332,
+      "adjusted_r2": 0.5298819524963165,
+      "aic": 314.9154756477643,
+      "bic": 330.3483239835011,
+      "rmse": 2.2857617641028125
+    },
+    "refined": {
+      "variables": [
+        "LAFitnessLocations",
+        "MedianHouseholdIncome",
+        "PopulationDensity",
+        "AvgGymRating"
+      ],
+      "r2": 0.566609633850909,
+      "adjusted_r2": 0.5386489650670967,
+      "aic": 311.85114485489527,
+      "bic": 322.87460795185007,
+      "rmse": 2.3017781910888475
+    },
+    "elimination_log": [
+      {
+        "RemovedVariable": "CountyPopulation",
+        "pValueAtRemoval": 0.7735927070220895
+      },
+      {
+        "RemovedVariable": "CompetitorLocations",
+        "pValueAtRemoval": 0.38308421788981534
+      }
+    ],
+    "max_vif": 19.270442349602153,
+    "max_vif_variable": "CountyPopulation",
+    "strongest_standardized_effect": {
+      "variable": "LAFitnessLocations",
+      "dollars_per_sd": 1.2222214987716207,
+      "p_value": 0.005921894600452686
+    }
+  },
+  "diagnostics": [
+    {
+      "Test": "Shapiro-Wilk residual normality",
+      "Statistic": 0.9648322553974148,
+      "pValue": 0.055000550498814534,
+      "Interpretation": "No evidence against normality"
+    },
+    {
+      "Test": "Breusch-Pagan homoscedasticity",
+      "Statistic": 1.4576047587761267,
+      "pValue": 0.8341237745906929,
+      "Interpretation": "No evidence of heteroscedasticity"
+    },
+    {
+      "Test": "Breusch-Pagan F version",
+      "Statistic": 0.3447062573450136,
+      "pValue": 0.8467117098139141,
+      "Interpretation": "No evidence of heteroscedasticity"
+    }
+  ],
+  "outliers": [
+    {
+      "CountyName": "Pinellas County",
+      "StudentizedResidual": 0.5923287571824473,
+      "CooksDistance": 0.12890417576226945,
+      "Leverage": 0.6451101377382827,
+      "Flag": "Review"
+    },
+    {
+      "CountyName": "Miami-Dade County",
+      "StudentizedResidual": -0.9271846828655419,
+      "CooksDistance": 0.12321464963108857,
+      "Leverage": 0.4169150682075141,
+      "Flag": "Review"
+    },
+    {
+      "CountyName": "St. Johns County",
+      "StudentizedResidual": 1.5875490026425145,
+      "CooksDistance": 0.1073657445372255,
+      "Leverage": 0.1791328628745238,
+      "Flag": "Review"
+    },
+    {
+      "CountyName": "Columbia County",
+      "StudentizedResidual": 3.6167157109245025,
+      "CooksDistance": 0.05543768417104982,
+      "Leverage": 0.02469448709566459,
+      "Flag": "Review"
+    }
+  ],
+  "top_five": [
+    {
+      "Rank": 1,
+      "CountyName": "Broward County",
+      "MembershipPrice": 44.07,
+      "CountyPopulation": 1944375,
+      "LAFitnessLocations": 13,
+      "CompetitorLocations": 27,
+      "MedianHouseholdIncome": 64522,
+      "PopulationDensity": 1616.633,
+      "AvgGymRating": 4.408,
+      "PredictedMembershipPrice": 45.14265671559546,
+      "CompetitionPer100k": 1.3886210221793636,
+      "LAFitnessPer100k": 0.6685953069752492,
+      "DemandComponent": 0.9435286686058462,
+      "PurchasingPowerComponent": 0.5213189760580602,
+      "LowCompetitionComponent": 0.7504925747348119,
+      "PricingComponent": 0.955465485403414,
+      "WhitespaceComponent": 0.7742554805528769,
+      "MarketPotentialScore": 78.4232230409031
+    },
+    {
+      "Rank": 2,
+      "CountyName": "St. Johns County",
+      "MembershipPrice": 45.5,
+      "CountyPopulation": 273425,
+      "LAFitnessLocations": 0,
+      "CompetitorLocations": 4,
+      "MedianHouseholdIncome": 88794,
+      "PopulationDensity": 455.22,
+      "AvgGymRating": 4.65,
+      "PredictedMembershipPrice": 42.09977124608093,
+      "CompetitionPer100k": 1.4629240193837432,
+      "LAFitnessPer100k": 0.0,
+      "DemandComponent": 0.6067823165173796,
+      "PurchasingPowerComponent": 1.0,
+      "LowCompetitionComponent": 0.737141812197129,
+      "PricingComponent": 0.6662488871497675,
+      "WhitespaceComponent": 1.0,
+      "MarketPotentialScore": 77.94003904671047
+    },
+    {
+      "Rank": 3,
+      "CountyName": "Miami-Dade County",
+      "MembershipPrice": 43.14,
+      "CountyPopulation": 2701767,
+      "LAFitnessLocations": 16,
+      "CompetitorLocations": 29,
+      "MedianHouseholdIncome": 57815,
+      "PopulationDensity": 1422.054,
+      "AvgGymRating": 4.333,
+      "PredictedMembershipPrice": 44.83601318986202,
+      "CompetitionPer100k": 1.0733716119857857,
+      "LAFitnessPer100k": 0.5922050273025024,
+      "DemandComponent": 1.0,
+      "PurchasingPowerComponent": 0.3890466611446377,
+      "LowCompetitionComponent": 0.807136588758394,
+      "PricingComponent": 0.9263199923253332,
+      "WhitespaceComponent": 0.8000478945815831,
+      "MarketPotentialScore": 77.76417713447965
+    },
+    {
+      "Rank": 4,
+      "CountyName": "Orange County",
+      "MembershipPrice": 44.23,
+      "CountyPopulation": 1429908,
+      "LAFitnessLocations": 11,
+      "CompetitorLocations": 23,
+      "MedianHouseholdIncome": 65784,
+      "PopulationDensity": 1585.222,
+      "AvgGymRating": 4.391,
+      "PredictedMembershipPrice": 44.30994786481079,
+      "CompetitionPer100k": 1.608495091991932,
+      "LAFitnessPer100k": 0.769280261387446,
+      "DemandComponent": 0.8907712725888004,
+      "PurchasingPowerComponent": 0.5462075494024375,
+      "LowCompetitionComponent": 0.7109856018708897,
+      "PricingComponent": 0.8763191542080869,
+      "WhitespaceComponent": 0.7402602125451427,
+      "MarketPotentialScore": 75.14542838871547
+    },
+    {
+      "Rank": 5,
+      "CountyName": "Palm Beach County",
+      "MembershipPrice": 43.85,
+      "CountyPopulation": 1492191,
+      "LAFitnessLocations": 10,
+      "CompetitorLocations": 25,
+      "MedianHouseholdIncome": 68874,
+      "PopulationDensity": 759.656,
+      "AvgGymRating": 4.337,
+      "PredictedMembershipPrice": 42.42749587133266,
+      "CompetitionPer100k": 1.6753887404494465,
+      "LAFitnessPer100k": 0.6701554961797785,
+      "DemandComponent": 0.8980902103209327,
+      "PurchasingPowerComponent": 0.6071470831854219,
+      "LowCompetitionComponent": 0.6989661511160434,
+      "PricingComponent": 0.6973980717736564,
+      "WhitespaceComponent": 0.7737286982698596,
+      "MarketPotentialScore": 74.29896447088782
+    }
+  ],
+  "scenarios": [
+    {
+      "Scenario": "A - Rural, low competition",
+      "CountyPopulation": 50000.0,
+      "LAFitnessLocations": 2.0,
+      "CompetitorLocations": 1.0,
+      "MedianHouseholdIncome": 62000.0,
+      "PopulationDensity": 120.0,
+      "AvgGymRating": 4.2,
+      "PredictedPrice": 36.68875475856889,
+      "MeanCI95Lower": 35.361395384788445,
+      "MeanCI95Upper": 38.01611413234934,
+      "PredictionInterval95Lower": 31.72486944241986,
+      "PredictionInterval95Upper": 41.65264007471792
+    },
+    {
+      "Scenario": "B - Miami-Dade, high competition",
+      "CountyPopulation": 2600000.0,
+      "LAFitnessLocations": 15.0,
+      "CompetitorLocations": 30.0,
+      "MedianHouseholdIncome": 57815.0,
+      "PopulationDensity": 1422.054,
+      "AvgGymRating": 4.333,
+      "PredictedPrice": 44.451954277910495,
+      "MeanCI95Lower": 41.60643103673011,
+      "MeanCI95Upper": 47.29747751909088,
+      "PredictionInterval95Lower": 38.886410545190856,
+      "PredictionInterval95Upper": 50.017498010630135
+    },
+    {
+      "Scenario": "C - Target market: Broward County",
+      "CountyPopulation": 1944375.0,
+      "LAFitnessLocations": 13.0,
+      "CompetitorLocations": 27.0,
+      "MedianHouseholdIncome": 64522.0,
+      "PopulationDensity": 1616.633,
+      "AvgGymRating": 4.408,
+      "PredictedPrice": 45.14265671559546,
+      "MeanCI95Lower": 42.8434380690594,
+      "MeanCI95Upper": 47.44187536213151,
+      "PredictionInterval95Lower": 39.835616023336144,
+      "PredictionInterval95Upper": 50.44969740785477
+    }
+  ],
+  "summary_statistics": [
+    {
+      "Variable": "MembershipPrice",
+      "Count": 67.0,
+      "Mean": 37.98059701492538,
+      "Median": 37.45,
+      "StdDev": 3.5228104657455974,
+      "Min": 31.58,
+      "Max": 46.46
+    },
+    {
+      "Variable": "CountyPopulation",
+      "Count": 67.0,
+      "Mean": 321465.4776119403,
+      "Median": 129752.0,
+      "StdDev": 500924.4256717942,
+      "Min": 7974.0,
+      "Max": 2701767.0
+    },
+    {
+      "Variable": "LAFitnessLocations",
+      "Count": 67.0,
+      "Mean": 1.3134328358208955,
+      "Median": 0.0,
+      "StdDev": 3.1823802566150623,
+      "Min": 0.0,
+      "Max": 16.0
+    },
+    {
+      "Variable": "CompetitorLocations",
+      "Count": 67.0,
+      "Mean": 4.462686567164179,
+      "Median": 2.0,
+      "StdDev": 6.776358989741254,
+      "Min": 0.0,
+      "Max": 29.0
+    },
+    {
+      "Variable": "MedianHouseholdIncome",
+      "Count": 67.0,
+      "Mean": 56360.53731343283,
+      "Median": 56786.0,
+      "StdDev": 11801.242585228252,
+      "Min": 38088.0,
+      "Max": 88794.0
+    },
+    {
+      "Variable": "PopulationDensity",
+      "Count": 67.0,
+      "Mean": 384.49359701492534,
+      "Median": 188.163,
+      "StdDev": 574.0999349459739,
+      "Min": 9.543,
+      "Max": 3504.163
+    },
+    {
+      "Variable": "AvgGymRating",
+      "Count": 67.0,
+      "Mean": 4.422179104477612,
+      "Median": 4.4,
+      "StdDev": 0.13515265503430648,
+      "Min": 4.1,
+      "Max": 4.8
+    }
+  ],
+  "quality_checks": [
+    {
+      "Check": "Florida county rows",
+      "Result": 67.0,
+      "Expected": 67,
+      "Status": "PASS"
+    },
+    {
+      "Check": "Unique county names",
+      "Result": 67.0,
+      "Expected": 67,
+      "Status": "PASS"
+    },
+    {
+      "Check": "Missing values in MainDataset",
+      "Result": 0.0,
+      "Expected": 0,
+      "Status": "PASS"
+    },
+    {
+      "Check": "Counties with imputed average rating",
+      "Result": 23.0,
+      "Expected": "Documented",
+      "Status": "PASS"
+    },
+    {
+      "Check": "Rating imputation value",
+      "Result": 4.4,
+      "Expected": "Statewide median of observed Google Places ratings",
+      "Status": "PASS"
+    }
+  ],
+  "sources": [
+    {
+      "Dataset": "County population",
+      "Status": "Observed",
+      "Vintage": "2020 Census PL 94-171",
+      "Variable": "P1_001N",
+      "URL": "https://api.census.gov/data/2020/dec/pl",
+      "Notes": "Total population for all Florida counties."
+    },
+    {
+      "Dataset": "Median household income",
+      "Status": "Observed estimate",
+      "Vintage": "2021 ACS 5-year",
+      "Variable": "B19013_001E",
+      "URL": "https://api.census.gov/data/2021/acs/acs5",
+      "Notes": "Income is expressed in 2021 inflation-adjusted dollars."
+    },
+    {
+      "Dataset": "County land area and internal point",
+      "Status": "Observed",
+      "Vintage": "2020 Census Gazetteer",
+      "Variable": "ALAND_SQMI, INTPTLAT, INTPTLONG",
+      "URL": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2020_Gazetteer/2020_Gaz_counties_national.zip",
+      "Notes": "Land area is used to derive population density."
+    },
+    {
+      "Dataset": "Gym locations, ratings, and reviews",
+      "Status": "Observed API results",
+      "Vintage": "Google Places API (New); retrieval date recorded in run metadata",
+      "Variable": "Place ID, name, county, coordinates, rating, and rating count",
+      "URL": "https://developers.google.com/maps/documentation/places/web-service/text-search",
+      "Notes": "County-by-county branded Text Search with exact-county filtering and Place ID deduplication. Results reflect Google's response at retrieval time and may not be exhaustive."
+    },
+    {
+      "Dataset": "Membership price",
+      "Status": "SIMULATED",
+      "Vintage": "Assignment scenario",
+      "Variable": "MembershipPrice",
+      "URL": "https://www.lafitness.com/Pages/MembershipSignUpRate.aspx",
+      "Notes": "County estimates are generated from a transparent model anchored to public chain price points; they are not surveyed county averages."
+    }
+  ]
+}
