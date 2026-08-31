@@ -7,7 +7,7 @@ This folder contains the completed Week 1 and Week 2 assignment workflow for the
 - `Florida_Fitness_Market_EDA_Report.docx`: summary statistics, correlations, required charts, outliers, and EDA conclusions.
 - `Florida_Fitness_Market_Predictions_and_Insights.docx`: full and refined OLS models, diagnostics, scenario predictions, and the ranked expansion shortlist.
 - `data/MainDataset.csv`: one row for each of Florida's 67 counties and the eight required columns.
-- `data/gym_locations.csv`: accepted Google Places records, exact-county filtered and deduplicated by Place ID.
+- `data/gym_locations.csv`: 387 accepted Google Places records, exact-county filtered and deduplicated by Place ID, with each gym's name and formatted street address.
 - `data/demographic_data.csv`: 2020 Census population, 2021 ACS income, Gazetteer land area, and calculated density.
 - `data/membership_prices.csv`: transparently estimated county membership-price target.
 - `outputs/`: statistical tables, model summaries, diagnostics, scenarios, rankings, query audit, and figures.
@@ -23,10 +23,9 @@ Run from this directory:
 
 ```bash
 python fitness_market_analysis.py
-python build_reports.py
 ```
 
-The first command performs a live Google Places collection across 67 counties and five brands, so rerunning it can create API usage and produce a newer retrieval snapshot. To rebuild only the Word reports from the existing analytical outputs, run `python build_reports.py` by itself.
+The submitted location file already includes each gym's name and formatted street address. Running this command makes live Google Places API requests across 67 counties and five brands.
 
 ## Important limitation
 

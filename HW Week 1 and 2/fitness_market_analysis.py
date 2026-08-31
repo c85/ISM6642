@@ -343,6 +343,7 @@ def collect_google_places(demographic_internal: pd.DataFrame) -> pd.DataFrame:
             for place in returned:
                 place_id = str(place.get("id", "")).strip()
                 display_name = str(place.get("displayName", {}).get("text", "")).strip()
+                formatted_address = str(place.get("formattedAddress", "")).strip()
                 place_county = extract_county_name(place.get("addressComponents", []))
                 location = place.get("location", {})
                 if not place_id or not display_name or place_county != county_name:
@@ -358,6 +359,8 @@ def collect_google_places(demographic_internal: pd.DataFrame) -> pd.DataFrame:
                 rows_by_place_id[place_id] = {
                     "LocationID": place_id,
                     "GymChain": canonical_chain,
+                    "GymName": display_name,
+                    "Address": formatted_address,
                     "CountyName": county_name,
                     "Latitude": round(float(latitude), 7),
                     "Longitude": round(float(longitude), 7),
@@ -479,6 +482,18 @@ def build_main_dataset(
                 "Result": round(rating_imputation_value, 2),
                 "Expected": "Statewide median of observed Google Places ratings",
                 "Status": "PASS",
+            },
+            {
+                "Check": "Gym records with missing names",
+                "Result": int(locations["GymName"].isna().sum()),
+                "Expected": 0,
+                "Status": "PASS" if not locations["GymName"].isna().any() else "FAIL",
+            },
+            {
+                "Check": "Gym records with missing addresses",
+                "Result": int(locations["Address"].isna().sum()),
+                "Expected": 0,
+                "Status": "PASS" if not locations["Address"].isna().any() else "FAIL",
             },
         ]
     )

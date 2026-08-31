@@ -1,388 +1,388 @@
-LocationID,GymChain,CountyName,Latitude,Longitude,Rating,ReviewCount
-ChIJLxydKVO76IgR1kHp_GTHafw,Orangetheory Fitness,Alachua County,29.6716842,-82.3881046,4.8,184
-ChIJaaOaky6j6IgRYflms5Sinv8,Orangetheory Fitness,Alachua County,29.6244061,-82.3821119,4.8,165
-ChIJ2dA-mGSk6IgRav8upj2dAYM,Planet Fitness,Alachua County,29.6735077,-82.3422263,4.0,719
-ChIJkap58_q96IgR4Qvj2qTw_JI,Planet Fitness,Alachua County,29.6565388,-82.4112817,3.7,53
-ChIJK7ALANOOk4gRIvrEb7z0WgQ,Gold's Gym,Bay County,30.1875381,-85.8162305,3.5,4
-ChIJq6rqRjeMk4gR15cZYmIY5wc,Orangetheory Fitness,Bay County,30.2222524,-85.8653523,4.8,191
-ChIJERV-729_k4gRsh4_rBPl7lU,Planet Fitness,Bay County,30.14386,-85.59282,4.6,712
-ChIJdQcPxdODk4gRwscTvPYGVlo,Planet Fitness,Bay County,30.1950647,-85.6488788,4.5,1367
-ChIJtfm0MHkO3ogRKPJAkR7U6L8,Gold's Gym,Brevard County,28.0790091,-80.6709114,5.0,1
-ChIJoRlevpgP3ogRKh1d-kcNSYM,LA Fitness,Brevard County,28.1463126,-80.6696142,4.2,570
-ChIJxS-5qJkN3ogRssNPkK3HsEs,LA Fitness,Brevard County,28.0370148,-80.6537975,4.2,971
-ChIJK0CYGf4E3ogRiUqtekkiJNI,Orangetheory Fitness,Brevard County,28.2164191,-80.6720084,4.6,140
-ChIJ75q_OScN3ogRzcuwltZeqN4,Planet Fitness,Brevard County,27.996059,-80.6740379,4.3,847
-ChIJ7bjfjSAC3ogRNY9de5lBM8g,Planet Fitness,Brevard County,28.3298943,-80.7197333,4.3,846
-ChIJ8agyBtkb3ogRqSBpPKztgiE,Planet Fitness,Brevard County,28.184578,-80.5935948,4.5,394
-ChIJL-StHbCr4IgRThKLNFS1k3g,Planet Fitness,Brevard County,28.4709532,-80.7676889,4.3,491
-ChIJMUxiDoip4IgROYFz5ajXOmk,Planet Fitness,Brevard County,28.384239,-80.7054898,4.4,359
-ChIJQY6TYNMP3ogR7mE7DiO0ELA,Planet Fitness,Brevard County,28.1203229,-80.640245,4.2,735
-ChIJVd021Xez4IgRwhAbIbd2uFQ,Planet Fitness,Brevard County,28.559028,-80.808317,4.6,131
-ChIJjTJNqfMP3ogR2kyOx-4PMY4,Planet Fitness,Brevard County,28.0771162,-80.6476923,3.8,107
-ChIJ-cfuJR0J2YgRYBWatyI7cEU,LA Fitness,Broward County,26.146706,-80.3335828,4.3,1118
-ChIJ93pdyqEC2YgRfMrRphEjwxA,LA Fitness,Broward County,26.2435717,-80.1012414,4.6,3347
-ChIJA1zE8pQH2YgR1P2s7WoxFwI,LA Fitness,Broward County,26.1078736,-80.252113,4.4,1139
-ChIJBcpKTgCl2YgRmY7XIy2-lTw,LA Fitness,Broward County,25.9850669,-80.299547,3.9,187
-ChIJJ02y4GEb2YgRnnbaTiQtA1Y,LA Fitness,Broward County,26.2992248,-80.1879424,3.8,808
-ChIJPf7MP2kA2YgRHHzvzefzyKw,LA Fitness,Broward County,26.0972256,-80.1321239,4.0,1326
-ChIJS9QT7DkF2YgRJXS83G1BTPo,LA Fitness,Broward County,26.2634237,-80.2492952,3.8,677
-ChIJfSj_5mOh2YgRxTBgb1eJuF4,LA Fitness,Broward County,26.0098722,-80.3947096,4.2,1284
-ChIJp6HXICAC2YgR91kGsRnoq_g,LA Fitness,Broward County,26.175315,-80.1208524,3.9,1415
-ChIJp9HiGsSo2YgReUXIEtc32vo,LA Fitness,Broward County,26.0126895,-80.249588,4.2,1233
-ChIJs_Pshnvi2IgRHKGJoXW4w_0,LA Fitness,Broward County,26.3168112,-80.0896344,4.2,1114
-ChIJx1_iM1ym2YgRnj_jYcdguYA,LA Fitness,Broward County,26.0260635,-80.3149562,3.8,890
-ChIJx79FynCp2YgRZKYWQxhsojg,LA Fitness,Broward County,26.0345328,-80.1988276,3.6,1420
-ChIJBWSYZuir2YgRyXL4r1xS7oE,Orangetheory Fitness,Broward County,26.0139963,-80.1748032,4.7,424
-ChIJI0i6HqKm2YgRtLVZZX89Kvs,Orangetheory Fitness,Broward County,26.0062981,-80.3481064,4.6,154
-ChIJPz_rSK2n2YgReOFao8pnYsQ,Orangetheory Fitness,Broward County,26.0450862,-80.3119747,4.9,261
-ChIJQ2nUZvgJ2YgRovtgLYeXwX8,Orangetheory Fitness,Broward County,26.1052901,-80.3630158,4.6,178
-ChIJRWESZXYQ2YgRnlMG62ZWa7o,Orangetheory Fitness,Broward County,26.3073174,-80.2802598,4.7,135
-ChIJT-CM5qfi2IgRc5iMlHfbhxs,Orangetheory Fitness,Broward County,26.258644,-80.1021696,4.8,137
-ChIJTWkKumgA2YgRt0Z4M84jSiE,Orangetheory Fitness,Broward County,26.09816,-80.131478,4.8,199
-ChIJfaASTDwC2YgRWfIMZP2fYUA,Orangetheory Fitness,Broward County,26.1902132,-80.1231266,4.6,217
-ChIJfytPjnwI2YgRcFW8llJA42k,Orangetheory Fitness,Broward County,26.1350441,-80.2842272,4.7,298
-ChIJh8VKn-sB2YgRIIK4loIa1Uc,Orangetheory Fitness,Broward County,26.1542421,-80.1173627,4.7,184
-ChIJv-BLh8il2YgREMQgT_ABPVw,Orangetheory Fitness,Broward County,25.9781529,-80.3104334,4.6,208
-ChIJweSXjKcc2YgRfinNKsm93yg,Orangetheory Fitness,Broward County,26.284572,-80.1870431,4.9,239
-ChIJB6n2oYAc2YgRyhLWJgAPo0M,Planet Fitness,Broward County,26.31885,-80.18411,4.3,1202
-ChIJHco8sxkb2YgRROpeQCG5t2I,Planet Fitness,Broward County,26.30019,-80.2519,4.4,195
-ChIJJdwpGzoG2YgRmrU6y8P2TeU,Planet Fitness,Broward County,26.1496644,-80.2602105,4.5,1297
-ChIJKVGz3p4E2YgRjczer8QY9eY,Planet Fitness,Broward County,26.24638,-80.19049,4.4,938
-ChIJRTHasQYB2YgRYI1mZxVxH-E,Planet Fitness,Broward County,26.1141099,-80.1418989,4.6,107
-ChIJSyyDJsMF2YgRW5NxYJ7-LLs,Planet Fitness,Broward County,26.1961345,-80.250865,4.3,1351
-ChIJWyDfY9AA2YgRR8n8diUMCuk,Planet Fitness,Broward County,26.1191269,-80.1776001,4.4,1984
-ChIJZ7Cha8al2YgRCia7nAj_pXc,Planet Fitness,Broward County,25.9804968,-80.3135123,4.7,1012
-ChIJg-XNbR6m2YgR0KUCSfd_wrM,Planet Fitness,Broward County,26.0148929,-80.2777379,4.4,1303
-ChIJhzJQ7lAB2YgRa78bFUZLmc4,Planet Fitness,Broward County,26.1721389,-80.1189114,4.6,1724
-ChIJlTZuQKUD2YgRxR0bq7_b2dM,Planet Fitness,Broward County,26.2123636,-80.1550381,4.4,268
-ChIJp390PaUD2YgR-NeRk3S4uAc,Planet Fitness,Broward County,26.21199,-80.15435,4.4,1409
-ChIJsWMtbk8H2YgRDOScQuB-j2o,Planet Fitness,Broward County,26.1599228,-80.2037696,4.6,997
-ChIJsYPKkPWn2YgRZQQTwE3EIDc,Planet Fitness,Broward County,26.0067451,-80.3449134,4.6,1141
-ChIJuYcpaP8H2YgR-6a8wi8joCA,Planet Fitness,Broward County,26.0911634,-80.249513,4.4,658
-ChIJYzEGmJao3IgRCUcHjiU1eks,Planet Fitness,Charlotte County,27.0156206,-82.0541477,4.3,1288
-ChIJZzz18Tyr3IgRPvbLCRjANAY,Planet Fitness,Charlotte County,27.0046756,-82.1328654,4.5,308
-ChIJj6p0Rs5B6IgRXX3o34s4V2c,Planet Fitness,Citrus County,28.8832664,-82.5808415,4.4,29
-ChIJlexP6N1z6IgRv79ENw8qI6I,Planet Fitness,Citrus County,28.8446099,-82.3437469,4.5,764
-ChIJp4ee0cVr6IgRvvKOS-BP_aI,Planet Fitness,Citrus County,28.894597,-82.4896618,4.3,22
-ChIJo7fygkHE5YgRWU_tnCZJ9Mk,LA Fitness,Clay County,30.1477784,-81.7547264,4.0,443
-ChIJgeShwj7F5YgR5a4v6TmSBKA,Orangetheory Fitness,Clay County,30.1008758,-81.716128,4.9,146
-ChIJ2-OO-oXG5YgRAMLkNBbzumE,Planet Fitness,Clay County,30.1865286,-81.7412771,4.2,691
-ChIJcYua3UHF5YgRSZzMXv1QpWs,Planet Fitness,Clay County,30.1042051,-81.7090732,4.1,374
-ChIJg9UmV8zF5YgRiscrPKpLnBs,Planet Fitness,Clay County,30.1488713,-81.7583811,4.4,150
-ChIJp_U8pOse24gRT4DOH3HsvBA,LA Fitness,Collier County,26.2521939,-81.8039622,4.3,966
-ChIJJTb8eS8c24gREKAczr5iIn0,Orangetheory Fitness,Collier County,26.2408544,-81.7707213,4.7,265
-ChIJ0-QXWNHj2ogRphscLcCINqQ,Planet Fitness,Collier County,26.121821,-81.75897,4.1,584
-ChIJ_SjuZvrl2ogRWdb5dije0Bs,Planet Fitness,Collier County,26.0672704,-81.6993472,3.7,592
-ChIJz-AmV-Md24gRH_XYVf0oBLE,Planet Fitness,Collier County,26.182,-81.71014,4.1,553
-ChIJrR-JHkYk74gRcuJu5Amb3e0,Planet Fitness,Columbia County,30.1783669,-82.6780777,4.4,915
-ChIJ806rjwmX3IgRSAtneD072NE,Planet Fitness,DeSoto County,27.2081049,-81.8375204,4.6,156
-ChIJ-0_T3FXJ5YgRhkJ9s2Ftj0k,LA Fitness,Duval County,30.172026,-81.60623,4.1,450
-ChIJE15VNEBL5IgRqaZP0xIL6HQ,LA Fitness,Duval County,30.3222832,-81.4913712,4.0,748
-ChIJgx18wUVJ5IgRM-fbgTdwV60,LA Fitness,Duval County,30.325935,-81.4115859,4.1,420
-ChIJ2Snpvs9J5IgRg7weDQscvAM,Orangetheory Fitness,Duval County,30.2578887,-81.3933015,4.9,332
-ChIJ51Ut6E9K5IgRRb_eM3c0FQ8,Orangetheory Fitness,Duval County,30.2849897,-81.4599885,4.9,231
-ChIJSff_FaC35YgRb5PXc-dBfmg,Orangetheory Fitness,Duval County,30.3049839,-81.6522542,4.4,21
-ChIJW3_xbZzB5YgRS8TaF-MjLGE,Orangetheory Fitness,Duval County,30.1964625,-81.8271576,4.9,190
-ChIJi-Gb7zXJ5YgRhf_RFmu0M3I,Orangetheory Fitness,Duval County,30.1743196,-81.6255197,4.7,160
-ChIJkQU3im645YgRmFKRTqLTyis,Orangetheory Fitness,Duval County,30.2799634,-81.719261,4.9,251
-ChIJ41qGQeSz5YgRw-OhimcX3oM,Planet Fitness,Duval County,30.3651432,-81.5958334,4.4,633
-ChIJ9QSOyia55YgRJnTP5QRQWF4,Planet Fitness,Duval County,30.3052742,-81.7487112,4.3,1247
-ChIJGR8Mb7bM5YgR69QT8zNphRo,Planet Fitness,Duval County,30.1398051,-81.5227922,4.4,1151
-ChIJP4sFDDW15YgRsBZDiG7TPzE,Planet Fitness,Duval County,30.3344825,-81.5499892,4.4,902
-ChIJQftyzHOx5YgR8wYBn9DZXUM,Planet Fitness,Duval County,30.428576,-81.6643172,3.9,256
-ChIJWfAc5CC55YgRd60DwsaioYw,Planet Fitness,Duval County,30.2711194,-81.7380209,4.5,331
-ChIJiScTiV-x5YgRANX1NL8MTTc,Planet Fitness,Duval County,30.3720583,-81.665357,4.3,92
-ChIJmQSPeKa15YgRXccJLFIvALY,Planet Fitness,Duval County,30.2885792,-81.5658342,4.3,894
-ChIJmZj_S6dJ5IgRJwJN-kmra-A,Planet Fitness,Duval County,30.3260491,-81.4087679,4.5,527
-ChIJmcEoJixK5IgRa4C2vv2tHmE,Planet Fitness,Duval County,30.2869427,-81.4348631,4.3,757
-ChIJnx-KI0rH5YgRjAlpML1cgK0,Planet Fitness,Duval County,30.24687,-81.7744587,4.1,496
-ChIJo1FYnnS75YgRDAAgo5FcQiE,Planet Fitness,Duval County,30.2227516,-81.5915082,4.5,801
-ChIJp8UXEvm35YgRndYXpkrt6K8,Planet Fitness,Duval County,30.2618945,-81.6309538,4.4,93
-ChIJQcF27SjAkIgRoqU0d9dGGuE,LA Fitness,Escambia County,30.4976964,-87.1905683,4.3,297
-ChIJUSOR6vS_kIgROZcDSIyk8QE,Orangetheory Fitness,Escambia County,30.4770431,-87.2256167,4.7,199
-ChIJQ8c1KXm-kIgReDWmzT-2IZU,Planet Fitness,Escambia County,30.4599602,-87.302371,4.4,1071
-ChIJrS6GoPm_kIgR9LAPqiSFe4g,Planet Fitness,Escambia County,30.4902417,-87.2259826,4.3,820
-ChIJy6TruKeVkIgRsB_Dx_nB5qY,Planet Fitness,Escambia County,30.5342657,-87.260439,4.3,898
-ChIJ4_hvIE6U5ogRE4l63OY05Dg,Planet Fitness,Flagler County,29.5557066,-81.2148867,4.0,734
-ChIJWcm39RDr5ogRj4wwYcSxwwM,Planet Fitness,Flagler County,29.4746209,-81.2056946,4.2,642
-ChIJ3cHwbnOgwogRwPxFWc9Xi1U,Planet Fitness,Hernando County,28.4601806,-82.5389832,4.3,837
-ChIJ8dkYlr0f6IgRPUHmvOGN-Do,Planet Fitness,Hernando County,28.5356412,-82.5133495,4.3,667
-ChIJk75i5ZVX3IgRa1VLUgJqguc,Gold's Gym,Highlands County,27.4984692,-81.4858722,4.1,116
-ChIJi5lISX5X3IgRGRhDuftQ1Y0,Planet Fitness,Highlands County,27.4900328,-81.4869699,4.6,539
-ChIJ_4Y_ZFTFwogRcuT6PH9WsBs,Gold's Gym,Hillsborough County,27.9551557,-82.4471014,4.7,347
-ChIJ2wZsUPS3wogRIdpnLCdYUtE,LA Fitness,Hillsborough County,28.1078437,-82.3854436,4.0,695
-ChIJ36FvJjC3wogRPjwUxCmgipI,LA Fitness,Hillsborough County,28.169979,-82.3565139,4.3,1156
-ChIJa12b09XrwogRc-ji0r_RN_g,LA Fitness,Hillsborough County,28.0099913,-82.6101378,4.0,488
-ChIJaxqEfTfAwogRtFQWaUXFC34,LA Fitness,Hillsborough County,28.0631618,-82.5429728,4.0,573
-ChIJiev7QhDDwogRQMU3tkVwupo,LA Fitness,Hillsborough County,27.9417071,-82.5061524,4.2,1873
-ChIJrRWGRz_OwogRDh9n6RqnS9g,LA Fitness,Hillsborough County,27.9208577,-82.3289471,4.1,1176
-ChIJ2y4iR2TdwogR4ABmHVnod68,Orangetheory Fitness,Hillsborough County,27.8949474,-82.5179656,4.9,68
-ChIJ4d7dZMbSwogR3O8mr8KsQnM,Orangetheory Fitness,Hillsborough County,27.8960161,-82.2439888,4.8,162
-ChIJExZ2_NjWwogR6CVcngWIxXY,Orangetheory Fitness,Hillsborough County,27.7911055,-82.3428709,4.8,250
-ChIJFcW4KuzAwogRDSOQr1mm0B8,Orangetheory Fitness,Hillsborough County,28.0660531,-82.5064855,4.8,413
-ChIJI4bU2A_DwogRQqzPLCTwM0A,Orangetheory Fitness,Hillsborough County,27.94357,-82.5061101,4.6,256
-ChIJQVE55PPEwogRN7JyRgZ3C3U,Orangetheory Fitness,Hillsborough County,27.944739,-82.4491864,4.8,312
-ChIJ-3TqHcfGwogRFiB9dOhO-j0,Planet Fitness,Hillsborough County,28.0238559,-82.4616406,4.5,1225
-ChIJ8_rP59nHwogRaiKVEFrNmR4,Planet Fitness,Hillsborough County,28.05324,-82.39244,4.1,1562
-ChIJCcklsInNwogR_FSso73dqaQ,Planet Fitness,Hillsborough County,27.9253777,-82.2701265,1.9,37
-ChIJD8Bsx6U23YgRlbKoN93VWKM,Planet Fitness,Hillsborough County,27.9941095,-82.1197019,4.5,997
-ChIJHXMNuA7MwogRK_tmB2tsKMw,Planet Fitness,Hillsborough County,27.9829847,-82.2869187,4.3,1242
-ChIJIXiBMODBwogRuUFmSTOfJ8E,Planet Fitness,Hillsborough County,28.02436,-82.56103,4.2,1114
-ChIJPdv-B4TBwogRfgCBdO7vodM,Planet Fitness,Hillsborough County,28.0599661,-82.534119,4.7,536
-ChIJ_zRwVHTRwogR3hb3-qpNk0k,Planet Fitness,Hillsborough County,27.8557987,-82.3247805,4.5,1156
-ChIJt7q34JrHwogRb4UA_2UH7qw,Planet Fitness,Hillsborough County,28.0816164,-82.4321366,4.7,1169
-ChIJn9woKStc3ogRxGPgLv8cmf8,Orangetheory Fitness,Indian River County,27.6888311,-80.4097404,4.9,186
-ChIJHcCEyBdf3ogRAVvOSQJ-jK0,Planet Fitness,Indian River County,27.6238216,-80.3907831,4.2,827
-ChIJr4WfR_Qhk4gRxoRRLsA6uOo,Planet Fitness,Jackson County,30.767719,-85.2019419,4.5,518
-ChIJl8rnJIWF54gRrHsrYAoF0D0,Orangetheory Fitness,Lake County,28.5483963,-81.6802351,4.7,165
-ChIJo4aTJV6j54gRljsqAFs4QsY,Orangetheory Fitness,Lake County,28.8262903,-81.643262,4.6,70
-ChIJE3ouBBbA54gRpq9Aa9e7LfE,Planet Fitness,Lake County,28.8203563,-81.888599,4.5,934
-ChIJbYmM5IGP54gRrXPwbsjBjWY,Planet Fitness,Lake County,28.5289244,-81.7342017,4.5,914
-ChIJt_AuM9Ki54gRY5LCjqfU_-w,Planet Fitness,Lake County,28.8258296,-81.6873837,4.4,921
-ChIJ3Vj6d1cZ24gRB9ojruVAQfo,Gold's Gym,Lee County,26.331812,-81.8098617,3.8,38
-ChIJR1_r39tA24gRJgMv1XJ3f34,LA Fitness,Lee County,26.608436,-81.9394142,4.2,1023
-ChIJZ5UaVQ0U24gRf7igP8qCBv8,LA Fitness,Lee County,26.4895395,-81.7901507,4.2,849
-ChIJ-6uNawhr24gRgho0XR44oL8,Orangetheory Fitness,Lee County,26.6057281,-81.8105286,4.7,264
-ChIJBVPFev5H24gRjgDQ2VjJQ7E,Orangetheory Fitness,Lee County,26.609252,-81.973686,4.7,149
-ChIJo3ecwwEX24gRyadPFSbLKCk,Orangetheory Fitness,Lee County,26.4304823,-81.7826178,4.7,48
-ChIJ16QR4toV24gR1sgrLxYAN_o,Planet Fitness,Lee County,26.4656201,-81.8307279,3.9,668
-ChIJPWxJymQb24gRPnHmZMVwSuY,Planet Fitness,Lee County,26.3289903,-81.7610377,4.2,468
-ChIJ____gElC24gRdz0kFQTLJuc,Planet Fitness,Lee County,26.686134,-81.903863,4.3,1134
-ChIJda-3ciVB24gR4fED_V5Ear4,Planet Fitness,Lee County,26.625027,-81.942149,4.4,976
-ChIJewXdLtc-24gRBK54XgD1xOA,Planet Fitness,Lee County,26.5165101,-81.9444522,4.4,505
-ChIJxZZXXilA24gRDFJFPCGfTHE,Planet Fitness,Lee County,26.6057719,-81.8704794,4.2,1190
-ChIJA55IocBY7IgRDS2GNzWXY1M,Orangetheory Fitness,Leon County,30.5123361,-84.2483843,4.8,129
-ChIJP3zSTYT17IgRK23hZ7GE3lE,Orangetheory Fitness,Leon County,30.457103,-84.276891,4.1,174
-ChIJ0yY4RaP17IgR5zo6umVWNPI,Planet Fitness,Leon County,30.4065766,-84.282247,4.7,479
-ChIJ_3thu6j17IgRHMWRZMrwUFY,Planet Fitness,Leon County,30.4418789,-84.3185927,4.2,38
-ChIJkRnb0ZP17IgRfjFWIeW2Vxs,Planet Fitness,Leon County,30.4668799,-84.2833946,4.5,988
-ChIJnTktW7Nf7IgRdwcZEAFeuYo,Planet Fitness,Leon County,30.4304131,-84.2287833,4.5,656
-ChIJw16clMJZ7IgRJzVx73tdaWU,Planet Fitness,Leon County,30.5423752,-84.2247509,4.2,118
-ChIJGwuR-xZmYogRsgvaU9DL8D0,Orangetheory Fitness,Madison County,34.7493761,-86.7546994,4.8,168
-ChIJjRpiVA4Ww4gRfnrhkxMt8-U,Gold's Gym,Manatee County,27.4547701,-82.5768864,,0
-ChIJYQspEkE5w4gRNpXVxdDIHEM,LA Fitness,Manatee County,27.4339589,-82.4247082,4.3,583
-ChIJdU3DYd44w4gRvvxmFxCsm-A,LA Fitness,Manatee County,27.3919083,-82.4557275,4.0,671
-ChIJ-3rBauA7w4gRO2VVOSdyODk,Orangetheory Fitness,Manatee County,27.4407165,-82.455288,4.9,367
-ChIJuagFdOwXw4gRrm25LwIiFyQ,Planet Fitness,Manatee County,27.4629927,-82.5737481,4.4,949
-ChIJxy-B-d8Ww4gRmHgxXUjzYio,Planet Fitness,Manatee County,27.4943995,-82.6277406,3.9,418
-ChIJ97R3W14r5ogRfD9rrD3RGD8,Gold's Gym,Marion County,29.2129587,-82.1948017,4.7,656
-ChIJ58qq3KHV54gR_4eiyJg39d0,Orangetheory Fitness,Marion County,29.1393839,-82.191939,4.8,234
-ChIJ1UG_IOTU54gRj0Z3yTHZHMU,Planet Fitness,Marion County,29.1591554,-82.164163,4.3,907
-ChIJ1zPrlmDF54gRBztCTfJYTgg,Planet Fitness,Marion County,28.9606722,-81.9670415,4.3,164
-ChIJN8UQZyLT54gRY7NlSWWfHnQ,Planet Fitness,Marion County,29.1619697,-82.0916086,4.4,724
-ChIJA6GsaQ3d3ogRkbYatiJy-IY,LA Fitness,Martin County,27.2275288,-80.264099,4.3,724
-ChIJ51XfJX7o3ogRsswGYZW3dBI,Orangetheory Fitness,Martin County,27.2574202,-80.2777516,4.9,104
-ChIJOc2eggnd3ogRsq3MU2cluVY,Orangetheory Fitness,Martin County,27.1783691,-80.2348801,4.8,168
-ChIJT-DzUgnd3ogRQWaWpXAPFMg,Planet Fitness,Martin County,27.1770962,-80.2542965,4.4,777
-ChIJ3bkESFW62YgRzMEM_6BGitE,LA Fitness,Miami-Dade County,25.8582801,-80.3205032,3.8,890
-ChIJ48fMeHSy2YgRJd218f6PeOI,LA Fitness,Miami-Dade County,25.8900694,-80.161973,3.6,1854
-ChIJ6z3keYS22YgR40tT58c-BWQ,LA Fitness,Miami-Dade County,25.7650877,-80.1942998,3.6,1233
-ChIJ9U64nSPA2YgRFTq-wdKaCPs,LA Fitness,Miami-Dade County,25.6851802,-80.4570911,4.0,1109
-ChIJI-G8gFa52YgRsv0CbX7ur2o,LA Fitness,Miami-Dade County,25.8122719,-80.359862,4.0,1696
-ChIJIWOsWn7D2YgRXd8hMiXuzGg,LA Fitness,Miami-Dade County,25.575739,-80.3691722,4.1,649
-ChIJS-GDU_-l2YgRxy2SZxCURes,LA Fitness,Miami-Dade County,25.9375213,-80.2950221,3.9,979
-ChIJS6q-9DSs2YgRyXlbRE2iELA,LA Fitness,Miami-Dade County,25.9444429,-80.1692699,4.2,2090
-ChIJXZCyno-42YgRLuq1vnEpAvE,LA Fitness,Miami-Dade County,25.7320763,-80.3301783,4.1,1107
-ChIJZZBeq4262YgR3rRzJ4tee3I,LA Fitness,Miami-Dade County,25.8654519,-80.2958031,4.4,3115
-ChIJaS9Yu6S32YgR4hkuBnxlMvQ,LA Fitness,Miami-Dade County,25.750451,-80.2497308,2.7,1210
-ChIJb-UVOHvA2YgRTq9XiqGayyA,LA Fitness,Miami-Dade County,25.711885,-80.4176157,4.1,745
-ChIJe4qzWyC52YgRDa6GhQUT-SE,LA Fitness,Miami-Dade County,25.7702876,-80.3478546,4.1,2573
-ChIJf0SvCbC_2YgRh5_4szdIugw,LA Fitness,Miami-Dade County,25.7599104,-80.4231782,4.2,1322
-ChIJpfiNvIjD2YgRTcjYd-rHx68,LA Fitness,Miami-Dade County,25.6253725,-80.3975699,4.2,533
-ChIJrUKHgujA2YgR3O4QNBc4sqI,LA Fitness,Miami-Dade County,25.6884032,-80.3913512,4.4,1325
-ChIJ0YIrgW3A2YgRx_OjjP7xFsI,Orangetheory Fitness,Miami-Dade County,25.7150642,-80.42974,4.8,156
-ChIJA-YrPSmy2YgRgIonuSrLxEM,Orangetheory Fitness,Miami-Dade County,25.8580055,-80.183066,4.7,198
-ChIJEYA9iGS42YgRk22ATRJZnSM,Orangetheory Fitness,Miami-Dade County,25.7325792,-80.3147836,4.4,137
-ChIJNUGvMVGx2YgRsECMq4TD2GU,Orangetheory Fitness,Miami-Dade County,25.8119386,-80.1938051,4.4,151
-ChIJQ_j8_W3E2YgRsfJug-EQcoI,Orangetheory Fitness,Miami-Dade County,25.5980932,-80.3510735,4.5,178
-ChIJa1pEF5q32YgRgcGvHhKfIW0,Orangetheory Fitness,Miami-Dade County,25.7508029,-80.2609818,4.8,245
-ChIJa2_wEFes2YgRFLf2kAolnZc,Orangetheory Fitness,Miami-Dade County,25.9502344,-80.1442772,4.4,282
-ChIJc8Qz2aTH2YgRhMIJlVk83lk,Orangetheory Fitness,Miami-Dade County,25.6865141,-80.3126745,4.5,90
-ChIJcaPdNNGk2YgRZazQ_HCKnGU,Orangetheory Fitness,Miami-Dade County,25.915247,-80.3271005,4.8,223
-ChIJdx6C76HB2YgRQGCNWTgRDUI,Orangetheory Fitness,Miami-Dade County,25.6554961,-80.4150854,4.8,302
-ChIJpSNl96m-2YgR4x_Sk8JgqwI,Orangetheory Fitness,Miami-Dade County,25.8263393,-80.3680736,4.7,270
-ChIJtabGO5622YgRtGwQ8Drj7vc,Orangetheory Fitness,Miami-Dade County,25.7763292,-80.1888644,4.3,184
-ChIJuQEJ5o3G2YgRXTj_bb4N_q8,Orangetheory Fitness,Miami-Dade County,25.6442661,-80.3311386,4.6,132
-ChIJ-byzO4y62YgRjgPGjC15U6I,Planet Fitness,Miami-Dade County,25.8654721,-80.2930405,4.5,2326
-ChIJ4XRlzz-z2YgRM40T5p_9LbU,Planet Fitness,Miami-Dade County,25.8902703,-80.1800462,4.5,1497
-ChIJ7SbUcvu72YgREQx0knxZdC0,Planet Fitness,Miami-Dade County,25.8538145,-80.320711,4.6,1373
-ChIJ7_4o2QLB2YgRiuUE9R5jMk8,Planet Fitness,Miami-Dade County,25.6709702,-80.3713089,4.6,1001
-ChIJ7_bQMO232YgRfySHcsSHNXU,Planet Fitness,Miami-Dade County,25.766368,-80.2069273,4.5,3035
-ChIJF30qi2ax2YgRLm1mkquhugU,Planet Fitness,Miami-Dade County,25.8486398,-80.2445371,4.4,224
-ChIJGZ9TuCPA2YgRCiTCvxdR7Mg,Planet Fitness,Miami-Dade County,25.6997295,-80.4483246,4.4,1000
-ChIJHUNjNSes2YgRuUlVmuAP-eU,Planet Fitness,Miami-Dade County,25.9608087,-80.1861671,4.4,1733
-ChIJL6KGqrCv2YgRMeIj1RIh2NY,Planet Fitness,Miami-Dade County,25.9303811,-80.2432665,4.5,1271
-ChIJ_0VXhGi72YgR2bwUTjEOyPE,Planet Fitness,Miami-Dade County,25.8980151,-80.3521122,4.5,1777
-ChIJcXeeYOO42YgR8BylrFjtPFU,Planet Fitness,Miami-Dade County,25.7603794,-80.3334641,4.6,1934
-ChIJnVtF0sCt2YgRJ5-A1OxusUg,Planet Fitness,Miami-Dade County,25.9243394,-80.167332,4.1,1484
-ChIJoQXVo3a32YgRYkHuIELxxAE,Planet Fitness,Miami-Dade County,25.7856884,-80.2198051,4.6,1964
-ChIJt9g2D5Dd2YgRcUW9BcVoauw,Planet Fitness,Miami-Dade County,25.479054,-80.4398906,4.5,1663
-ChIJvY7I12_F2YgRyw5gDDiX2B0,Planet Fitness,Miami-Dade County,25.58904,-80.357687,4.6,1157
-ChIJvcz9UQ6l2YgRiurttMiu-lY,Planet Fitness,Miami-Dade County,25.9432366,-80.3089815,4.6,2189
-ChIJJdqFM2tkwokRzYTWkbYCseg,24 Hour Fitness,Nassau County,40.6628441,-73.727182,4.1,1405
-ChIJ1aK2xk97wokRDH4l4WkaHUc,Orangetheory Fitness,Nassau County,40.6562502,-73.643526,4.9,404
-ChIJ9bANiVZ_wokRJhJX2NPEocg,Orangetheory Fitness,Nassau County,40.6661312,-73.4857718,4.9,97
-ChIJrYSDo61-wokRhevofIh2oZY,Orangetheory Fitness,Nassau County,40.6554977,-73.5501185,4.8,116
-ChIJue_sHbYB5YgRxfzCdUxYTk4,Orangetheory Fitness,Nassau County,30.6277307,-81.5453301,4.8,56
-ChIJ6-Pq1Ds_kYgR2b7dbLK0Dbw,Gold's Gym,Okaloosa County,30.4062915,-86.6059192,4.2,186
-ChIJS__dNbpdkYgRCnYAJC1DfgQ,Orangetheory Fitness,Okaloosa County,30.3875681,-86.4045888,4.6,123
-ChIJAYkcEudzkYgRIvPAoT71pqY,Planet Fitness,Okaloosa County,30.7316051,-86.5686943,4.1,247
-ChIJeUElNaA-kYgRQVzQSKXYYvk,Planet Fitness,Okaloosa County,30.4158767,-86.6561629,4.3,994
-ChIJDfSzPTTX3IAReHjumx0wgzY,24 Hour Fitness,Orange County,33.8245804,-117.8373977,4.4,590
-ChIJNTu0JZDX3IARpgL4SxLeCQk,24 Hour Fitness,Orange County,33.7958031,-117.8917836,4.1,760
-ChIJC5Fq64Rj54gR5V-0lbyi3Oc,LA Fitness,Orange County,28.4768161,-81.2872085,4.0,1037
-ChIJIZKFuM5654gRmHcyOMbQgoI,LA Fitness,Orange County,28.5548952,-81.3467628,4.3,853
-ChIJN3Sz5M1-54gRn1uXom9BCRE,LA Fitness,Orange County,28.4922898,-81.4605285,4.4,2049
-ChIJOVbEKAB754gRHec7urBSEcw,LA Fitness,Orange County,28.5148411,-81.3772296,4.7,461
-ChIJUfaiJVd_54gREqfnodC0_bo,LA Fitness,Orange County,28.4917165,-81.51078,4.1,1127
-ChIJbUEBYmlw54gR610iT9Nwwck,LA Fitness,Orange County,28.6050078,-81.3679973,4.3,818
-ChIJcaKOWMtn54gRpraV-TCNUGw,LA Fitness,Orange County,28.5569438,-81.202629,3.8,1167
-ChIJe75I_7dk54gR46eJ0s32X0I,LA Fitness,Orange County,28.5118954,-81.3301111,4.1,806
-ChIJlTXDi2qH3YgRvljZb4-UpZU,LA Fitness,Orange County,28.380835,-81.4059515,4.0,1134
-ChIJlzmsnZFl54gRbe_8cbKC_A8,LA Fitness,Orange County,28.5424652,-81.284172,4.0,611
-ChIJr0c2v-uD54gR_O1XJXcZijA,LA Fitness,Orange County,28.5250336,-81.5840218,4.3,1007
-ChIJ-fiWlCti54gRbl3owrFq7TM,Orangetheory Fitness,Orange County,28.4341953,-81.2563017,4.9,257
-ChIJE6n0gw5754gRxcmTNyb9Ewg,Orangetheory Fitness,Orange County,28.521761,-81.376114,4.8,127
-ChIJTSlwpG1w54gRQo4lV9W-jOc,Orangetheory Fitness,Orange County,28.5974027,-81.3660952,4.5,114
-ChIJVaOOSGmB54gRBfygA6vS7So,Orangetheory Fitness,Orange County,28.4766273,-81.5848177,4.8,181
-ChIJcc7s0ECC54gRyUuCp99ST_4,Orangetheory Fitness,Orange County,28.5285304,-81.5425887,4.7,146
-ChIJewTSgZmL3YgRXdz06bo1MdA,Orangetheory Fitness,Orange County,28.3790546,-81.2438808,4.7,110
-ChIJo-Qufah_54gRU9eIPNK432c,Orangetheory Fitness,Orange County,28.4503758,-81.4819519,4.6,210
-ChIJrZGz0rVn54gRvJUkmCz5xfs,Orangetheory Fitness,Orange County,28.5472678,-81.2028604,4.8,185
-ChIJ-WddmDx554gR04_aPJ0ICow,Planet Fitness,Orange County,28.5172728,-81.4615642,4.3,880
-ChIJ9Xf5O9Zx54gRL_KdX82r3Bg,Planet Fitness,Orange County,28.6043951,-81.3952802,4.6,883
-ChIJQdMni7Vl54gRP9u87HeAc5w,Planet Fitness,Orange County,28.5363051,-81.2738745,4.3,928
-ChIJQwJuhb5354gRRhI5P0_IXEs,Planet Fitness,Orange County,28.6752902,-81.4692219,4.4,83
-ChIJjWjYBvWC54gR78NkAeKdLFs,Planet Fitness,Orange County,28.5501366,-81.5410914,4.4,1025
-ChIJk1w88FBj54gRUAcM-MnHE1c,Planet Fitness,Orange County,28.4819907,-81.3324397,4.5,840
-ChIJnzAha-Cd54gRPDSWy01UBZU,Planet Fitness,Orange County,28.6884737,-81.5376127,4.4,597
-ChIJoXdszcp954gRdoPX6tdVbBY,Planet Fitness,Orange County,28.443768,-81.4038262,4.6,625
-ChIJs4OkGsx654gRI3bXmJxxGyg,Planet Fitness,Orange County,28.5552669,-81.3421357,4.5,690
-ChIJsRPNTqx_54gRMu8AmT4b8-Y,Planet Fitness,Orange County,28.444109,-81.4756199,4.3,886
-ChIJs_xU7GqH3YgRPgOD8-9ulHo,Planet Fitness,Orange County,28.3834915,-81.4031558,4.4,1110
-ChIJtxluw4h754gRkuUfqI5H_SA,Planet Fitness,Orange County,28.5313969,-81.3771211,4.3,949
-ChIJzSuESnxn54gRG-GljWirsZo,Planet Fitness,Orange County,28.5563686,-81.2089356,4.0,194
-ChIJPQ0608uG3YgRlzEAwppAbEg,LA Fitness,Osceola County,28.3366074,-81.4221691,4.0,1515
-ChIJa_P9U0iG3YgRFXcMDgwKm8I,LA Fitness,Osceola County,28.3435117,-81.364303,4.0,898
-ChIJ8bGD_MSG3YgRzENLHx8x1do,Orangetheory Fitness,Osceola County,28.3413586,-81.4120582,4.6,254
-ChIJUaL_6-OD3YgRMver_yrL6Vc,Planet Fitness,Osceola County,28.3054498,-81.4339932,4.3,1477
-ChIJe0PEUKGP3YgR4m5Tmvqk55M,Planet Fitness,Osceola County,28.2515439,-81.3113163,4.2,736
-ChIJ3zgNKigk2YgR8PZEdMgAHzI,LA Fitness,Palm Beach County,26.5892897,-80.1873322,4.3,802
-ChIJ78V7ZEPV2IgRqcT0j_rAVp0,LA Fitness,Palm Beach County,26.8066514,-80.0850467,3.9,626
-ChIJJWvgGTTV3ogRyLY4QsErlvE,LA Fitness,Palm Beach County,26.8809669,-80.1152273,4.0,434
-ChIJLzTVWyYe2YgR19nswC9oofM,LA Fitness,Palm Beach County,26.3918884,-80.1018286,4.0,1075
-ChIJXW198l4v2YgRweRYw16JwRM,LA Fitness,Palm Beach County,26.6493443,-80.2065098,3.8,740
-ChIJYR4zxq3Y2IgRwy6sQ3LNdHI,LA Fitness,Palm Beach County,26.5499194,-80.0892158,3.8,1054
-ChIJmTFUTXLg2IgRS4pvNRCXQec,LA Fitness,Palm Beach County,26.4415397,-80.0726623,3.9,1044
-ChIJs6-ReREh2YgRlBOtvzU9RRQ,LA Fitness,Palm Beach County,26.5311729,-80.1487762,4.1,562
-ChIJt4f3bMMp2YgROeDMn4zXMkk,LA Fitness,Palm Beach County,26.70427,-80.113534,3.6,773
-ChIJzXnA_FsZ2YgR1p9LhsfFNFc,LA Fitness,Palm Beach County,26.3700927,-80.2068987,4.1,813
-ChIJ2RYjZPwm2YgRVDuZByEm4VY,Orangetheory Fitness,Palm Beach County,26.5876012,-80.1485279,4.8,204
-ChIJ6X8wC6sY2YgRGsHsJurQUuo,Orangetheory Fitness,Palm Beach County,26.4543328,-80.1901861,4.6,177
-ChIJAyEIfcAq34gRYOTHDasaYno,Orangetheory Fitness,Palm Beach County,26.8437327,-80.0753515,4.9,218
-ChIJCSqdGnQe2YgRp65hYzgw1rU,Orangetheory Fitness,Palm Beach County,26.3633775,-80.1227067,4.6,134
-ChIJDR9Xyase2YgRfjeP0bK8cq0,Orangetheory Fitness,Palm Beach County,26.3687854,-80.1845939,4.7,131
-ChIJEwM4rlvf2IgRiAHwiLq7vk4,Orangetheory Fitness,Palm Beach County,26.5309009,-80.0929287,4.5,211
-ChIJFz3bdzQe2YgRGJLh8uwdTjU,Orangetheory Fitness,Palm Beach County,26.4029696,-80.1151088,2.9,62
-ChIJS11qyoff2IgRLy0v9GJZEug,Orangetheory Fitness,Palm Beach County,26.4565731,-80.0680663,4.5,121
-ChIJTW50ofYl2YgR-HM-uKKwHjg,Orangetheory Fitness,Palm Beach County,26.6418037,-80.2060354,4.7,161
-ChIJW8tRrosz2YgRcR_IoYp1wtQ,Orangetheory Fitness,Palm Beach County,26.7516241,-80.3084789,4.8,27
-ChIJY89IvOMp34gRUWLSj7XYnmc,Orangetheory Fitness,Palm Beach County,26.9337791,-80.1324261,4.8,136
-ChIJyTCd0gTi2IgRQXcupW3O5qQ,Orangetheory Fitness,Palm Beach County,26.350185,-80.0871464,4.7,136
-ChIJ-_YpiT8p2YgRUwNF4wJA_kI,Planet Fitness,Palm Beach County,26.6500931,-80.1130441,4.3,720
-ChIJ23gsm9rX3ogRQUFTURS7Qy8,Planet Fitness,Palm Beach County,26.9359064,-80.1357427,4.5,393
-ChIJEdwZYMcg2YgRjVPwkeC5ARU,Planet Fitness,Palm Beach County,26.5313203,-80.1206078,4.4,682
-ChIJFe-1cm0q2YgR6KlgLpEvZEY,Planet Fitness,Palm Beach County,26.75871,-80.1116216,4.4,701
-ChIJIRvjYjUm2YgRfV2kofpEIBo,Planet Fitness,Palm Beach County,26.6159433,-80.1456379,4.3,965
-ChIJIRxOOiIg2YgRztWlxN2XpY8,Planet Fitness,Palm Beach County,26.4610926,-80.1211924,4.2,881
-ChIJTdp_vhTh2IgRabyg2GZo3Vc,Planet Fitness,Palm Beach County,26.42668,-80.07176,4.6,499
-ChIJWdFOZ3DV3ogRTGr9y3TKH78,Planet Fitness,Palm Beach County,26.8983933,-80.1017984,4.4,362
-ChIJ_1ID_oLX2IgRV2wEx-GKrhI,Planet Fitness,Palm Beach County,26.6477249,-80.0581144,4.3,729
-ChIJc7JGoU3V2IgRBIrpsBDou1o,Planet Fitness,Palm Beach County,26.8234084,-80.0848611,4.6,902
-ChIJcWP3w8LZ2IgRewJ5b-c-UME,Planet Fitness,Palm Beach County,26.5891212,-80.0948161,4.6,676
-ChIJd0sSxTwv2YgRq7uFaAtK_eQ,Planet Fitness,Palm Beach County,26.6813279,-80.2065635,4.4,961
-ChIJl4IktgMz2YgRKWZNVGw2teQ,Planet Fitness,Palm Beach County,26.7547926,-80.3094839,4.8,156
-ChIJ8w_KutewwogRFAO05MJeMtg,Orangetheory Fitness,Pasco County,28.1878675,-82.3498983,4.8,434
-ChIJn57SSiqUwogR9lptM-oHLAs,Orangetheory Fitness,Pasco County,28.1895184,-82.6076727,4.9,437
-ChIJ1TKC4hCxwogRYVD_70jussc,Planet Fitness,Pasco County,28.2461732,-82.3511291,4.4,513
-ChIJ4W6IyMlT3YgRyOo0VOQUEIs,Planet Fitness,Pasco County,28.2724,-82.18615,4.4,640
-ChIJWXlfIUmbwogR8miGLNMEA84,Planet Fitness,Pasco County,28.3346739,-82.7014083,4.7,624
-ChIJq6qqqlqXwogR8N5WOcNBKro,Planet Fitness,Pasco County,28.28848,-82.67724,4.4,1104
-ChIJyYVrFf6NwogRrQBusVN8bvU,Planet Fitness,Pasco County,28.1990344,-82.7387732,4.3,1049
-ChIJ01p9TZvwwogRUQmoLZtAh2Y,LA Fitness,Pinellas County,27.9295566,-82.7889999,4.0,1030
-ChIJ1-T_XFTlwogRkMPcpinvCwc,LA Fitness,Pinellas County,27.9180821,-82.7313762,4.3,813
-ChIJ4yaTstL8wogReFCzM8zT8MU,LA Fitness,Pinellas County,27.7910625,-82.7363157,4.0,1011
-ChIJBbJ_TSDywogROegCWeB9l90,LA Fitness,Pinellas County,28.0179142,-82.758304,4.0,702
-ChIJX9BI_CruwogR0byAOznLST4,LA Fitness,Pinellas County,27.9617629,-82.7487938,4.1,956
-ChIJo_f2n63mwogRXduEwtcs8Hw,LA Fitness,Pinellas County,27.8256182,-82.6389752,4.0,781
-ChIJu4UD8437wogRbqmDDfWmxCs,LA Fitness,Pinellas County,27.8423732,-82.7925137,4.1,722
-ChIJ17_AQ1LjwogReAsDncEsjGg,Orangetheory Fitness,Pinellas County,27.7863912,-82.7292482,4.8,198
-ChIJG9nEfN7vwogRSFNprSTt4No,Orangetheory Fitness,Pinellas County,28.0072213,-82.7278651,4.9,429
-ChIJMd-SoJ7ywogRWTbYMnyvW-k,Orangetheory Fitness,Pinellas County,28.0784289,-82.7376496,4.7,207
-ChIJi0Y-TynjwogRTEc4Nrf-84I,Orangetheory Fitness,Pinellas County,27.8184115,-82.6391652,4.8,255
-ChIJqSWulVv6wogRhZs5Bga_AUw,Orangetheory Fitness,Pinellas County,27.8935643,-82.784073,4.8,261
-ChIJtcUQB4ThwogRv9O7qCCdEQg,Orangetheory Fitness,Pinellas County,27.7699583,-82.6424629,4.7,211
-ChIJA3PfQYrvwogRFtsqwunad2M,Planet Fitness,Pinellas County,27.982122,-82.71111,4.5,357
-ChIJGzg65uTxwogRLVMJZVZa9Rs,Planet Fitness,Pinellas County,27.9890231,-82.774106,4.6,934
-ChIJTXkFo3nywogR3ROpDA8NIAU,Planet Fitness,Pinellas County,28.0511805,-82.7377519,4.3,934
-ChIJU95Eqq37wogRHsUeDv8msN0,Planet Fitness,Pinellas County,27.8811707,-82.7887901,4.4,463
-ChIJY-uqalHjwogRl_e7o4m6n30,Planet Fitness,Pinellas County,27.81981,-82.72796,4.3,1335
-ChIJv90q4R3lwogREbNjzKAZ2IM,Planet Fitness,Pinellas County,27.8739763,-82.7070226,4.4,1169
-ChIJdVwdbkZH3YgRHCZ1uAkB00Q,Gold's Gym,Polk County,28.0823638,-81.9661425,4.2,17
-ChIJ0e7WTThH3YgRO6KqooEkihU,LA Fitness,Polk County,28.0905471,-81.9655419,4.5,727
-ChIJe62vFBY53YgRuAaG1T6qFd8,Orangetheory Fitness,Polk County,28.0006993,-81.9798331,4.8,193
-ChIJ0QGn84EN3YgRoElyWJfjgaI,Planet Fitness,Polk County,27.9508878,-81.6178064,4.5,728
-ChIJ52EQn4pz3YgRWslQXDrpvwk,Planet Fitness,Polk County,28.122706,-81.6398064,4.1,115
-ChIJfbHFoU453YgRXXVCDxpbRRU,Planet Fitness,Polk County,27.9870865,-81.9597625,4.4,1052
-ChIJwTWzUp9G3YgRohkoFhWkr5U,Planet Fitness,Polk County,28.1221886,-81.9753733,4.2,654
-ChIJz7BPsVVr3YgROIq_INHtOqo,Planet Fitness,Polk County,28.0533881,-81.7787848,4.5,1177
-ChIJF8f8bH9l5ogRPa7VrXhmyJU,Planet Fitness,Putnam County,29.6470756,-81.6715474,4.6,551
-ChIJMa2_ZQfckIgRb5VQKJ8x3NE,24 Hour Fitness,Santa Rosa County,30.4018223,-86.9890953,4.8,84
-ChIJ8yqM61XlkIgRu24JIa0B84k,Planet Fitness,Santa Rosa County,30.6192529,-87.0523944,4.5,529
-ChIJ75SXDuFGw4gRSQ47lCXxid4,LA Fitness,Sarasota County,27.2955169,-82.4495086,4.1,654
-ChIJ2aTbDW1Aw4gR0Nhdf5701Rs,Orangetheory Fitness,Sarasota County,27.3366178,-82.5384191,4.9,334
-ChIJHd21FIFBw4gRUTXx-wM1Jtw,Orangetheory Fitness,Sarasota County,27.2608381,-82.5211627,4.8,423
-ChIJ3QNPkqlDw4gRxA_QkeQfe6A,Planet Fitness,Sarasota County,27.2360166,-82.499458,4.4,538
-ChIJN1ibw6hBw4gRR8zNlkwVbbE,Planet Fitness,Sarasota County,27.3416312,-82.4986413,4.2,884
-ChIJO_r1JPtZw4gRxEDvbx57McU,Planet Fitness,Sarasota County,27.0513725,-82.3960855,4.4,951
-ChIJPw83t4Jp54gRMcLbJaTGpaU,LA Fitness,Seminole County,28.6573823,-81.205523,4.2,795
-ChIJQ4zJeLly54gRUmw3Ind-zms,LA Fitness,Seminole County,28.7545687,-81.3575581,4.4,1199
-ChIJYcu5yN1z54gR15xZOthCvKk,LA Fitness,Seminole County,28.6861362,-81.4041061,4.0,769
-ChIJt2jquW1t54gRuG6jzePGbYw,LA Fitness,Seminole County,28.758368,-81.288792,4.3,576
-ChIJ376EaW9p54gRi2S8-jFj8bc,Orangetheory Fitness,Seminole County,28.6548842,-81.2245004,4.9,134
-ChIJ9bqSb6Nv54gR8YIt14h85og,Orangetheory Fitness,Seminole County,28.6461193,-81.2687217,4.5,25
-ChIJFU7FkZxx54gR6eCAEZ3DJfY,Orangetheory Fitness,Seminole County,28.6641757,-81.3794141,4.6,147
-ChIJOe4oXklt54gRxkgCqGG0ONg,Orangetheory Fitness,Seminole County,28.7548597,-81.3456307,4.7,170
-ChIJ___vDn8N54gRAELuFWwUG9g,Orangetheory Fitness,Seminole County,28.8124307,-81.3437766,4.6,162
-ChIJ41WjCZ5p54gRTXzqL9_kCbo,Planet Fitness,Seminole County,28.6519719,-81.2063033,4.4,777
-ChIJ8SkoRWUT54gROlAbwdxiu1w,Planet Fitness,Seminole County,28.8086249,-81.3336545,4.2,155
-ChIJB2j4ZFpt54gReJIcXzmp8Go,Planet Fitness,Seminole County,28.7549177,-81.3319307,4.4,1013
-ChIJ_9w1Skhx54gRajEXiY4zKwo,Planet Fitness,Seminole County,28.6591203,-81.4219578,4.2,691
-ChIJv49YJDlu54gRLvfh2_D0SCw,Planet Fitness,Seminole County,28.6436009,-81.3208195,4.2,729
-ChIJw8-tzsZt54gRFOL-wCrOblw,Planet Fitness,Seminole County,28.7003998,-81.3023533,4.7,313
-ChIJ84TuDfEn5IgRrcUkVWn50Nk,Orangetheory Fitness,St. Johns County,29.881543,-81.3244268,4.9,177
-ChIJ988IZngx5IgRMSg5IBvy8P4,Orangetheory Fitness,St. Johns County,30.1097137,-81.4181151,4.9,171
-ChIJDejKVaPS5YgRq_YIoLxW7JU,Orangetheory Fitness,St. Johns County,30.057652,-81.5321999,4.5,134
-ChIJV5u4yECd5ogRHfOtN6bnZG8,Planet Fitness,St. Johns County,29.8631046,-81.3429306,4.3,1053
-ChIJibPdxXTs3ogREQ5MQ1_qAp8,LA Fitness,St. Lucie County,27.317722,-80.390819,4.1,1060
-ChIJbSkkzA7s3ogR83RVB4L7x6E,Orangetheory Fitness,St. Lucie County,27.3160127,-80.3801181,4.8,205
-ChIJK50MV_fp3ogRQl1GO_nUxdA,Planet Fitness,St. Lucie County,27.2774627,-80.2938182,4.7,958
-ChIJS_F9zCTq3ogRo4ELUVZ5qZI,Planet Fitness,St. Lucie County,27.2481689,-80.3740472,4.3,897
-ChIJVQ41dADx3ogRq0dSaqf68B0,Planet Fitness,St. Lucie County,27.4280568,-80.3279121,4.0,116
-ChIJu1Hpufzu3ogRRBKZ9f-oevE,Planet Fitness,St. Lucie County,27.3756645,-80.3273864,4.5,881
-ChIJvSrB6rnF54gR7bHeDG5duYE,Orangetheory Fitness,Sumter County,28.9078998,-81.9757468,4.8,51
-ChIJ2QaVlj7Z5ogRG2sMG4SKzvU,Gold's Gym,Volusia County,29.1944106,-81.0683141,4.7,691
-ChIJ06KpSvgQ54gRjYuI_J4WwWI,LA Fitness,Volusia County,28.9146264,-81.2913099,3.7,874
-ChIJbdrPcIMn54gRnrZgxwa8Rsk,LA Fitness,Volusia County,29.1083671,-81.0238778,4.0,788
-ChIJ2aoDA80v54gRlsjBY9K9tKg,Orangetheory Fitness,Volusia County,29.0119189,-80.9462292,4.9,93
-ChIJ5RuNdrUb54gRyJQYkDsq6Vk,Orangetheory Fitness,Volusia County,28.9874161,-81.2976376,4.7,94
-ChIJn6ry4Ucn54gRQK0tdFcbVrI,Orangetheory Fitness,Volusia County,29.1111352,-81.0338567,4.9,106
-ChIJ3adulAgv54gR-iPBgIvH1OY,Planet Fitness,Volusia County,29.0085116,-80.9183257,4.6,522
-ChIJAWXFgvgQ54gREOf-kLjVa-w,Planet Fitness,Volusia County,28.9091399,-81.2931432,4.4,1244
-ChIJO4bmH7Td5ogRKCjdd9E2IkY,Planet Fitness,Volusia County,29.2769471,-81.0840093,4.1,113
-ChIJfdTXUabZ5ogRCzc24V1v4pc,Planet Fitness,Volusia County,29.1786377,-81.026877,4.3,859
-ChIJw6j32-La5ogRg9VMwaeiCF4,Planet Fitness,Volusia County,29.26794,-81.02928,3.9,705
-ChIJzdfrW24b54gRMs6AtDMXdgE,Planet Fitness,Volusia County,29.056223,-81.30314,4.3,623
-ChIJdb8YGeiF7IgRCix3HyXCzFI,24 Hour Fitness,Wakulla County,30.2003077,-84.3657089,4.6,72
-ChIJ96iErIKF7IgRE0M_ZqZ0ahY,LA Fitness,Wakulla County,30.1928954,-84.3723585,5.0,5
-ChIJ6-Pq1Ds_kYgRHgBZapCb61g,Gold's Gym,Walton County,30.385651,-86.375919,4.1,378
+LocationID,GymChain,GymName,Address,CountyName,Latitude,Longitude,Rating,ReviewCount
+ChIJLxydKVO76IgR1kHp_GTHafw,Orangetheory Fitness,Orangetheory Fitness,"2005 NW 43rd St, Gainesville, FL 32605, USA",Alachua County,29.6716842,-82.3881046,4.8,184
+ChIJaaOaky6j6IgRYflms5Sinv8,Orangetheory Fitness,Orangetheory Fitness,"3205 Clark Butler Blvd #20, Gainesville, FL 32608, USA",Alachua County,29.6244061,-82.3821119,4.8,165
+ChIJ2dA-mGSk6IgRav8upj2dAYM,Planet Fitness,Planet Fitness,"2210 NW 13th St, Gainesville, FL 32609, USA",Alachua County,29.6735077,-82.3422263,4.0,719
+ChIJkap58_q96IgR4Qvj2qTw_JI,Planet Fitness,Planet Fitness,"6419 W Newberry Rd Ste B-0016, Gainesville, FL 32605, USA",Alachua County,29.6565388,-82.4112817,3.7,53
+ChIJK7ALANOOk4gRIvrEb7z0WgQ,Gold's Gym,Gold's Gym,"11205 Middle Beach Rd, Panama City Beach, FL 32407, USA",Bay County,30.1875381,-85.8162305,3.5,4
+ChIJq6rqRjeMk4gR15cZYmIY5wc,Orangetheory Fitness,Orangetheory Fitness,"15500 Panama City Beach Pkwy #780, Panama City Beach, FL 32413, USA",Bay County,30.2222524,-85.8653523,4.8,191
+ChIJERV-729_k4gRsh4_rBPl7lU,Planet Fitness,Planet Fitness,"208 S Tyndall Pkwy, Parker, FL 32404, USA",Bay County,30.14386,-85.59282,4.6,712
+ChIJdQcPxdODk4gRwscTvPYGVlo,Planet Fitness,Planet Fitness,"2614 Hwy 77, Martin Luther King Jr Blvd, Panama City, FL 32405, USA",Bay County,30.1950647,-85.6488788,4.5,1367
+ChIJtfm0MHkO3ogRKPJAkR7U6L8,Gold's Gym,Gold'S Gym - Melbourne,"3008 W New Haven Ave, Melbourne, FL 32904, USA",Brevard County,28.0790091,-80.6709114,5.0,1
+ChIJoRlevpgP3ogRKh1d-kcNSYM,LA Fitness,LA Fitness,"2447 N Wickham Rd #102, Melbourne, FL 32935, USA",Brevard County,28.1463126,-80.6696142,4.2,570
+ChIJxS-5qJkN3ogRssNPkK3HsEs,LA Fitness,LA Fitness,"4454 Hollywood Blvd, West Melbourne, FL 32904, USA",Brevard County,28.0370148,-80.6537975,4.2,971
+ChIJK0CYGf4E3ogRiUqtekkiJNI,Orangetheory Fitness,Orangetheory Fitness,"6365 N Wickham Rd D301, Melbourne, FL 32940, USA",Brevard County,28.2164191,-80.6720084,4.6,140
+ChIJ75q_OScN3ogRzcuwltZeqN4,Planet Fitness,Planet Fitness,"160 Malabar Rd, Palm Bay, FL 32907, USA",Brevard County,27.996059,-80.6740379,4.3,847
+ChIJ7bjfjSAC3ogRNY9de5lBM8g,Planet Fitness,Planet Fitness,"1802 US-1, Rockledge, FL 32955, USA",Brevard County,28.3298943,-80.7197333,4.3,846
+ChIJ8agyBtkb3ogRqSBpPKztgiE,Planet Fitness,Planet Fitness,"1024 Jimmy Buffett Mem Hwy, Satellite Beach, FL 32937, USA",Brevard County,28.184578,-80.5935948,4.5,394
+ChIJL-StHbCr4IgRThKLNFS1k3g,Planet Fitness,Planet Fitness,"6221 US-1, Cocoa, FL 32927, USA",Brevard County,28.4709532,-80.7676889,4.3,491
+ChIJMUxiDoip4IgROYFz5ajXOmk,Planet Fitness,Planet Fitness,"245 Crockett Blvd, Merritt Island, FL 32953, USA",Brevard County,28.384239,-80.7054898,4.4,359
+ChIJQY6TYNMP3ogR7mE7DiO0ELA,Planet Fitness,Planet Fitness,"840 N Apollo Blvd, Melbourne, FL 32935, USA",Brevard County,28.1203229,-80.640245,4.2,735
+ChIJVd021Xez4IgRwhAbIbd2uFQ,Planet Fitness,Planet Fitness,"700 Cheney Hwy, Titusville, FL 32780, USA",Brevard County,28.559028,-80.808317,4.6,131
+ChIJjTJNqfMP3ogR2kyOx-4PMY4,Planet Fitness,Planet Fitness,"1555 W New Haven Ave, West Melbourne, FL 32904, USA",Brevard County,28.0771162,-80.6476923,3.8,107
+ChIJ-cfuJR0J2YgRYBWatyI7cEU,LA Fitness,LA Fitness,"13999 W Sunrise Blvd, Sunrise, FL 33323, USA",Broward County,26.146706,-80.3335828,4.3,1118
+ChIJ93pdyqEC2YgRfMrRphEjwxA,LA Fitness,LA Fitness,"1000 N Federal Hwy, Pompano Beach, FL 33062, USA",Broward County,26.2435717,-80.1012414,4.6,3347
+ChIJA1zE8pQH2YgR1P2s7WoxFwI,LA Fitness,LA Fitness,"1041 S University Dr, Plantation, FL 33324, USA",Broward County,26.1078736,-80.252113,4.4,1139
+ChIJBcpKTgCl2YgRmY7XIy2-lTw,LA Fitness,LA Fitness,"11645 Red Rd H-1, Miramar, FL 33025, USA",Broward County,25.9850669,-80.299547,3.9,187
+ChIJJ02y4GEb2YgRnnbaTiQtA1Y,LA Fitness,LA Fitness,"5501 Lyons Rd, Coconut Creek, FL 33073, USA",Broward County,26.2992248,-80.1879424,3.8,808
+ChIJPf7MP2kA2YgRHHzvzefzyKw,LA Fitness,LA Fitness,"1900 SE 10th Ave, Fort Lauderdale, FL 33316, USA",Broward County,26.0972256,-80.1321239,4.0,1326
+ChIJS9QT7DkF2YgRJXS83G1BTPo,LA Fitness,LA Fitness,"2633 N University Dr, Coral Springs, FL 33065, USA",Broward County,26.2634237,-80.2492952,3.8,677
+ChIJfSj_5mOh2YgRxTBgb1eJuF4,LA Fitness,LA Fitness,"18445 Pines Blvd, Pembroke Pines, FL 33029, USA",Broward County,26.0098722,-80.3947096,4.2,1284
+ChIJp6HXICAC2YgR91kGsRnoq_g,LA Fitness,LA Fitness,"3825 N Federal Hwy, Oakland Park, FL 33308, USA",Broward County,26.175315,-80.1208524,3.9,1415
+ChIJp9HiGsSo2YgReUXIEtc32vo,LA Fitness,LA Fitness,"350 N University Dr, Pembroke Pines, FL 33024, USA",Broward County,26.0126895,-80.249588,4.2,1233
+ChIJs_Pshnvi2IgRHKGJoXW4w_0,LA Fitness,LA Fitness,"1000 E Hillsboro Blvd, Deerfield Beach, FL 33441, USA",Broward County,26.3168112,-80.0896344,4.2,1114
+ChIJx1_iM1ym2YgRnj_jYcdguYA,LA Fitness,LA Fitness,"1900 N Flamingo Rd, Pembroke Pines, FL 33028, USA",Broward County,26.0260635,-80.3149562,3.8,890
+ChIJx79FynCp2YgRZKYWQxhsojg,LA Fitness,LA Fitness,"5591 Sheridan St, Hollywood, FL 33021, USA",Broward County,26.0345328,-80.1988276,3.6,1420
+ChIJBWSYZuir2YgRyXL4r1xS7oE,Orangetheory Fitness,Orangetheory Fitness,"3251 Hollywood Blvd, Hollywood, FL 33021, USA",Broward County,26.0139963,-80.1748032,4.7,424
+ChIJI0i6HqKm2YgRtLVZZX89Kvs,Orangetheory Fitness,Orangetheory Fitness,"14918 Pines Blvd, Pembroke Pines, FL 33027, USA",Broward County,26.0062981,-80.3481064,4.6,154
+ChIJPz_rSK2n2YgReOFao8pnYsQ,Orangetheory Fitness,Orangetheory Fitness,"5874 S Flamingo Rd, Cooper City, FL 33330, USA",Broward County,26.0450862,-80.3119747,4.9,261
+ChIJQ2nUZvgJ2YgRovtgLYeXwX8,Orangetheory Fitness,Orangetheory Fitness,"1132 Weston Rd, Weston, FL 33326, USA",Broward County,26.1052901,-80.3630158,4.6,178
+ChIJRWESZXYQ2YgRnlMG62ZWa7o,Orangetheory Fitness,Orangetheory Fitness,"6230 Coral Ridge Dr, Coral Springs, FL 33076, USA",Broward County,26.3073174,-80.2802598,4.7,135
+ChIJT-CM5qfi2IgRc5iMlHfbhxs,Orangetheory Fitness,Orangetheory Fitness,"1700 NE 23rd St, Pompano Beach, FL 33062, USA",Broward County,26.258644,-80.1021696,4.8,137
+ChIJTWkKumgA2YgRt0Z4M84jSiE,Orangetheory Fitness,Orangetheory Fitness,"1835 Cordova Rd, Fort Lauderdale, FL 33316, USA",Broward County,26.09816,-80.131478,4.8,199
+ChIJfaASTDwC2YgRWfIMZP2fYUA,Orangetheory Fitness,Orangetheory Fitness,"1759 E Commercial Blvd, Fort Lauderdale, FL 33334, USA",Broward County,26.1902132,-80.1231266,4.6,217
+ChIJfytPjnwI2YgRcFW8llJA42k,Orangetheory Fitness,Orangetheory Fitness,"10073 Cleary Blvd, Plantation, FL 33324, USA",Broward County,26.1350441,-80.2842272,4.7,298
+ChIJh8VKn-sB2YgRIIK4loIa1Uc,Orangetheory Fitness,Orangetheory Fitness,"2354 N Federal Hwy, Fort Lauderdale, FL 33305, USA",Broward County,26.1542421,-80.1173627,4.7,184
+ChIJv-BLh8il2YgREMQgT_ABPVw,Orangetheory Fitness,Orangetheory Fitness,"12316 Miramar Pkwy, Miramar, FL 33025, USA",Broward County,25.9781529,-80.3104334,4.6,208
+ChIJweSXjKcc2YgRfinNKsm93yg,Orangetheory Fitness,Orangetheory Fitness,"4449 Lyons Rd J - 103, Coconut Creek, FL 33073, USA",Broward County,26.284572,-80.1870431,4.9,239
+ChIJB6n2oYAc2YgRyhLWJgAPo0M,Planet Fitness,Planet Fitness,"4291 W Hillsboro Blvd, Coconut Creek, FL 33073, USA",Broward County,26.31885,-80.18411,4.3,1202
+ChIJHco8sxkb2YgRROpeQCG5t2I,Planet Fitness,Planet Fitness,"9535 Westview Dr, Coral Springs, FL 33076, USA",Broward County,26.30019,-80.2519,4.4,195
+ChIJJdwpGzoG2YgRmrU6y8P2TeU,Planet Fitness,Planet Fitness,"8219 W Sunrise Blvd, Plantation, FL 33322, USA",Broward County,26.1496644,-80.2602105,4.5,1297
+ChIJKVGz3p4E2YgRjczer8QY9eY,Planet Fitness,Planet Fitness,"4911 Coconut Creek Pkwy, Coconut Creek, FL 33063, USA",Broward County,26.24638,-80.19049,4.4,938
+ChIJRTHasQYB2YgRYI1mZxVxH-E,Planet Fitness,Planet Fitness,"110 SE 6th St, Fort Lauderdale, FL 33301, USA",Broward County,26.1141099,-80.1418989,4.6,107
+ChIJSyyDJsMF2YgRW5NxYJ7-LLs,Planet Fitness,Planet Fitness,"7501 NW 57th St, Tamarac, FL 33319, USA",Broward County,26.1961345,-80.250865,4.3,1351
+ChIJWyDfY9AA2YgRR8n8diUMCuk,Planet Fitness,Planet Fitness,"2670 W Broward Blvd, Fort Lauderdale, FL 33312, USA",Broward County,26.1191269,-80.1776001,4.4,1984
+ChIJZ7Cha8al2YgRCia7nAj_pXc,Planet Fitness,Planet Fitness,"12531 Miramar Pkwy, Miramar, FL 33027, USA",Broward County,25.9804968,-80.3135123,4.7,1012
+ChIJg-XNbR6m2YgR0KUCSfd_wrM,Planet Fitness,Planet Fitness,"9930 Johnson St, Pembroke Pines, FL 33024, USA",Broward County,26.0148929,-80.2777379,4.4,1303
+ChIJhzJQ7lAB2YgRa78bFUZLmc4,Planet Fitness,Planet Fitness,"3600 N Federal Hwy, Fort Lauderdale, FL 33308, USA",Broward County,26.1721389,-80.1189114,4.6,1724
+ChIJlTZuQKUD2YgRxR0bq7_b2dM,Planet Fitness,Planet Fitness Plaza,"Palm Plaza, 1400-1440 S Pompano Pkwy #1436, Pompano Beach, FL 33069, USA",Broward County,26.2123636,-80.1550381,4.4,268
+ChIJp390PaUD2YgR-NeRk3S4uAc,Planet Fitness,Planet Fitness,"1434 Powerline Rd, Pompano Beach, FL 33069, USA",Broward County,26.21199,-80.15435,4.4,1409
+ChIJsWMtbk8H2YgRDOScQuB-j2o,Planet Fitness,Planet Fitness,"2629 N State Rd 7, Lauderhill, FL 33313, USA",Broward County,26.1599228,-80.2037696,4.6,997
+ChIJsYPKkPWn2YgRZQQTwE3EIDc,Planet Fitness,Planet Fitness,"14802 Pines Blvd, Pembroke Pines, FL 33027, USA",Broward County,26.0067451,-80.3449134,4.6,1141
+ChIJuYcpaP8H2YgR-6a8wi8joCA,Planet Fitness,Planet fitness,"2310 S University Dr, Davie, FL 33324, USA",Broward County,26.0911634,-80.249513,4.4,658
+ChIJYzEGmJao3IgRCUcHjiU1eks,Planet Fitness,Planet Fitness,"24123 Peachland Blvd, Port Charlotte, FL 33954, USA",Charlotte County,27.0156206,-82.0541477,4.3,1288
+ChIJZzz18Tyr3IgRPvbLCRjANAY,Planet Fitness,Planet Fitness,"1825 S Tamiami Trl, Port Charlotte, FL 33948, USA",Charlotte County,27.0046756,-82.1328654,4.5,308
+ChIJj6p0Rs5B6IgRXX3o34s4V2c,Planet Fitness,Planet Fitness,"1641 SE US Hwy 19, Crystal River, FL 34429, USA",Citrus County,28.8832664,-82.5808415,4.4,29
+ChIJlexP6N1z6IgRv79ENw8qI6I,Planet Fitness,Planet Fitness,"1660 US-41, Inverness, FL 34450, USA",Citrus County,28.8446099,-82.3437469,4.5,764
+ChIJp4ee0cVr6IgRvvKOS-BP_aI,Planet Fitness,Planet Fitness,"3317 W Norvell Bryant Hwy, Lecanto, FL 34461, USA",Citrus County,28.894597,-82.4896618,4.3,22
+ChIJo7fygkHE5YgRWU_tnCZJ9Mk,LA Fitness,LA Fitness,"661 Blanding Blvd Ste 800, Orange Park, FL 32073, USA",Clay County,30.1477784,-81.7547264,4.0,443
+ChIJgeShwj7F5YgR5a4v6TmSBKA,Orangetheory Fitness,Orangetheory Fitness,"1615 County Rd 220, Fleming Island, FL 32003, USA",Clay County,30.1008758,-81.716128,4.9,146
+ChIJ2-OO-oXG5YgRAMLkNBbzumE,Planet Fitness,Planet Fitness,"1980 Wells Rd, Orange Park, FL 32073, USA",Clay County,30.1865286,-81.7412771,4.2,691
+ChIJcYua3UHF5YgRSZzMXv1QpWs,Planet Fitness,Planet Fitness,"1514 County Rd 220 Unit 400, Fleming Island, FL 32003, USA",Clay County,30.1042051,-81.7090732,4.1,374
+ChIJg9UmV8zF5YgRiscrPKpLnBs,Planet Fitness,Planet Fitness,"700 Blanding Blvd, Orange Park, FL 32065, USA",Clay County,30.1488713,-81.7583811,4.4,150
+ChIJp_U8pOse24gRT4DOH3HsvBA,LA Fitness,LA Fitness,"871 Vanderbilt Beach Rd, Naples, FL 34108, USA",Collier County,26.2521939,-81.8039622,4.3,966
+ChIJJTb8eS8c24gREKAczr5iIn0,Orangetheory Fitness,Orangetheory Fitness,"7935 Airport-Pulling Rd #1, Naples, FL 34109, USA",Collier County,26.2408544,-81.7707213,4.7,265
+ChIJ0-QXWNHj2ogRphscLcCINqQ,Planet Fitness,Planet Fitness,"3725 Tamiami Trl E, Naples, FL 34112, USA",Collier County,26.121821,-81.75897,4.1,584
+ChIJ_SjuZvrl2ogRWdb5dije0Bs,Planet Fitness,Planet Fitness,"12725 Tamiami Trl E #128, Naples, FL 34113, USA",Collier County,26.0672704,-81.6993472,3.7,592
+ChIJz-AmV-Md24gRH_XYVf0oBLE,Planet Fitness,Planet Fitness,"4955 Golden Gate Pkwy, Naples, FL 34116, USA",Collier County,26.182,-81.71014,4.1,553
+ChIJrR-JHkYk74gRcuJu5Amb3e0,Planet Fitness,Planet Fitness,"2782 W US Hwy 90, Lake City, FL 32055, USA",Columbia County,30.1783669,-82.6780777,4.4,915
+ChIJ806rjwmX3IgRSAtneD072NE,Planet Fitness,Planet Fitness,"2231 SE Hwy 70, Arcadia, FL 34266, USA",DeSoto County,27.2081049,-81.8375204,4.6,156
+ChIJ-0_T3FXJ5YgRhkJ9s2Ftj0k,LA Fitness,LA Fitness,"11250 Old St Augustine Rd Ste 16, Jacksonville, FL 32257, USA",Duval County,30.172026,-81.60623,4.1,450
+ChIJE15VNEBL5IgRqaZP0xIL6HQ,LA Fitness,LA Fitness,"11901 Atlantic Blvd Ste 800, Jacksonville, FL 32225, USA",Duval County,30.3222832,-81.4913712,4.0,748
+ChIJgx18wUVJ5IgRM-fbgTdwV60,LA Fitness,LA Fitness,"985 Atlantic Blvd, Atlantic Beach, FL 32233, USA",Duval County,30.325935,-81.4115859,4.1,420
+ChIJ2Snpvs9J5IgRg7weDQscvAM,Orangetheory Fitness,Orangetheory Fitness,"3994 3rd St S Ste 9, Jacksonville Beach, FL 32250, USA",Duval County,30.2578887,-81.3933015,4.9,332
+ChIJ51Ut6E9K5IgRRb_eM3c0FQ8,Orangetheory Fitness,Orangetheory Fitness,"13500 Beach Blvd #30, Jacksonville, FL 32224, USA",Duval County,30.2849897,-81.4599885,4.9,231
+ChIJSff_FaC35YgRb5PXc-dBfmg,Orangetheory Fitness,Orangetheory Fitness,"2039 Hendricks Ave Unit 215, Jacksonville, FL 32207, USA",Duval County,30.3049839,-81.6522542,4.4,21
+ChIJW3_xbZzB5YgRS8TaF-MjLGE,Orangetheory Fitness,Orangetheory Fitness,"9610 Applecross Rd #102, Jacksonville, FL 32222, USA",Duval County,30.1964625,-81.8271576,4.9,190
+ChIJi-Gb7zXJ5YgRhf_RFmu0M3I,Orangetheory Fitness,Orangetheory Fitness,"11111 San Jose Blvd, Jacksonville, FL 32223, USA",Duval County,30.1743196,-81.6255197,4.7,160
+ChIJkQU3im645YgRmFKRTqLTyis,Orangetheory Fitness,Orangetheory Fitness,"4495 Roosevelt Blvd #318, Jacksonville, FL 32210, USA",Duval County,30.2799634,-81.719261,4.9,251
+ChIJ41qGQeSz5YgRw-OhimcX3oM,Planet Fitness,Planet Fitness,"6060 Fort Caroline Rd, Jacksonville, FL 32277, USA",Duval County,30.3651432,-81.5958334,4.4,633
+ChIJ9QSOyia55YgRJnTP5QRQWF4,Planet Fitness,Planet Fitness,"5810 Normandy Blvd, Jacksonville, FL 32205, USA",Duval County,30.3052742,-81.7487112,4.3,1247
+ChIJGR8Mb7bM5YgR69QT8zNphRo,Planet Fitness,Planet Fitness,"14858 Old St Augustine Rd, Jacksonville, FL 32258, USA",Duval County,30.1398051,-81.5227922,4.4,1151
+ChIJP4sFDDW15YgRsBZDiG7TPzE,Planet Fitness,Planet fitness (Commerce Center),"651 Commerce Center Dr Unit 300, Jacksonville, FL 32225, USA",Duval County,30.3344825,-81.5499892,4.4,902
+ChIJQftyzHOx5YgR8wYBn9DZXUM,Planet Fitness,Planet Fitness,"1102 Dunn Ave #1, Jacksonville, FL 32218, USA",Duval County,30.428576,-81.6643172,3.9,256
+ChIJWfAc5CC55YgRd60DwsaioYw,Planet Fitness,Planet Fitness,"3566 Blanding Blvd #3, Jacksonville, FL 32210, USA",Duval County,30.2711194,-81.7380209,4.5,331
+ChIJiScTiV-x5YgRANX1NL8MTTc,Planet Fitness,Planet Fitness,"5290 Norwood Ave #2, Jacksonville, FL 32208, USA",Duval County,30.3720583,-81.665357,4.3,92
+ChIJmQSPeKa15YgRXccJLFIvALY,Planet Fitness,Planet Fitness,"8595 Beach Blvd, Jacksonville, FL 32216, USA",Duval County,30.2885792,-81.5658342,4.3,894
+ChIJmZj_S6dJ5IgRJwJN-kmra-A,Planet Fitness,Planet Fitness,"253 Royal Palms Dr, Atlantic Beach, FL 32233, USA",Duval County,30.3260491,-81.4087679,4.5,527
+ChIJmcEoJixK5IgRa4C2vv2tHmE,Planet Fitness,Planet Fitness,"14444 Beach Blvd, Jacksonville, FL 32250, USA",Duval County,30.2869427,-81.4348631,4.3,757
+ChIJnx-KI0rH5YgRjAlpML1cgK0,Planet Fitness,Planet Fitness,"7628 103rd St Units 16-20, Jacksonville, FL 32210, USA",Duval County,30.24687,-81.7744587,4.1,496
+ChIJo1FYnnS75YgRDAAgo5FcQiE,Planet Fitness,Planet Fitness,"8661 Old Kings Rd S, Jacksonville, FL 32217, USA",Duval County,30.2227516,-81.5915082,4.5,801
+ChIJp8UXEvm35YgRndYXpkrt6K8,Planet Fitness,Planet Fitness,"2777 University Blvd W, Jacksonville, FL 32217, USA",Duval County,30.2618945,-81.6309538,4.4,93
+ChIJQcF27SjAkIgRoqU0d9dGGuE,LA Fitness,Pensacola Fitness Club,"6933 N 9th Ave, Pensacola, FL 32504, USA",Escambia County,30.4976964,-87.1905683,4.3,297
+ChIJUSOR6vS_kIgROZcDSIyk8QE,Orangetheory Fitness,Orangetheory Fitness,"5555 N Davis Hwy, Pensacola, FL 32503, USA",Escambia County,30.4770431,-87.2256167,4.7,199
+ChIJQ8c1KXm-kIgReDWmzT-2IZU,Planet Fitness,Planet Fitness,"5975 Mobile Hwy, Pensacola, FL 32526, USA",Escambia County,30.4599602,-87.302371,4.4,1071
+ChIJrS6GoPm_kIgR9LAPqiSFe4g,Planet Fitness,Planet Fitness,"6241 N Davis Hwy, Pensacola, FL 32504, USA",Escambia County,30.4902417,-87.2259826,4.3,820
+ChIJy6TruKeVkIgRsB_Dx_nB5qY,Planet Fitness,Planet Fitness,"312 E 9 Mile Rd, Pensacola, FL 32514, USA",Escambia County,30.5342657,-87.260439,4.3,898
+ChIJ4_hvIE6U5ogRE4l63OY05Dg,Planet Fitness,Planet Fitness,"7 Old Kings Rd N Units 20-32, Palm Coast, FL 32137, USA",Flagler County,29.5557066,-81.2148867,4.0,734
+ChIJWcm39RDr5ogRj4wwYcSxwwM,Planet Fitness,Planet Fitness,"5615 FL-100 Unit 100, Palm Coast, FL 32164, USA",Flagler County,29.4746209,-81.2056946,4.2,642
+ChIJ3cHwbnOgwogRwPxFWc9Xi1U,Planet Fitness,Planet Fitness,"11156 Spring Hill Dr, Spring Hill, FL 34609, USA",Hernando County,28.4601806,-82.5389832,4.3,837
+ChIJ8dkYlr0f6IgRPUHmvOGN-Do,Planet Fitness,Planet Fitness,"13003 Cortez Blvd, Brooksville, FL 34613, USA",Hernando County,28.5356412,-82.5133495,4.3,667
+ChIJk75i5ZVX3IgRa1VLUgJqguc,Gold's Gym,Gold's Gym,"1720 US Hwy 27 N, Sebring, FL 33870, USA",Highlands County,27.4984692,-81.4858722,4.1,116
+ChIJi5lISX5X3IgRGRhDuftQ1Y0,Planet Fitness,Planet Fitness,"901 US Hwy 27 N, Sebring, FL 33870, USA",Highlands County,27.4900328,-81.4869699,4.6,539
+ChIJ_4Y_ZFTFwogRcuT6PH9WsBs,Gold's Gym,Gold's Gym Tampa Gas Worx,"802 N 12th St, Tampa, FL 33602, USA",Hillsborough County,27.9551557,-82.4471014,4.7,347
+ChIJ2wZsUPS3wogRIdpnLCdYUtE,LA Fitness,LA Fitness,"5225 Cypress Preserve Dr, Tampa, FL 33647, USA",Hillsborough County,28.1078437,-82.3854436,4.0,695
+ChIJ36FvJjC3wogRPjwUxCmgipI,LA Fitness,LA Fitness,"6411 E County Line Rd, Tampa, FL 33647, USA",Hillsborough County,28.169979,-82.3565139,4.3,1156
+ChIJa12b09XrwogRc-ji0r_RN_g,LA Fitness,LA Fitness,"11252 W Hillsborough Ave, Tampa, FL 33635, USA",Hillsborough County,28.0099913,-82.6101378,4.0,488
+ChIJaxqEfTfAwogRtFQWaUXFC34,LA Fitness,LA Fitness,"5735 Gunn Hwy, Tampa, FL 33625, USA",Hillsborough County,28.0631618,-82.5429728,4.0,573
+ChIJiev7QhDDwogRQMU3tkVwupo,LA Fitness,LA Fitness,"301 S Dale Mabry Hwy, Tampa, FL 33609, USA",Hillsborough County,27.9417071,-82.5061524,4.2,1873
+ChIJrRWGRz_OwogRDh9n6RqnS9g,LA Fitness,LA Fitness,"2890 Providence Lakes Blvd, Brandon, FL 33511, USA",Hillsborough County,27.9208577,-82.3289471,4.1,1176
+ChIJ2y4iR2TdwogR4ABmHVnod68,Orangetheory Fitness,Orangetheory Fitness,"4810 S Manhattan Ave #102, Tampa, FL 33611, USA",Hillsborough County,27.8949474,-82.5179656,4.9,68
+ChIJ4d7dZMbSwogR3O8mr8KsQnM,Orangetheory Fitness,Orangetheory Fitness,"3311 Lithia Pinecrest Rd, Valrico, FL 33596, USA",Hillsborough County,27.8960161,-82.2439888,4.8,162
+ChIJExZ2_NjWwogR6CVcngWIxXY,Orangetheory Fitness,Orangetheory Fitness,"10173 Big Bend Rd #5, Riverview, FL 33578, USA",Hillsborough County,27.7911055,-82.3428709,4.8,250
+ChIJFcW4KuzAwogRDSOQr1mm0B8,Orangetheory Fitness,Orangetheory Fitness,"13122 N Dale Mabry Hwy, Tampa, FL 33618, USA",Hillsborough County,28.0660531,-82.5064855,4.8,413
+ChIJI4bU2A_DwogRQqzPLCTwM0A,Orangetheory Fitness,Orangetheory Fitness,"115 S Dale Mabry Hwy, Tampa, FL 33609, USA",Hillsborough County,27.94357,-82.5061101,4.6,256
+ChIJQVE55PPEwogRN7JyRgZ3C3U,Orangetheory Fitness,Orangetheory Fitness,"1061 E Cumberland Ave, Tampa, FL 33602, USA",Hillsborough County,27.944739,-82.4491864,4.8,312
+ChIJ-3TqHcfGwogRFiB9dOhO-j0,Planet Fitness,Planet Fitness,"210 W Waters Ave, Tampa, FL 33604, USA",Hillsborough County,28.0238559,-82.4616406,4.5,1225
+ChIJ8_rP59nHwogRaiKVEFrNmR4,Planet Fitness,Planet Fitness,"5681 E Fowler Ave, Tampa, FL 33617, USA",Hillsborough County,28.05324,-82.39244,4.1,1562
+ChIJCcklsInNwogR_FSso73dqaQ,Planet Fitness,Planet Fitness,"911 Lithia Pinecrest Rd, Brandon, FL 33511, USA",Hillsborough County,27.9253777,-82.2701265,1.9,37
+ChIJD8Bsx6U23YgRlbKoN93VWKM,Planet Fitness,Planet Fitness,"1864 James L Redman Pkwy, Plant City, FL 33563, USA",Hillsborough County,27.9941095,-82.1197019,4.5,997
+ChIJHXMNuA7MwogRK_tmB2tsKMw,Planet Fitness,Planet Fitness,"725 W Dr Martin Luther King Jr Blvd, Seffner, FL 33584, USA",Hillsborough County,27.9829847,-82.2869187,4.3,1242
+ChIJIXiBMODBwogRuUFmSTOfJ8E,Planet Fitness,Planet Fitness,"7310 W Waters Ave, Tampa, FL 33634, USA",Hillsborough County,28.02436,-82.56103,4.2,1114
+ChIJPdv-B4TBwogRfgCBdO7vodM,Planet Fitness,Planet Fitness,"5353 Gunn Hwy, Tampa, FL 33624, USA",Hillsborough County,28.0599661,-82.534119,4.7,536
+ChIJ_zRwVHTRwogR3hb3-qpNk0k,Planet Fitness,Planet Fitness,"9822 B US-301, Riverview, FL 33578, USA",Hillsborough County,27.8557987,-82.3247805,4.5,1156
+ChIJt7q34JrHwogRb4UA_2UH7qw,Planet Fitness,Planet Fitness,"2546 E Bearss Ave Unit C, Tampa, FL 33613, USA",Hillsborough County,28.0816164,-82.4321366,4.7,1169
+ChIJn9woKStc3ogRxGPgLv8cmf8,Orangetheory Fitness,Orangetheory Fitness,"5240 US-1, Vero Beach, FL 32967, USA",Indian River County,27.6888311,-80.4097404,4.9,186
+ChIJHcCEyBdf3ogRAVvOSQJ-jK0,Planet Fitness,Planet Fitness,"1225 US-1 Ste 2, Vero Beach, FL 32962, USA",Indian River County,27.6238216,-80.3907831,4.2,827
+ChIJr4WfR_Qhk4gRxoRRLsA6uOo,Planet Fitness,Planet Fitness,"2800 FL-71, Marianna, FL 32446, USA",Jackson County,30.767719,-85.2019419,4.5,518
+ChIJl8rnJIWF54gRrHsrYAoF0D0,Orangetheory Fitness,Orangetheory Fitness,"G8X9+4G, 13900 County Rd 455, Clermont, FL 34711, USA",Lake County,28.5483963,-81.6802351,4.7,165
+ChIJo4aTJV6j54gRljsqAFs4QsY,Orangetheory Fitness,Orangetheory Fitness,"3208 County Rd 44B, Mt Dora, FL 32757, USA",Lake County,28.8262903,-81.643262,4.6,70
+ChIJE3ouBBbA54gRpq9Aa9e7LfE,Planet Fitness,Planet Fitness,"735 N 14th St, Leesburg, FL 34748, USA",Lake County,28.8203563,-81.888599,4.5,934
+ChIJbYmM5IGP54gRrXPwbsjBjWY,Planet Fitness,Planet Fitness,"2620 US-27, Clermont, FL 34711, USA",Lake County,28.5289244,-81.7342017,4.5,914
+ChIJt_AuM9Ki54gRY5LCjqfU_-w,Planet Fitness,Planet Fitness,"2830 S Bay St, Eustis, FL 32726, USA",Lake County,28.8258296,-81.6873837,4.4,921
+ChIJ3Vj6d1cZ24gRB9ojruVAQfo,Gold's Gym,Gold's Gym North Naples,"3306 Bonita Beach Rd SW, Bonita Springs, FL 34134, USA",Lee County,26.331812,-81.8098617,3.8,38
+ChIJR1_r39tA24gRJgMv1XJ3f34,LA Fitness,LA Fitness,"2301 Del Prado Blvd S, Cape Coral, FL 33990, USA",Lee County,26.608436,-81.9394142,4.2,1023
+ChIJZ5UaVQ0U24gRf7igP8qCBv8,LA Fitness,LA Fitness,"10058 Gulf Center Dr, Fort Myers, FL 33913, USA",Lee County,26.4895395,-81.7901507,4.2,849
+ChIJ-6uNawhr24gRgho0XR44oL8,Orangetheory Fitness,Orangetheory Fitness,"8001 Dani Dr, Fort Myers, FL 33966, USA",Lee County,26.6057281,-81.8105286,4.7,264
+ChIJBVPFev5H24gRjgDQ2VjJQ7E,Orangetheory Fitness,Orangetheory Fitness,"2311 Santa Barbara Blvd S, Cape Coral, FL 33991, USA",Lee County,26.609252,-81.973686,4.7,149
+ChIJo3ecwwEX24gRyadPFSbLKCk,Orangetheory Fitness,Orangetheory Fitness,"10171 Estero Town Commons Place, Estero, FL 33928, USA",Lee County,26.4304823,-81.7826178,4.7,48
+ChIJ16QR4toV24gR1sgrLxYAN_o,Planet Fitness,Planet Fitness,"18911 S Tamiami Trl, Fort Myers, FL 33908, USA",Lee County,26.4656201,-81.8307279,3.9,668
+ChIJPWxJymQb24gRPnHmZMVwSuY,Planet Fitness,Planet Fitness,"11601 Bonita Beach Rd SE, Bonita Springs, FL 34135, USA",Lee County,26.3289903,-81.7610377,4.2,468
+ChIJ____gElC24gRdz0kFQTLJuc,Planet Fitness,Planet Fitness,"15201 N Cleveland Ave, North Fort Myers, FL 33903, USA",Lee County,26.686134,-81.903863,4.3,1134
+ChIJda-3ciVB24gR4fED_V5Ear4,Planet Fitness,Planet Fitness,"1502 Del Prado Blvd S B, Cape Coral, FL 33990, USA",Lee County,26.625027,-81.942149,4.4,976
+ChIJewXdLtc-24gRBK54XgD1xOA,Planet Fitness,Planet Fitness,"15501 Old McGregor Blvd, Fort Myers, FL 33908, USA",Lee County,26.5165101,-81.9444522,4.4,505
+ChIJxZZXXilA24gRDFJFPCGfTHE,Planet Fitness,Planet Fitness,"3853 Cleveland Ave, Fort Myers, FL 33901, USA",Lee County,26.6057719,-81.8704794,4.2,1190
+ChIJA55IocBY7IgRDS2GNzWXY1M,Orangetheory Fitness,Orangetheory Fitness,"1400 Village Square Blvd Ste 26, Tallahassee, FL 32312, USA",Leon County,30.5123361,-84.2483843,4.8,129
+ChIJP3zSTYT17IgRK23hZ7GE3lE,Orangetheory Fitness,Orangetheory Fitness,"1321 Thomasville Rd #1, Tallahassee, FL 32303, USA",Leon County,30.457103,-84.276891,4.1,174
+ChIJ0yY4RaP17IgR5zo6umVWNPI,Planet Fitness,Planet Fitness,"110 Paul Russell Rd, Tallahassee, FL 32301, USA",Leon County,30.4065766,-84.282247,4.7,479
+ChIJ_3thu6j17IgRHMWRZMrwUFY,Planet Fitness,Planet Fitness,"2020 W Pensacola St Ste 250, Tallahassee, FL 32304, USA",Leon County,30.4418789,-84.3185927,4.2,38
+ChIJkRnb0ZP17IgRfjFWIeW2Vxs,Planet Fitness,Planet Fitness,"1925 N Monroe St, Tallahassee, FL 32303, USA",Leon County,30.4668799,-84.2833946,4.5,988
+ChIJnTktW7Nf7IgRdwcZEAFeuYo,Planet Fitness,Planet Fitness,"1212 Capital Cir SE C, Tallahassee, FL 32301, USA",Leon County,30.4304131,-84.2287833,4.5,656
+ChIJw16clMJZ7IgRJzVx73tdaWU,Planet Fitness,Planet Fitness,"2910 Kerry Forest Pkwy, Tallahassee, FL 32309, USA",Leon County,30.5423752,-84.2247509,4.2,118
+ChIJGwuR-xZmYogRsgvaU9DL8D0,Orangetheory Fitness,Orangetheory Fitness,"8141 Hwy 72 W Ste K, Madison, AL 35758, USA",Madison County,34.7493761,-86.7546994,4.8,168
+ChIJjRpiVA4Ww4gRfnrhkxMt8-U,Gold's Gym,Gold's Gym,"4836 14th St W, Bradenton, FL 34207, USA",Manatee County,27.4547701,-82.5768864,,0
+ChIJYQspEkE5w4gRNpXVxdDIHEM,LA Fitness,LA Fitness,"11661 State Road 70 E, Lakewood Ranch, FL 34202, USA",Manatee County,27.4339589,-82.4247082,4.3,583
+ChIJdU3DYd44w4gRvvxmFxCsm-A,LA Fitness,LA Fitness,"8502 Cooper Creek Blvd, University Park, FL 34201, USA",Manatee County,27.3919083,-82.4557275,4.0,671
+ChIJ-3rBauA7w4gRO2VVOSdyODk,Orangetheory Fitness,Orangetheory Fitness,"5496 Lena Rd, Bradenton, FL 34211, USA",Manatee County,27.4407165,-82.455288,4.9,367
+ChIJuagFdOwXw4gRrm25LwIiFyQ,Planet Fitness,Planet Fitness,"4301 14th St W, Bradenton, FL 34205, USA",Manatee County,27.4629927,-82.5737481,4.4,949
+ChIJxy-B-d8Ww4gRmHgxXUjzYio,Planet Fitness,Planet Fitness,"6605 Manatee Ave W, Bradenton, FL 34209, USA",Manatee County,27.4943995,-82.6277406,3.9,418
+ChIJ97R3W14r5ogRfD9rrD3RGD8,Gold's Gym,Gold’s Gym,"4417 NW Blitchton Rd, Ocala, FL 34482, USA",Marion County,29.2129587,-82.1948017,4.7,656
+ChIJ58qq3KHV54gR_4eiyJg39d0,Orangetheory Fitness,Orangetheory Fitness,"4414 SW College Rd #960, Ocala, FL 34474, USA",Marion County,29.1393839,-82.191939,4.8,234
+ChIJ1UG_IOTU54gRj0Z3yTHZHMU,Planet Fitness,Planet Fitness,"2800 SW 24th Ave, Ocala, FL 34471, USA",Marion County,29.1591554,-82.164163,4.3,907
+ChIJ1zPrlmDF54gRBztCTfJYTgg,Planet Fitness,Planet Fitness,"17950 US-441, Summerfield, FL 34491, USA",Marion County,28.9606722,-81.9670415,4.3,164
+ChIJN8UQZyLT54gRY7NlSWWfHnQ,Planet Fitness,Planet Fitness,"3233 SE Maricamp Rd Unit 500, Ocala, FL 34471, USA",Marion County,29.1619697,-82.0916086,4.4,724
+ChIJA6GsaQ3d3ogRkbYatiJy-IY,LA Fitness,LA Fitness,"1901 NW Federal Hwy, Stuart, FL 34994, USA",Martin County,27.2275288,-80.264099,4.3,724
+ChIJ51XfJX7o3ogRsswGYZW3dBI,Orangetheory Fitness,Orangetheory Fitness,"4215 NW Federal Hwy, Jensen Beach, FL 34957, USA",Martin County,27.2574202,-80.2777516,4.9,104
+ChIJOc2eggnd3ogRsq3MU2cluVY,Orangetheory Fitness,Orangetheory Fitness,"2303 SE Federal Hwy, Stuart, FL 34994, USA",Martin County,27.1783691,-80.2348801,4.8,168
+ChIJT-DzUgnd3ogRQWaWpXAPFMg,Planet Fitness,Planet Fitness,"41 SW Monterey Rd, Stuart, FL 34994, USA",Martin County,27.1770962,-80.2542965,4.4,777
+ChIJ3bkESFW62YgRzMEM_6BGitE,LA Fitness,LA Fitness,"1901 W 39th St, Hialeah, FL 33012, USA",Miami-Dade County,25.8582801,-80.3205032,3.8,890
+ChIJ48fMeHSy2YgRJd218f6PeOI,LA Fitness,LA Fitness,"1801 NE 123rd St Ste 200, North Miami, FL 33181, USA",Miami-Dade County,25.8900694,-80.161973,3.6,1854
+ChIJ6z3keYS22YgR40tT58c-BWQ,LA Fitness,LA Fitness,"900 S Miami Ave Spc 236, Miami, FL 33130, USA",Miami-Dade County,25.7650877,-80.1942998,3.6,1233
+ChIJ9U64nSPA2YgRFTq-wdKaCPs,LA Fitness,LA Fitness,"16339 SW 88th St, Miami, FL 33196, USA",Miami-Dade County,25.6851802,-80.4570911,4.0,1109
+ChIJI-G8gFa52YgRsv0CbX7ur2o,LA Fitness,LA Fitness,"10055 NW 41st St, Doral, FL 33178, USA",Miami-Dade County,25.8122719,-80.359862,4.0,1696
+ChIJIWOsWn7D2YgRXd8hMiXuzGg,LA Fitness,LA Fitness,"20505 S Dixie Hwy, Cutler Bay, FL 33189, USA",Miami-Dade County,25.575739,-80.3691722,4.1,649
+ChIJS-GDU_-l2YgRxy2SZxCURes,LA Fitness,LA Fitness,"5730 NW 183rd St, Hialeah, FL 33015, USA",Miami-Dade County,25.9375213,-80.2950221,3.9,979
+ChIJS6q-9DSs2YgRyXlbRE2iELA,LA Fitness,LA Fitness,"1580 NE Miami Gardens Dr, North Miami Beach, FL 33179, USA",Miami-Dade County,25.9444429,-80.1692699,4.2,2090
+ChIJXZCyno-42YgRLuq1vnEpAvE,LA Fitness,LA Fitness,"8310 Bird Rd, Miami, FL 33155, USA",Miami-Dade County,25.7320763,-80.3301783,4.1,1107
+ChIJZZBeq4262YgR3rRzJ4tee3I,LA Fitness,LA Fitness,"630 W 49th St, Hialeah, FL 33012, USA",Miami-Dade County,25.8654519,-80.2958031,4.4,3115
+ChIJaS9Yu6S32YgR4hkuBnxlMvQ,LA Fitness,LA Fitness,"3301 Coral Wy, Miami, FL 33145, USA",Miami-Dade County,25.750451,-80.2497308,2.7,1210
+ChIJb-UVOHvA2YgRTq9XiqGayyA,LA Fitness,LA Fitness,"13838 SW 56th St, Miami, FL 33175, USA",Miami-Dade County,25.711885,-80.4176157,4.1,745
+ChIJe4qzWyC52YgRDa6GhQUT-SE,LA Fitness,LA Fitness,"9291 W Flagler St, Miami, FL 33174, USA",Miami-Dade County,25.7702876,-80.3478546,4.1,2573
+ChIJf0SvCbC_2YgRh5_4szdIugw,LA Fitness,LA Fitness,"14100 SW 8th St, Miami, FL 33184, USA",Miami-Dade County,25.7599104,-80.4231782,4.2,1322
+ChIJpfiNvIjD2YgRTcjYd-rHx68,LA Fitness,LA Fitness,"15400 SW 127th Ave, Miami, FL 33177, USA",Miami-Dade County,25.6253725,-80.3975699,4.2,533
+ChIJrUKHgujA2YgR3O4QNBc4sqI,LA Fitness,LA Fitness,"8555 SW 124th Ave., Miami, FL 33183, USA",Miami-Dade County,25.6884032,-80.3913512,4.4,1325
+ChIJ0YIrgW3A2YgRx_OjjP7xFsI,Orangetheory Fitness,Orangetheory Fitness,"14627 SW 56th St, Miami, FL 33175, USA",Miami-Dade County,25.7150642,-80.42974,4.8,156
+ChIJA-YrPSmy2YgRgIonuSrLxEM,Orangetheory Fitness,Orangetheory Fitness,"9017 Biscayne Blvd, Miami Shores, FL 33138, USA",Miami-Dade County,25.8580055,-80.183066,4.7,198
+ChIJEYA9iGS42YgRk22ATRJZnSM,Orangetheory Fitness,Orangetheory Fitness,"7396 SW 40th St, Miami, FL 33155, USA",Miami-Dade County,25.7325792,-80.3147836,4.4,137
+ChIJNUGvMVGx2YgRsECMq4TD2GU,Orangetheory Fitness,Orangetheory Fitness,"89 NE 38th St, Miami, FL 33137, USA",Miami-Dade County,25.8119386,-80.1938051,4.4,151
+ChIJQ_j8_W3E2YgRsfJug-EQcoI,Orangetheory Fitness,Orangetheory Fitness,"18455 S Dixie Hwy, Cutler Bay, FL 33157, USA",Miami-Dade County,25.5980932,-80.3510735,4.5,178
+ChIJa1pEF5q32YgRgcGvHhKfIW0,Orangetheory Fitness,Orangetheory Fitness,"2300 Salzedo St, Coral Gables, FL 33134, USA",Miami-Dade County,25.7508029,-80.2609818,4.8,245
+ChIJa2_wEFes2YgRFLf2kAolnZc,Orangetheory Fitness,Orangetheory Fitness,"18839 Biscayne Blvd A, Aventura, FL 33180, USA",Miami-Dade County,25.9502344,-80.1442772,4.4,282
+ChIJc8Qz2aTH2YgRhMIJlVk83lk,Orangetheory Fitness,Orangetheory Fitness,"9045 SW 72nd Pl Apt E150C, Kendall, FL 33156, USA",Miami-Dade County,25.6865141,-80.3126745,4.5,90
+ChIJcaPdNNGk2YgRZazQ_HCKnGU,Orangetheory Fitness,Orangetheory Fitness,"15490 NW 77th Ct, Miami Lakes, FL 33016, USA",Miami-Dade County,25.915247,-80.3271005,4.8,223
+ChIJdx6C76HB2YgRQGCNWTgRDUI,Orangetheory Fitness,Orangetheory Fitness,"13550 SW 120th St #402, Miami, FL 33186, USA",Miami-Dade County,25.6554961,-80.4150854,4.8,302
+ChIJpSNl96m-2YgR4x_Sk8JgqwI,Orangetheory Fitness,Orangetheory Fitness,"5875 NW 105th Ct #106, Doral, FL 33178, USA",Miami-Dade County,25.8263393,-80.3680736,4.7,270
+ChIJtabGO5622YgRtGwQ8Drj7vc,Orangetheory Fitness,Orangetheory Fitness,"269 NE 2nd St, Miami, FL 33132, USA",Miami-Dade County,25.7763292,-80.1888644,4.3,184
+ChIJuQEJ5o3G2YgRXTj_bb4N_q8,Orangetheory Fitness,Orangetheory Fitness,"8511 SW 136th St, Miami, FL 33156, USA",Miami-Dade County,25.6442661,-80.3311386,4.6,132
+ChIJ-byzO4y62YgRjgPGjC15U6I,Planet Fitness,Planet Fitness,"502A W 49th St, Hialeah, FL 33012, USA",Miami-Dade County,25.8654721,-80.2930405,4.5,2326
+ChIJ4XRlzz-z2YgRM40T5p_9LbU,Planet Fitness,Planet Fitness,"900 NE 125th St, Miami, FL 33161, USA",Miami-Dade County,25.8902703,-80.1800462,4.5,1497
+ChIJ7SbUcvu72YgREQx0knxZdC0,Planet Fitness,Planet Fitness,"3505 W 20th Ave, Hialeah, FL 33012, USA",Miami-Dade County,25.8538145,-80.320711,4.6,1373
+ChIJ7_4o2QLB2YgRiuUE9R5jMk8,Planet Fitness,Planet Fitness,"10872 SW 104th St, Miami, FL 33176, USA",Miami-Dade County,25.6709702,-80.3713089,4.6,1001
+ChIJ7_bQMO232YgRfySHcsSHNXU,Planet Fitness,Planet Fitness,"775 SW 8th Ave, Miami, FL 33130, USA",Miami-Dade County,25.766368,-80.2069273,4.5,3035
+ChIJF30qi2ax2YgRLm1mkquhugU,Planet Fitness,Planet Fitness,"7900 NW 27th Ave #200, Miami, FL 33147, USA",Miami-Dade County,25.8486398,-80.2445371,4.4,224
+ChIJGZ9TuCPA2YgRCiTCvxdR7Mg,Planet Fitness,Planet Fitness,"15725 SW 72nd St, Miami, FL 33193, USA",Miami-Dade County,25.6997295,-80.4483246,4.4,1000
+ChIJHUNjNSes2YgRuUlVmuAP-eU,Planet Fitness,Planet Fitness,"850 Ives Dairy Rd, North Miami Beach, FL 33179, USA",Miami-Dade County,25.9608087,-80.1861671,4.4,1733
+ChIJL6KGqrCv2YgRMeIj1RIh2NY,Planet Fitness,Planet Fitness,"17165 NW 27th Ave, Miami Gardens, FL 33056, USA",Miami-Dade County,25.9303811,-80.2432665,4.5,1271
+ChIJ_0VXhGi72YgR2bwUTjEOyPE,Planet Fitness,Planet Fitness,"8350 Hialeah Gardens Blvd, Hialeah Gardens, FL 33018, USA",Miami-Dade County,25.8980151,-80.3521122,4.5,1777
+ChIJcXeeYOO42YgR8BylrFjtPFU,Planet Fitness,Planet Fitness,"8524 SW 8th St, Miami, FL 33144, USA",Miami-Dade County,25.7603794,-80.3334641,4.6,1934
+ChIJnVtF0sCt2YgRJ5-A1OxusUg,Planet Fitness,Planet Fitness,"1630 NE 163rd St, North Miami Beach, FL 33162, USA",Miami-Dade County,25.9243394,-80.167332,4.1,1484
+ChIJoQXVo3a32YgRYkHuIELxxAE,Planet Fitness,Planet Fitness,"1440 NW N River Dr #440, Miami, FL 33125, USA",Miami-Dade County,25.7856884,-80.2198051,4.6,1964
+ChIJt9g2D5Dd2YgRcUW9BcVoauw,Planet Fitness,Planet Fitness,"2650 NE 10th Ct, Homestead, FL 33033, USA",Miami-Dade County,25.479054,-80.4398906,4.5,1663
+ChIJvY7I12_F2YgRyw5gDDiX2B0,Planet Fitness,Planet Fitness,"19189 S Dixie Hwy, Cutler Bay, FL 33157, USA",Miami-Dade County,25.58904,-80.357687,4.6,1157
+ChIJvcz9UQ6l2YgRiurttMiu-lY,Planet Fitness,Planet Fitness,"18620 NW 67th Ave, Hialeah, FL 33015, USA",Miami-Dade County,25.9432366,-80.3089815,4.6,2189
+ChIJJdqFM2tkwokRzYTWkbYCseg,24 Hour Fitness,24 Hour Fitness,"750 W Sunrise Hwy, Valley Stream, NY 11581, USA",Nassau County,40.6628441,-73.727182,4.1,1405
+ChIJ1aK2xk97wokRDH4l4WkaHUc,Orangetheory Fitness,Orangetheory Fitness,"315 Merrick Rd, Rockville Centre, NY 11570, USA",Nassau County,40.6562502,-73.643526,4.9,404
+ChIJ9bANiVZ_wokRJhJX2NPEocg,Orangetheory Fitness,Orangetheory Fitness,"3940 Merrick Rd, Seaford, NY 11783, USA",Nassau County,40.6661312,-73.4857718,4.9,97
+ChIJrYSDo61-wokRhevofIh2oZY,Orangetheory Fitness,Orangetheory Fitness,"1976 Merrick Rd, Merrick, NY 11566, USA",Nassau County,40.6554977,-73.5501185,4.8,116
+ChIJue_sHbYB5YgRxfzCdUxYTk4,Orangetheory Fitness,Orangetheory Fitness,"463867 FL-200, Yulee, FL 32097, USA",Nassau County,30.6277307,-81.5453301,4.8,56
+ChIJ6-Pq1Ds_kYgR2b7dbLK0Dbw,Gold's Gym,Ballers Fitness (formerly Gold’s Gym Fort Walton Beach),"140 Eglin Pkwy SE, Fort Walton Beach, FL 32548, USA",Okaloosa County,30.4062915,-86.6059192,4.2,186
+ChIJS__dNbpdkYgRCnYAJC1DfgQ,Orangetheory Fitness,Orangetheory Fitness,"4495 Furling Ln Ste 140, Destin, FL 32541, USA",Okaloosa County,30.3875681,-86.4045888,4.6,123
+ChIJAYkcEudzkYgRIvPAoT71pqY,Planet Fitness,Planet Fitness,"2680 S Ferdon Blvd Unit 101, Crestview, FL 32536, USA",Okaloosa County,30.7316051,-86.5686943,4.1,247
+ChIJeUElNaA-kYgRQVzQSKXYYvk,Planet Fitness,Planet Fitness,"300 Mary Esther Blvd, Mary Esther, FL 32569, USA",Okaloosa County,30.4158767,-86.6561629,4.3,994
+ChIJDfSzPTTX3IAReHjumx0wgzY,24 Hour Fitness,24 Hour Fitness,"2102 N Tustin St, Orange, CA 92865, USA",Orange County,33.8245804,-117.8373977,4.4,590
+ChIJNTu0JZDX3IARpgL4SxLeCQk,24 Hour Fitness,24 Hour Fitness,"3600 W Orangewood Ave, Orange, CA 92868, USA",Orange County,33.7958031,-117.8917836,4.1,760
+ChIJC5Fq64Rj54gR5V-0lbyi3Oc,LA Fitness,LA Fitness,"5915 S Goldenrod Rd, Orlando, FL 32822, USA",Orange County,28.4768161,-81.2872085,4.0,1037
+ChIJIZKFuM5654gRmHcyOMbQgoI,LA Fitness,LA Fitness,"2999 E Colonial Dr, Orlando, FL 32803, USA",Orange County,28.5548952,-81.3467628,4.3,853
+ChIJN3Sz5M1-54gRn1uXom9BCRE,LA Fitness,LA Fitness,"4792 S Kirkman Rd, Orlando, FL 32811, USA",Orange County,28.4922898,-81.4605285,4.4,2049
+ChIJOVbEKAB754gRHec7urBSEcw,LA Fitness,LA Fitness,"15 W Crystal Lake St, Orlando, FL 32806, USA",Orange County,28.5148411,-81.3772296,4.7,461
+ChIJUfaiJVd_54gREqfnodC0_bo,LA Fitness,LA Fitness,"4768 The Grove Dr, Windermere, FL 34786, USA",Orange County,28.4917165,-81.51078,4.1,1127
+ChIJbUEBYmlw54gR610iT9Nwwck,LA Fitness,LA Fitness,"501 N Orlando Ave Ste 219, Winter Park, FL 32789, USA",Orange County,28.6050078,-81.3679973,4.3,818
+ChIJcaKOWMtn54gRpraV-TCNUGw,LA Fitness,LA Fitness,"815 N Alafaya Trail, Orlando, FL 32828, USA",Orange County,28.5569438,-81.202629,3.8,1167
+ChIJe75I_7dk54gR46eJ0s32X0I,LA Fitness,LA Fitness,"4550 E Michigan St, Orlando, FL 32812, USA",Orange County,28.5118954,-81.3301111,4.1,806
+ChIJlTXDi2qH3YgRvljZb4-UpZU,LA Fitness,LA Fitness,"12700 S Orange Blossom Trl, Orlando, FL 32837, USA",Orange County,28.380835,-81.4059515,4.0,1134
+ChIJlzmsnZFl54gRbe_8cbKC_A8,LA Fitness,LA Fitness,"189 S Goldenrod Rd, Orlando, FL 32807, USA",Orange County,28.5424652,-81.284172,4.0,611
+ChIJr0c2v-uD54gR_O1XJXcZijA,LA Fitness,LA Fitness,"3029 Daniels Rd, Winter Garden, FL 34787, USA",Orange County,28.5250336,-81.5840218,4.3,1007
+ChIJ-fiWlCti54gRbl3owrFq7TM,Orangetheory Fitness,Orangetheory Fitness,"9161 Narcoossee Rd #104, Orlando, FL 32827, USA",Orange County,28.4341953,-81.2563017,4.9,257
+ChIJE6n0gw5754gRxcmTNyb9Ewg,Orangetheory Fitness,Orangetheory Fitness,"1731 S Orange Ave, Orlando, FL 32806, USA",Orange County,28.521761,-81.376114,4.8,127
+ChIJTSlwpG1w54gRQo4lV9W-jOc,Orangetheory Fitness,Orangetheory Fitness,"115 S Orlando Ave, Winter Park, FL 32789, USA",Orange County,28.5974027,-81.3660952,4.5,114
+ChIJVaOOSGmB54gRBfygA6vS7So,Orangetheory Fitness,Orangetheory Fitness,"13620 Summerport Village Pkwy, Windermere, FL 34786, USA",Orange County,28.4766273,-81.5848177,4.8,181
+ChIJcc7s0ECC54gRyUuCp99ST_4,Orangetheory Fitness,Orangetheory Fitness,"2883 Maguire Rd Unit Ste A1004-A1005, Windermere, FL 34786, USA",Orange County,28.5285304,-81.5425887,4.7,146
+ChIJewTSgZmL3YgRXdz06bo1MdA,Orangetheory Fitness,Orangetheory Fitness,"12851 Narcoossee Rd, Orlando, FL 32832, USA",Orange County,28.3790546,-81.2438808,4.7,110
+ChIJo-Qufah_54gRU9eIPNK432c,Orangetheory Fitness,Orangetheory Fitness,"7343 Sand Lake Rd #1001, Orlando, FL 32819, USA",Orange County,28.4503758,-81.4819519,4.6,210
+ChIJrZGz0rVn54gRvJUkmCz5xfs,Orangetheory Fitness,Orangetheory Fitness,"12301 Lake Underhill Rd, Orlando, FL 32828, USA",Orange County,28.5472678,-81.2028604,4.8,185
+ChIJ-WddmDx554gR04_aPJ0ICow,Planet Fitness,Planet Fitness,"5920 Metropolis Wy, Orlando, FL 32811, USA",Orange County,28.5172728,-81.4615642,4.3,880
+ChIJ9Xf5O9Zx54gRL_KdX82r3Bg,Planet Fitness,Planet Fitness,"908 Lee Rd, Orlando, FL 32810, USA",Orange County,28.6043951,-81.3952802,4.6,883
+ChIJQdMni7Vl54gRP9u87HeAc5w,Planet Fitness,Planet Fitness,"505 S Chickasaw Trail, Orlando, FL 32825, USA",Orange County,28.5363051,-81.2738745,4.3,928
+ChIJQwJuhb5354gRRhI5P0_IXEs,Planet Fitness,Planet Fitness,"2239 E Semoran Blvd, Apopka, FL 32703, USA",Orange County,28.6752902,-81.4692219,4.4,83
+ChIJjWjYBvWC54gR78NkAeKdLFs,Planet Fitness,Planet Fitness,"10908 W Colonial Dr, Ocoee, FL 34761, USA",Orange County,28.5501366,-81.5410914,4.4,1025
+ChIJk1w88FBj54gRUAcM-MnHE1c,Planet Fitness,Planet Fitness,"5130 Conway Rd, Orlando, FL 32812, USA",Orange County,28.4819907,-81.3324397,4.5,840
+ChIJnzAha-Cd54gRPDSWy01UBZU,Planet Fitness,Planet Fitness,"1569 W Orange Blossom Trail, Apopka, FL 32712, USA",Orange County,28.6884737,-81.5376127,4.4,597
+ChIJoXdszcp954gRdoPX6tdVbBY,Planet Fitness,Planet Fitness,"8358 S Orange Blossom Trl, Orlando, FL 32809, USA",Orange County,28.443768,-81.4038262,4.6,625
+ChIJs4OkGsx654gRI3bXmJxxGyg,Planet Fitness,Planet Fitness,"3203 E Colonial Dr Unit E20, Orlando, FL 32803, USA",Orange County,28.5552669,-81.3421357,4.5,690
+ChIJsRPNTqx_54gRMu8AmT4b8-Y,Planet Fitness,Planet Fitness,"8956 Turkey Lake Rd #1000, Orlando, FL 32819, USA",Orange County,28.444109,-81.4756199,4.3,886
+ChIJs_xU7GqH3YgRPgOD8-9ulHo,Planet Fitness,Planet Fitness,"12471 S Orange Blossom Trl, Orlando, FL 32837, USA",Orange County,28.3834915,-81.4031558,4.4,1110
+ChIJtxluw4h754gRkuUfqI5H_SA,Planet Fitness,Planet Fitness,"9 W Gore St, Orlando, FL 32801, USA",Orange County,28.5313969,-81.3771211,4.3,949
+ChIJzSuESnxn54gRG-GljWirsZo,Planet Fitness,Planet Fitness,"638 N Alafaya Trail, Orlando, FL 32828, USA",Orange County,28.5563686,-81.2089356,4.0,194
+ChIJPQ0608uG3YgRlzEAwppAbEg,LA Fitness,LA Fitness,"1750 Ball Park Rd, Kissimmee, FL 34741, USA",Osceola County,28.3366074,-81.4221691,4.0,1515
+ChIJa_P9U0iG3YgRFXcMDgwKm8I,LA Fitness,LA Fitness,"1980 Osceola Pkwy, Kissimmee, FL 34743, USA",Osceola County,28.3435117,-81.364303,4.0,898
+ChIJ8bGD_MSG3YgRzENLHx8x1do,Orangetheory Fitness,Orangetheory Fitness,"1021 Osceola Pkwy, Kissimmee, FL 34741, USA",Osceola County,28.3413586,-81.4120582,4.6,254
+ChIJUaL_6-OD3YgRMver_yrL6Vc,Planet Fitness,Planet Fitness,"3107 W Vine St, Kissimmee, FL 34741, USA",Osceola County,28.3054498,-81.4339932,4.3,1477
+ChIJe0PEUKGP3YgR4m5Tmvqk55M,Planet Fitness,Planet Fitness,"4020 13th St, St Cloud, FL 34769, USA",Osceola County,28.2515439,-81.3113163,4.2,736
+ChIJ3zgNKigk2YgR8PZEdMgAHzI,LA Fitness,LA Fitness,"8888 Lantana Rd, Lake Worth, FL 33467, USA",Palm Beach County,26.5892897,-80.1873322,4.3,802
+ChIJ78V7ZEPV2IgRqcT0j_rAVp0,LA Fitness,LA Fitness,"3176 Northlake Blvd, Palm Beach Gardens, FL 33403, USA",Palm Beach County,26.8066514,-80.0850467,3.9,626
+ChIJJWvgGTTV3ogRyLY4QsErlvE,LA Fitness,LA Fitness,"5260 Donald Ross Rd, Palm Beach Gardens, FL 33418, USA",Palm Beach County,26.8809669,-80.1152273,4.0,434
+ChIJLzTVWyYe2YgR19nswC9oofM,LA Fitness,LA Fitness,"4950 Technology Way, Boca Raton, FL 33431, USA",Palm Beach County,26.3918884,-80.1018286,4.0,1075
+ChIJXW198l4v2YgRweRYw16JwRM,LA Fitness,LA Fitness,"10180 Forest Hill Blvd, Wellington, FL 33414, USA",Palm Beach County,26.6493443,-80.2065098,3.8,740
+ChIJYR4zxq3Y2IgRwy6sQ3LNdHI,LA Fitness,LA Fitness,"2290 N Congress Ave, Boynton Beach, FL 33426, USA",Palm Beach County,26.5499194,-80.0892158,3.8,1054
+ChIJmTFUTXLg2IgRS4pvNRCXQec,LA Fitness,LA Fitness,"1660 S Federal Hwy, Delray Beach, FL 33483, USA",Palm Beach County,26.4415397,-80.0726623,3.9,1044
+ChIJs6-ReREh2YgRlBOtvzU9RRQ,LA Fitness,LA Fitness,"6683 Boynton Beach Blvd, Boynton Beach, FL 33437, USA",Palm Beach County,26.5311729,-80.1487762,4.1,562
+ChIJt4f3bMMp2YgROeDMn4zXMkk,LA Fitness,LA Fitness,"1925 N Military Trl, West Palm Beach, FL 33409, USA",Palm Beach County,26.70427,-80.113534,3.6,773
+ChIJzXnA_FsZ2YgR1p9LhsfFNFc,LA Fitness,LA Fitness,"20443 FL-7 Bay Bb1, Boca Raton, FL 33498, USA",Palm Beach County,26.3700927,-80.2068987,4.1,813
+ChIJ2RYjZPwm2YgRVDuZByEm4VY,Orangetheory Fitness,Orangetheory Fitness,"6177 Jog Rd #9D, Greenacres, FL 33467, USA",Palm Beach County,26.5876012,-80.1485279,4.8,204
+ChIJ6X8wC6sY2YgRGsHsJurQUuo,Orangetheory Fitness,Orangetheory Fitness,"9097 W Atlantic Ave #110, Delray Beach, FL 33446, USA",Palm Beach County,26.4543328,-80.1901861,4.6,177
+ChIJAyEIfcAq34gRYOTHDasaYno,Orangetheory Fitness,Orangetheory Fitness,"2612 PGA Blvd, Palm Beach Gardens, FL 33410, USA",Palm Beach County,26.8437327,-80.0753515,4.9,218
+ChIJCSqdGnQe2YgRp65hYzgw1rU,Orangetheory Fitness,Orangetheory Fitness,"5050 Town Center Cir Ste 205, Boca Raton, FL 33431, USA",Palm Beach County,26.3633775,-80.1227067,4.6,134
+ChIJDR9Xyase2YgRfjeP0bK8cq0,Orangetheory Fitness,Orangetheory Fitness,"8903 Glades Rd H13, Boca Raton, FL 33434, USA",Palm Beach County,26.3687854,-80.1845939,4.7,131
+ChIJEwM4rlvf2IgRiAHwiLq7vk4,Orangetheory Fitness,Orangetheory Fitness,"395 N Congress Ave Ste 10, Boynton Beach, FL 33426, USA",Palm Beach County,26.5309009,-80.0929287,4.5,211
+ChIJFz3bdzQe2YgRGJLh8uwdTjU,Orangetheory Fitness,Orangetheory Fitness,"6000 Broken Sound Pkwy NW, Boca Raton, FL 33487, USA",Palm Beach County,26.4029696,-80.1151088,2.9,62
+ChIJS11qyoff2IgRLy0v9GJZEug,Orangetheory Fitness,Orangetheory Fitness,"264 SE 5th Ave, Delray Beach, FL 33483, USA",Palm Beach County,26.4565731,-80.0680663,4.5,121
+ChIJTW50ofYl2YgR-HM-uKKwHjg,Orangetheory Fitness,Orangetheory Fitness,"2625 FL-7, Wellington, FL 33414, USA",Palm Beach County,26.6418037,-80.2060354,4.7,161
+ChIJW8tRrosz2YgRcR_IoYp1wtQ,Orangetheory Fitness,Orangetheory Fitness,"4951 Seminole Pratt Whitney Rd, Loxahatchee, FL 33470, USA",Palm Beach County,26.7516241,-80.3084789,4.8,27
+ChIJY89IvOMp34gRUWLSj7XYnmc,Orangetheory Fitness,Orangetheory Fitness,"6390 W Indiantown Rd Ste 24A, Jupiter, FL 33458, USA",Palm Beach County,26.9337791,-80.1324261,4.8,136
+ChIJyTCd0gTi2IgRQXcupW3O5qQ,Orangetheory Fitness,Orangetheory Fitness,"10 E Palmetto Park Rd, Boca Raton, FL 33432, USA",Palm Beach County,26.350185,-80.0871464,4.7,136
+ChIJ-_YpiT8p2YgRUwNF4wJA_kI,Planet Fitness,Planet Fitness,"4560 Forest Hill Blvd, West Palm Beach, FL 33415, USA",Palm Beach County,26.6500931,-80.1130441,4.3,720
+ChIJ23gsm9rX3ogRQUFTURS7Qy8,Planet Fitness,Planet Fitness,"6707 W Indiantown Rd Unit 45B, Jupiter, FL 33458, USA",Palm Beach County,26.9359064,-80.1357427,4.5,393
+ChIJEdwZYMcg2YgRjVPwkeC5ARU,Planet Fitness,Planet Fitness,"9764 S Military Trl, Boynton Beach, FL 33436, USA",Palm Beach County,26.5313203,-80.1206078,4.4,682
+ChIJFe-1cm0q2YgR6KlgLpEvZEY,Planet Fitness,Planet Fitness,"5335 N Military Trl Ste 20, West Palm Beach, FL 33407, USA",Palm Beach County,26.75871,-80.1116216,4.4,701
+ChIJIRvjYjUm2YgRfV2kofpEIBo,Planet Fitness,Planet Fitness,"6488 Lake Worth Rd, Lake Worth Beach, FL 33463, USA",Palm Beach County,26.6159433,-80.1456379,4.3,965
+ChIJIRxOOiIg2YgRztWlxN2XpY8,Planet Fitness,Planet Fitness,"14550 S Military Trl, Delray Beach, FL 33484, USA",Palm Beach County,26.4610926,-80.1211924,4.2,881
+ChIJTdp_vhTh2IgRabyg2GZo3Vc,Planet Fitness,Planet Fitness,"3065-3075 S Federal Hwy, Delray Beach, FL 33483, USA",Palm Beach County,26.42668,-80.07176,4.6,499
+ChIJWdFOZ3DV3ogRTGr9y3TKH78,Planet Fitness,Planet Fitness,"3761 Military Trail, Jupiter, FL 33458, USA",Palm Beach County,26.8983933,-80.1017984,4.4,362
+ChIJ_1ID_oLX2IgRV2wEx-GKrhI,Planet Fitness,Planet Fitness,"7731 S Dixie Hwy, West Palm Beach, FL 33405, USA",Palm Beach County,26.6477249,-80.0581144,4.3,729
+ChIJc7JGoU3V2IgRBIrpsBDou1o,Planet Fitness,Planet Fitness,"9930 Alt A1a, Palm Beach Gardens, FL 33410, USA",Palm Beach County,26.8234084,-80.0848611,4.6,902
+ChIJcWP3w8LZ2IgRewJ5b-c-UME,Planet Fitness,Planet Fitness,"5857 S Congress Ave, Lantana, FL 33462, USA",Palm Beach County,26.5891212,-80.0948161,4.6,676
+ChIJd0sSxTwv2YgRq7uFaAtK_eQ,Planet Fitness,Planet Fitness,"10463 Southern Blvd, Royal Palm Beach, FL 33411, USA",Palm Beach County,26.6813279,-80.2065635,4.4,961
+ChIJl4IktgMz2YgRKWZNVGw2teQ,Planet Fitness,Planet Fitness,"16861 Persimmon Blvd, Westlake, FL 33470, USA",Palm Beach County,26.7547926,-80.3094839,4.8,156
+ChIJ8w_KutewwogRFAO05MJeMtg,Orangetheory Fitness,Orangetheory Fitness,"28210 Paseo Drive #110, Wesley Chapel, FL 33543, USA",Pasco County,28.1878675,-82.3498983,4.8,434
+ChIJn57SSiqUwogR9lptM-oHLAs,Orangetheory Fitness,Orangetheory Fitness,"12546 FL-54, Odessa, FL 33556, USA",Pasco County,28.1895184,-82.6076727,4.9,437
+ChIJ1TKC4hCxwogRYVD_70jussc,Planet Fitness,Planet Fitness,"6117 Wesley Grove Blvd, Wesley Chapel, FL 33544, USA",Pasco County,28.2461732,-82.3511291,4.4,513
+ChIJ4W6IyMlT3YgRyOo0VOQUEIs,Planet Fitness,Planet Fitness,"7910 Gall Blvd, Zephyrhills, FL 33541, USA",Pasco County,28.2724,-82.18615,4.4,640
+ChIJWXlfIUmbwogR8miGLNMEA84,Planet Fitness,Planet Fitness,"12225 US-19, Bayonet Point, FL 34667, USA",Pasco County,28.3346739,-82.7014083,4.7,624
+ChIJq6qqqlqXwogR8N5WOcNBKro,Planet Fitness,Planet Fitness,"9023 Little Rd, New Port Richey, FL 34654, USA",Pasco County,28.28848,-82.67724,4.4,1104
+ChIJyYVrFf6NwogRrQBusVN8bvU,Planet Fitness,Planet Fitness,"4637 Sunray Dr, Holiday, FL 34690, USA",Pasco County,28.1990344,-82.7387732,4.3,1049
+ChIJ01p9TZvwwogRUQmoLZtAh2Y,LA Fitness,LA Fitness,"1229 Missouri Ave N, Largo, FL 33770, USA",Pinellas County,27.9295566,-82.7889999,4.0,1030
+ChIJ1-T_XFTlwogRkMPcpinvCwc,LA Fitness,LA Fitness,"5320 E Bay Dr, Clearwater, FL 33764, USA",Pinellas County,27.9180821,-82.7313762,4.3,813
+ChIJ4yaTstL8wogReFCzM8zT8MU,LA Fitness,LA Fitness,"7044 22nd Ave N, St. Petersburg, FL 33710, USA",Pinellas County,27.7910625,-82.7363157,4.0,1011
+ChIJBbJ_TSDywogROegCWeB9l90,LA Fitness,LA Fitness,"1681 Main St, Dunedin, FL 34698, USA",Pinellas County,28.0179142,-82.758304,4.0,702
+ChIJX9BI_CruwogR0byAOznLST4,LA Fitness,LA Fitness,"2134 Gulf To Bay Blvd, Clearwater, FL 33765, USA",Pinellas County,27.9617629,-82.7487938,4.1,956
+ChIJo_f2n63mwogRXduEwtcs8Hw,LA Fitness,LA Fitness,"5900 4th St N, St. Petersburg, FL 33703, USA",Pinellas County,27.8256182,-82.6389752,4.0,781
+ChIJu4UD8437wogRbqmDDfWmxCs,LA Fitness,LA Fitness,"7635 113th St N, Seminole, FL 33772, USA",Pinellas County,27.8423732,-82.7925137,4.1,722
+ChIJ17_AQ1LjwogReAsDncEsjGg,Orangetheory Fitness,Orangetheory Fitness,"1530 66th St N, St. Petersburg, FL 33710, USA",Pinellas County,27.7863912,-82.7292482,4.8,198
+ChIJG9nEfN7vwogRSFNprSTt4No,Orangetheory Fitness,Orangetheory Fitness,"25853 US Hwy 19 N, Clearwater, FL 33763, USA",Pinellas County,28.0072213,-82.7278651,4.9,429
+ChIJMd-SoJ7ywogRWTbYMnyvW-k,Orangetheory Fitness,Orangetheory Fitness,"33645 US Hwy 19 N, Palm Harbor, FL 34684, USA",Pinellas County,28.0784289,-82.7376496,4.7,207
+ChIJi0Y-TynjwogRTEc4Nrf-84I,Orangetheory Fitness,Orangetheory Fitness,"5032 4th St N, St. Petersburg, FL 33703, USA",Pinellas County,27.8184115,-82.6391652,4.8,255
+ChIJqSWulVv6wogRhZs5Bga_AUw,Orangetheory Fitness,Orangetheory Fitness,"10500 Ulmerton Rd Ste 220, Largo, FL 33771, USA",Pinellas County,27.8935643,-82.784073,4.8,261
+ChIJtcUQB4ThwogRv9O7qCCdEQg,Orangetheory Fitness,Orangetheory Fitness,"640 1st Ave S, St. Petersburg, FL 33701, USA",Pinellas County,27.7699583,-82.6424629,4.7,211
+ChIJA3PfQYrvwogRFtsqwunad2M,Planet Fitness,Planet Fitness,"1580 McMullen Booth Rd, Clearwater, FL 33759, USA",Pinellas County,27.982122,-82.71111,4.5,357
+ChIJGzg65uTxwogRLVMJZVZa9Rs,Planet Fitness,Planet Fitness,"1883-1885 N Highland Ave, Clearwater, FL 33755, USA",Pinellas County,27.9890231,-82.774106,4.6,934
+ChIJTXkFo3nywogR3ROpDA8NIAU,Planet Fitness,Planet Fitness,"30701 US-19, Palm Harbor, FL 34684, USA",Pinellas County,28.0511805,-82.7377519,4.3,934
+ChIJU95Eqq37wogRHsUeDv8msN0,Planet Fitness,Planet Fitness,"11912 Seminole Blvd, Largo, FL 33778, USA",Pinellas County,27.8811707,-82.7887901,4.4,463
+ChIJY-uqalHjwogRl_e7o4m6n30,Planet Fitness,Planet Fitness,"5335 66th St N, St. Petersburg, FL 33709, USA",Pinellas County,27.81981,-82.72796,4.3,1335
+ChIJv90q4R3lwogREbNjzKAZ2IM,Planet Fitness,Planet Fitness,"11141 US Hwy 19 N, Clearwater, FL 33764, USA",Pinellas County,27.8739763,-82.7070226,4.4,1169
+ChIJdVwdbkZH3YgRHCZ1uAkB00Q,Gold's Gym,Gold's Gym,"Lakeland, FL 33805, USA",Polk County,28.0823638,-81.9661425,4.2,17
+ChIJ0e7WTThH3YgRO6KqooEkihU,LA Fitness,LA Fitness,"833 Lakeland Park Center Dr, Lakeland, FL 33809, USA",Polk County,28.0905471,-81.9655419,4.5,727
+ChIJe62vFBY53YgRuAaG1T6qFd8,Orangetheory Fitness,Orangetheory Fitness,"1489 Town Center Dr, Lakeland, FL 33803, USA",Polk County,28.0006993,-81.9798331,4.8,193
+ChIJ0QGn84EN3YgRoElyWJfjgaI,Planet Fitness,Planet Fitness,"9 Eagle Ridge Dr, Lake Wales, FL 33859, USA",Polk County,27.9508878,-81.6178064,4.5,728
+ChIJ52EQn4pz3YgRWslQXDrpvwk,Planet Fitness,Planet Fitness,"35880 US-27, Haines City, FL 33844, USA",Polk County,28.122706,-81.6398064,4.1,115
+ChIJfbHFoU453YgRXXVCDxpbRRU,Planet Fitness,Planet Fitness,"4315 Florida Ave S, Lakeland, FL 33813, USA",Polk County,27.9870865,-81.9597625,4.4,1052
+ChIJwTWzUp9G3YgRohkoFhWkr5U,Planet Fitness,Planet Fitness,"6208 US Hwy 98 N, Lakeland, FL 33809, USA",Polk County,28.1221886,-81.9753733,4.2,654
+ChIJz7BPsVVr3YgROIq_INHtOqo,Planet Fitness,Planet Fitness,"368 Havendale Blvd, Auburndale, FL 33823, USA",Polk County,28.0533881,-81.7787848,4.5,1177
+ChIJF8f8bH9l5ogRPa7VrXhmyJU,Planet Fitness,Planet Fitness,"111 Town and Country Dr, Palatka, FL 32177, USA",Putnam County,29.6470756,-81.6715474,4.6,551
+ChIJMa2_ZQfckIgRb5VQKJ8x3NE,24 Hour Fitness,FIT 24 Hour Fitness Center,"5608 Gulf Breeze Pkwy, Gulf Breeze, FL 32563, USA",Santa Rosa County,30.4018223,-86.9890953,4.8,84
+ChIJ8yqM61XlkIgRu24JIa0B84k,Planet Fitness,Planet Fitness,"6522 Caroline St, Milton, FL 32570, USA",Santa Rosa County,30.6192529,-87.0523944,4.5,529
+ChIJ75SXDuFGw4gRSQ47lCXxid4,LA Fitness,LA Fitness,"4057 Cattlemen Rd, Sarasota, FL 34233, USA",Sarasota County,27.2955169,-82.4495086,4.1,654
+ChIJ2aTbDW1Aw4gR0Nhdf5701Rs,Orangetheory Fitness,Orangetheory Fitness,"1605 Main St, Sarasota, FL 34236, USA",Sarasota County,27.3366178,-82.5384191,4.9,334
+ChIJHd21FIFBw4gRUTXx-wM1Jtw,Orangetheory Fitness,Orangetheory Fitness,"6509 S Tamiami Trl, Sarasota, FL 34231, USA",Sarasota County,27.2608381,-82.5211627,4.8,423
+ChIJ3QNPkqlDw4gRxA_QkeQfe6A,Planet Fitness,Planet Fitness,"8195 S Tamiami Trl, Sarasota, FL 34231, USA",Sarasota County,27.2360166,-82.499458,4.4,538
+ChIJN1ibw6hBw4gRR8zNlkwVbbE,Planet Fitness,Planet Fitness,"501 N Beneva Rd, Sarasota, FL 34232, USA",Sarasota County,27.3416312,-82.4986413,4.2,884
+ChIJO_r1JPtZw4gRxEDvbx57McU,Planet Fitness,Planet Fitness,"4125 S Tamiami Trl, Venice, FL 34293, USA",Sarasota County,27.0513725,-82.3960855,4.4,951
+ChIJPw83t4Jp54gRMcLbJaTGpaU,LA Fitness,LA Fitness,"199 E Mitchell Hammock Rd, Oviedo, FL 32765, USA",Seminole County,28.6573823,-81.205523,4.2,795
+ChIJQ4zJeLly54gRUmw3Ind-zms,LA Fitness,LA Fitness,"3851 Lake Emma Rd, Lake Mary, FL 32746, USA",Seminole County,28.7545687,-81.3575581,4.4,1199
+ChIJYcu5yN1z54gR15xZOthCvKk,LA Fitness,LA Fitness,"1074 Montgomery Rd, Altamonte Springs, FL 32714, USA",Seminole County,28.6861362,-81.4041061,4.0,769
+ChIJt2jquW1t54gRuG6jzePGbYw,LA Fitness,LA Fitness,"300 W Lake Mary Blvd, Sanford, FL 32773, USA",Seminole County,28.758368,-81.288792,4.3,576
+ChIJ376EaW9p54gRi2S8-jFj8bc,Orangetheory Fitness,Orangetheory Fitness,"976 W Mitchell Hammock Rd #120, Oviedo, FL 32765, USA",Seminole County,28.6548842,-81.2245004,4.9,134
+ChIJ9bqSb6Nv54gR8YIt14h85og,Orangetheory Fitness,Orangetheory FitnessWS,"5701 Red Bug Lake Rd, Winter Springs, FL 32708, USA",Seminole County,28.6461193,-81.2687217,4.5,25
+ChIJFU7FkZxx54gR6eCAEZ3DJfY,Orangetheory Fitness,Orangetheory Fitness,"397 E Altamonte Dr Ste 1450, Altamonte Springs, FL 32701, USA",Seminole County,28.6641757,-81.3794141,4.6,147
+ChIJOe4oXklt54gRxkgCqGG0ONg,Orangetheory Fitness,Orangetheory Fitness,"3801 W Lake Mary Blvd #161, Lake Mary, FL 32746, USA",Seminole County,28.7548597,-81.3456307,4.7,170
+ChIJ___vDn8N54gRAELuFWwUG9g,Orangetheory Fitness,Orangetheory Fitness,"4932 W State Rd 46 #1112, Sanford, FL 32771, USA",Seminole County,28.8124307,-81.3437766,4.6,162
+ChIJ41WjCZ5p54gRTXzqL9_kCbo,Planet Fitness,Planet Fitness,"19 Alafaya Woods Blvd, Oviedo, FL 32765, USA",Seminole County,28.6519719,-81.2063033,4.4,777
+ChIJ8SkoRWUT54gROlAbwdxiu1w,Planet Fitness,Planet Fitness,"111 Towne Center Blvd, Sanford, FL 32771, USA",Seminole County,28.8086249,-81.3336545,4.2,155
+ChIJB2j4ZFpt54gReJIcXzmp8Go,Planet Fitness,Planet Fitness,"3005 W Lake Mary Blvd Ste 105, Lake Mary, FL 32746, USA",Seminole County,28.7549177,-81.3319307,4.4,1013
+ChIJ_9w1Skhx54gRajEXiY4zKwo,Planet Fitness,Planet Fitness,"280 S State Rd 434, Altamonte Springs, FL 32714, USA",Seminole County,28.6591203,-81.4219578,4.2,691
+ChIJv49YJDlu54gRLvfh2_D0SCw,Planet Fitness,Planet Fitness,"204 Sausalito Blvd, Casselberry, FL 32707, USA",Seminole County,28.6436009,-81.3208195,4.2,729
+ChIJw8-tzsZt54gRFOL-wCrOblw,Planet Fitness,Planet Fitness,"300 E State Rd 434, Winter Springs, FL 32708, USA",Seminole County,28.7003998,-81.3023533,4.7,313
+ChIJ84TuDfEn5IgRrcUkVWn50Nk,Orangetheory Fitness,Orangetheory Fitness,"833 S Ponce De Leon Blvd #1, St. Augustine, FL 32084, USA",St. Johns County,29.881543,-81.3244268,4.9,177
+ChIJ988IZngx5IgRMSg5IBvy8P4,Orangetheory Fitness,Orangetheory Fitness,"152 Capital Green Drive #34, Ponte Vedra Beach, FL 32081, USA",St. Johns County,30.1097137,-81.4181151,4.9,171
+ChIJDejKVaPS5YgRq_YIoLxW7JU,Orangetheory Fitness,Orangetheory Fitness,"2851 County Rd 210, Fruit Cove, FL 32259, USA",St. Johns County,30.057652,-81.5321999,4.5,134
+ChIJV5u4yECd5ogRHfOtN6bnZG8,Planet Fitness,Planet Fitness,"80 Epic Blvd Fl - 207, St. Augustine, FL 32086, USA",St. Johns County,29.8631046,-81.3429306,4.3,1053
+ChIJibPdxXTs3ogREQ5MQ1_qAp8,LA Fitness,LA Fitness,"1367 St Lucie W Blvd, Port St. Lucie, FL 34986, USA",St. Lucie County,27.317722,-80.390819,4.1,1060
+ChIJbSkkzA7s3ogR83RVB4L7x6E,Orangetheory Fitness,Orangetheory Fitness,"884 SW St Lucie W Blvd, Port St. Lucie, FL 34986, USA",St. Lucie County,27.3160127,-80.3801181,4.8,205
+ChIJK50MV_fp3ogRQl1GO_nUxdA,Planet Fitness,Planet Fitness,"10139 S Federal Hwy, Port St. Lucie, FL 34952, USA",St. Lucie County,27.2774627,-80.2938182,4.7,958
+ChIJS_F9zCTq3ogRo4ELUVZ5qZI,Planet Fitness,Planet Fitness,"3225 SW Port St Lucie Blvd, Port St. Lucie, FL 34953, USA",St. Lucie County,27.2481689,-80.3740472,4.3,897
+ChIJVQ41dADx3ogRq0dSaqf68B0,Planet Fitness,Planet Fitness,"2009 S US Hwy 1, Fort Pierce, FL 34950, USA",St. Lucie County,27.4280568,-80.3279121,4.0,116
+ChIJu1Hpufzu3ogRRBKZ9f-oevE,Planet Fitness,Planet Fitness,"4933 S US Hwy 1, Fort Pierce, FL 34982, USA",St. Lucie County,27.3756645,-80.3273864,4.5,881
+ChIJvSrB6rnF54gR7bHeDG5duYE,Orangetheory Fitness,Orangetheory Fitness,"1028 Old Mill Run, The Villages, FL 32162, USA",Sumter County,28.9078998,-81.9757468,4.8,51
+ChIJ2QaVlj7Z5ogRG2sMG4SKzvU,Gold's Gym,Gold's Gym,"1808 W International Speedway Blvd Ste. 601, Daytona Beach, FL 32114, USA",Volusia County,29.1944106,-81.0683141,4.7,691
+ChIJ06KpSvgQ54gRjYuI_J4WwWI,LA Fitness,LA Fitness,"2629 Enterprise Rd, Orange City, FL 32763, USA",Volusia County,28.9146264,-81.2913099,3.7,874
+ChIJbdrPcIMn54gRnrZgxwa8Rsk,LA Fitness,LA Fitness,"1810 Dunlawton Ave, Port Orange, FL 32127, USA",Volusia County,29.1083671,-81.0238778,4.0,788
+ChIJ2aoDA80v54gRlsjBY9K9tKg,Orangetheory Fitness,Orangetheory Fitness,"1944 FL-44, New Smyrna Beach, FL 32168, USA",Volusia County,29.0119189,-80.9462292,4.9,93
+ChIJ5RuNdrUb54gRyJQYkDsq6Vk,Orangetheory Fitness,Orangetheory Fitness,"2365 S Woodland Blvd, DeLand, FL 32720, USA",Volusia County,28.9874161,-81.2976376,4.7,94
+ChIJn6ry4Ucn54gRQK0tdFcbVrI,Orangetheory Fitness,Orangetheory Fitness,"5521 S Williamson Blvd, Port Orange, FL 32128, USA",Volusia County,29.1111352,-81.0338567,4.9,106
+ChIJ3adulAgv54gR-iPBgIvH1OY,Planet Fitness,Planet Fitness,"1433 S Dixie Fwy, New Smyrna Beach, FL 32168, USA",Volusia County,29.0085116,-80.9183257,4.6,522
+ChIJAWXFgvgQ54gREOf-kLjVa-w,Planet Fitness,Planet Fitness,"860 Saxon Blvd, Orange City, FL 32763, USA",Volusia County,28.9091399,-81.2931432,4.4,1244
+ChIJO4bmH7Td5ogRKCjdd9E2IkY,Planet Fitness,Planet Fitness,"160 S Nova Rd, Ormond Beach, FL 32174, USA",Volusia County,29.2769471,-81.0840093,4.1,113
+ChIJfdTXUabZ5ogRCzc24V1v4pc,Planet Fitness,Planet Fitness,"1423 S Nova Rd, Daytona Beach, FL 32114, USA",Volusia County,29.1786377,-81.026877,4.3,859
+ChIJw6j32-La5ogRg9VMwaeiCF4,Planet Fitness,Planet Fitness,"910 S Atlantic Ave, Ormond Beach, FL 32176, USA",Volusia County,29.26794,-81.02928,3.9,705
+ChIJzdfrW24b54gRMs6AtDMXdgE,Planet Fitness,Planet Fitness,"111 E International Speedway Blvd, DeLand, FL 32724, USA",Volusia County,29.056223,-81.30314,4.3,623
+ChIJdb8YGeiF7IgRCix3HyXCzFI,24 Hour Fitness,Body Tek 24 hour Fitness center,"56 Rainbow Dr, Crawfordville, FL 32327, USA",Wakulla County,30.2003077,-84.3657089,4.6,72
+ChIJ96iErIKF7IgRE0M_ZqZ0ahY,LA Fitness,Wakulla Fitness Studio,"2646 Crawfordville Hwy Unit D, Crawfordville, FL 32327, USA",Wakulla County,30.1928954,-84.3723585,5.0,5
+ChIJ6-Pq1Ds_kYgRHgBZapCb61g,Gold's Gym,Gold's Gym - Destin,"12200 Emerald Coast Pkwy W, Miramar Beach, FL 32550, USA",Walton County,30.385651,-86.375919,4.1,378
