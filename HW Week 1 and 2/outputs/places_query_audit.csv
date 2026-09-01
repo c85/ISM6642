@@ -1,336 +1,336 @@
 CountyName,GymChain,ReturnedCandidates,AcceptedExactCountyBrandMatches
-Alachua County,LA Fitness,58,0
+Alachua County,LA Fitness,36,0
 Alachua County,Planet Fitness,2,2
-Alachua County,24 Hour Fitness,14,0
-Alachua County,Gold's Gym,6,0
+Alachua County,YouFit,1,1
+Alachua County,Gold's Gym,4,0
 Alachua County,Orangetheory Fitness,2,2
-Baker County,LA Fitness,16,0
-Baker County,Planet Fitness,40,0
-Baker County,24 Hour Fitness,1,0
+Baker County,LA Fitness,33,0
+Baker County,Planet Fitness,13,0
+Baker County,YouFit,16,0
 Baker County,Gold's Gym,1,0
-Baker County,Orangetheory Fitness,19,0
-Bay County,LA Fitness,40,0
+Baker County,Orangetheory Fitness,10,0
+Bay County,LA Fitness,49,0
 Bay County,Planet Fitness,2,2
-Bay County,24 Hour Fitness,42,0
+Bay County,YouFit,18,0
 Bay County,Gold's Gym,1,1
 Bay County,Orangetheory Fitness,2,1
-Bradford County,LA Fitness,13,0
-Bradford County,Planet Fitness,60,0
-Bradford County,24 Hour Fitness,6,0
-Bradford County,Gold's Gym,3,0
-Bradford County,Orangetheory Fitness,31,0
+Bradford County,LA Fitness,34,0
+Bradford County,Planet Fitness,55,0
+Bradford County,YouFit,43,0
+Bradford County,Gold's Gym,2,0
+Bradford County,Orangetheory Fitness,34,0
 Brevard County,LA Fitness,2,2
 Brevard County,Planet Fitness,8,8
-Brevard County,24 Hour Fitness,60,0
+Brevard County,YouFit,47,1
 Brevard County,Gold's Gym,1,1
 Brevard County,Orangetheory Fitness,1,1
-Broward County,LA Fitness,27,13
-Broward County,Planet Fitness,26,15
-Broward County,24 Hour Fitness,43,0
-Broward County,Gold's Gym,2,0
-Broward County,Orangetheory Fitness,35,12
-Calhoun County,LA Fitness,19,0
-Calhoun County,Planet Fitness,24,0
-Calhoun County,24 Hour Fitness,1,0
+Broward County,LA Fitness,20,13
+Broward County,Planet Fitness,16,15
+Broward County,YouFit,22,18
+Broward County,Gold's Gym,10,0
+Broward County,Orangetheory Fitness,37,12
+Calhoun County,LA Fitness,10,0
+Calhoun County,Planet Fitness,21,0
+Calhoun County,YouFit,23,0
 Calhoun County,Gold's Gym,5,0
-Calhoun County,Orangetheory Fitness,28,0
-Charlotte County,LA Fitness,23,0
+Calhoun County,Orangetheory Fitness,26,0
+Charlotte County,LA Fitness,13,0
 Charlotte County,Planet Fitness,2,2
-Charlotte County,24 Hour Fitness,44,0
-Charlotte County,Gold's Gym,6,0
-Charlotte County,Orangetheory Fitness,38,0
-Citrus County,LA Fitness,8,0
+Charlotte County,YouFit,2,1
+Charlotte County,Gold's Gym,5,0
+Charlotte County,Orangetheory Fitness,28,0
+Citrus County,LA Fitness,23,0
 Citrus County,Planet Fitness,3,3
-Citrus County,24 Hour Fitness,60,0
+Citrus County,YouFit,22,0
 Citrus County,Gold's Gym,1,0
-Citrus County,Orangetheory Fitness,33,0
+Citrus County,Orangetheory Fitness,54,0
 Clay County,LA Fitness,2,1
-Clay County,Planet Fitness,17,3
-Clay County,24 Hour Fitness,21,0
-Clay County,Gold's Gym,17,0
+Clay County,Planet Fitness,15,3
+Clay County,YouFit,43,0
+Clay County,Gold's Gym,2,0
 Clay County,Orangetheory Fitness,8,1
 Collier County,LA Fitness,3,1
 Collier County,Planet Fitness,4,3
-Collier County,24 Hour Fitness,34,0
+Collier County,YouFit,1,1
 Collier County,Gold's Gym,1,0
 Collier County,Orangetheory Fitness,2,1
-Columbia County,LA Fitness,58,0
-Columbia County,Planet Fitness,1,1
-Columbia County,24 Hour Fitness,7,0
-Columbia County,Gold's Gym,3,0
+Columbia County,LA Fitness,48,0
+Columbia County,Planet Fitness,15,1
+Columbia County,YouFit,46,0
+Columbia County,Gold's Gym,4,0
 Columbia County,Orangetheory Fitness,3,0
-DeSoto County,LA Fitness,26,0
+DeSoto County,LA Fitness,27,0
 DeSoto County,Planet Fitness,1,1
-DeSoto County,24 Hour Fitness,18,0
-DeSoto County,Gold's Gym,0,0
-DeSoto County,Orangetheory Fitness,23,0
-Dixie County,LA Fitness,13,0
-Dixie County,Planet Fitness,19,0
-Dixie County,24 Hour Fitness,4,0
+DeSoto County,YouFit,8,0
+DeSoto County,Gold's Gym,1,0
+DeSoto County,Orangetheory Fitness,31,0
+Dixie County,LA Fitness,15,0
+Dixie County,Planet Fitness,26,0
+Dixie County,YouFit,29,0
 Dixie County,Gold's Gym,2,0
-Dixie County,Orangetheory Fitness,50,0
+Dixie County,Orangetheory Fitness,52,0
 Duval County,LA Fitness,4,3
 Duval County,Planet Fitness,14,13
-Duval County,24 Hour Fitness,34,0
-Duval County,Gold's Gym,49,0
+Duval County,YouFit,5,0
+Duval County,Gold's Gym,47,0
 Duval County,Orangetheory Fitness,10,6
-Escambia County,LA Fitness,58,1
+Escambia County,LA Fitness,38,1
 Escambia County,Planet Fitness,3,3
-Escambia County,24 Hour Fitness,36,0
-Escambia County,Gold's Gym,31,0
+Escambia County,YouFit,24,0
+Escambia County,Gold's Gym,28,0
 Escambia County,Orangetheory Fitness,1,1
-Flagler County,LA Fitness,2,0
+Flagler County,LA Fitness,7,0
 Flagler County,Planet Fitness,2,2
-Flagler County,24 Hour Fitness,36,0
-Flagler County,Gold's Gym,5,0
-Flagler County,Orangetheory Fitness,30,0
-Franklin County,LA Fitness,0,0
+Flagler County,YouFit,26,0
+Flagler County,Gold's Gym,3,0
+Flagler County,Orangetheory Fitness,31,0
+Franklin County,LA Fitness,15,0
 Franklin County,Planet Fitness,22,0
-Franklin County,24 Hour Fitness,3,0
-Franklin County,Gold's Gym,5,0
-Franklin County,Orangetheory Fitness,34,0
-Gadsden County,LA Fitness,24,0
-Gadsden County,Planet Fitness,7,0
-Gadsden County,24 Hour Fitness,18,0
+Franklin County,YouFit,41,0
+Franklin County,Gold's Gym,1,0
+Franklin County,Orangetheory Fitness,39,0
+Gadsden County,LA Fitness,36,0
+Gadsden County,Planet Fitness,27,0
+Gadsden County,YouFit,2,0
 Gadsden County,Gold's Gym,7,0
 Gadsden County,Orangetheory Fitness,2,0
 Gilchrist County,LA Fitness,1,0
-Gilchrist County,Planet Fitness,60,0
-Gilchrist County,24 Hour Fitness,0,0
+Gilchrist County,Planet Fitness,56,0
+Gilchrist County,YouFit,23,0
 Gilchrist County,Gold's Gym,1,0
 Gilchrist County,Orangetheory Fitness,2,0
-Glades County,LA Fitness,38,0
-Glades County,Planet Fitness,30,0
-Glades County,24 Hour Fitness,13,0
+Glades County,LA Fitness,28,0
+Glades County,Planet Fitness,46,0
+Glades County,YouFit,34,0
 Glades County,Gold's Gym,1,0
-Glades County,Orangetheory Fitness,27,0
-Gulf County,LA Fitness,25,0
-Gulf County,Planet Fitness,40,0
-Gulf County,24 Hour Fitness,10,0
-Gulf County,Gold's Gym,2,0
-Gulf County,Orangetheory Fitness,2,0
-Hamilton County,LA Fitness,51,0
-Hamilton County,Planet Fitness,49,0
-Hamilton County,24 Hour Fitness,18,0
+Glades County,Orangetheory Fitness,23,0
+Gulf County,LA Fitness,33,0
+Gulf County,Planet Fitness,37,0
+Gulf County,YouFit,49,0
+Gulf County,Gold's Gym,3,0
+Gulf County,Orangetheory Fitness,1,0
+Hamilton County,LA Fitness,55,0
+Hamilton County,Planet Fitness,51,0
+Hamilton County,YouFit,44,0
 Hamilton County,Gold's Gym,4,0
-Hamilton County,Orangetheory Fitness,47,0
-Hardee County,LA Fitness,5,0
+Hamilton County,Orangetheory Fitness,49,0
+Hardee County,LA Fitness,8,0
 Hardee County,Planet Fitness,10,0
-Hardee County,24 Hour Fitness,9,0
+Hardee County,YouFit,17,0
 Hardee County,Gold's Gym,1,0
-Hardee County,Orangetheory Fitness,34,0
-Hendry County,LA Fitness,10,0
+Hardee County,Orangetheory Fitness,35,0
+Hendry County,LA Fitness,12,0
 Hendry County,Planet Fitness,44,0
-Hendry County,24 Hour Fitness,8,0
+Hendry County,YouFit,29,0
 Hendry County,Gold's Gym,1,0
 Hendry County,Orangetheory Fitness,30,0
 Hernando County,LA Fitness,27,0
 Hernando County,Planet Fitness,3,2
-Hernando County,24 Hour Fitness,48,0
+Hernando County,YouFit,29,0
 Hernando County,Gold's Gym,9,0
-Hernando County,Orangetheory Fitness,50,0
-Highlands County,LA Fitness,6,0
+Hernando County,Orangetheory Fitness,46,0
+Highlands County,LA Fitness,5,0
 Highlands County,Planet Fitness,1,1
-Highlands County,24 Hour Fitness,7,0
+Highlands County,YouFit,8,0
 Highlands County,Gold's Gym,1,1
-Highlands County,Orangetheory Fitness,32,0
-Hillsborough County,LA Fitness,6,6
-Hillsborough County,Planet Fitness,30,9
-Hillsborough County,24 Hour Fitness,26,0
+Highlands County,Orangetheory Fitness,31,0
+Hillsborough County,LA Fitness,7,7
+Hillsborough County,Planet Fitness,36,10
+Hillsborough County,YouFit,1,1
 Hillsborough County,Gold's Gym,2,1
-Hillsborough County,Orangetheory Fitness,13,6
+Hillsborough County,Orangetheory Fitness,12,6
 Holmes County,LA Fitness,1,0
-Holmes County,Planet Fitness,35,0
-Holmes County,24 Hour Fitness,9,0
-Holmes County,Gold's Gym,6,0
-Holmes County,Orangetheory Fitness,50,0
+Holmes County,Planet Fitness,31,0
+Holmes County,YouFit,2,0
+Holmes County,Gold's Gym,5,0
+Holmes County,Orangetheory Fitness,49,0
 Indian River County,LA Fitness,60,0
 Indian River County,Planet Fitness,1,1
-Indian River County,24 Hour Fitness,57,0
+Indian River County,YouFit,41,0
 Indian River County,Gold's Gym,8,0
 Indian River County,Orangetheory Fitness,1,1
-Jackson County,LA Fitness,17,0
-Jackson County,Planet Fitness,10,1
-Jackson County,24 Hour Fitness,1,0
+Jackson County,LA Fitness,10,0
+Jackson County,Planet Fitness,7,1
+Jackson County,YouFit,41,0
 Jackson County,Gold's Gym,5,0
-Jackson County,Orangetheory Fitness,60,0
-Jefferson County,LA Fitness,22,0
-Jefferson County,Planet Fitness,21,0
-Jefferson County,24 Hour Fitness,1,0
-Jefferson County,Gold's Gym,6,0
+Jackson County,Orangetheory Fitness,59,0
+Jefferson County,LA Fitness,45,0
+Jefferson County,Planet Fitness,18,0
+Jefferson County,YouFit,31,0
+Jefferson County,Gold's Gym,5,0
 Jefferson County,Orangetheory Fitness,51,0
-Lafayette County,LA Fitness,51,0
-Lafayette County,Planet Fitness,20,0
-Lafayette County,24 Hour Fitness,30,0
+Lafayette County,LA Fitness,53,0
+Lafayette County,Planet Fitness,23,0
+Lafayette County,YouFit,37,0
 Lafayette County,Gold's Gym,3,0
-Lafayette County,Orangetheory Fitness,53,0
-Lake County,LA Fitness,15,0
-Lake County,Planet Fitness,8,3
-Lake County,24 Hour Fitness,27,0
-Lake County,Gold's Gym,5,0
-Lake County,Orangetheory Fitness,50,2
+Lafayette County,Orangetheory Fitness,60,0
+Lake County,LA Fitness,17,0
+Lake County,Planet Fitness,12,3
+Lake County,YouFit,31,0
+Lake County,Gold's Gym,10,0
+Lake County,Orangetheory Fitness,19,2
 Lee County,LA Fitness,2,2
-Lee County,Planet Fitness,6,6
-Lee County,24 Hour Fitness,19,0
+Lee County,Planet Fitness,7,6
+Lee County,YouFit,59,0
 Lee County,Gold's Gym,1,1
 Lee County,Orangetheory Fitness,4,3
-Leon County,LA Fitness,53,0
-Leon County,Planet Fitness,23,5
-Leon County,24 Hour Fitness,9,0
-Leon County,Gold's Gym,7,0
+Leon County,LA Fitness,31,0
+Leon County,Planet Fitness,20,5
+Leon County,YouFit,2,2
+Leon County,Gold's Gym,5,0
 Leon County,Orangetheory Fitness,2,2
-Levy County,LA Fitness,45,0
-Levy County,Planet Fitness,8,0
-Levy County,24 Hour Fitness,7,0
+Levy County,LA Fitness,44,0
+Levy County,Planet Fitness,10,0
+Levy County,YouFit,39,0
 Levy County,Gold's Gym,1,0
 Levy County,Orangetheory Fitness,3,0
-Liberty County,LA Fitness,24,0
-Liberty County,Planet Fitness,37,0
-Liberty County,24 Hour Fitness,16,0
+Liberty County,LA Fitness,27,0
+Liberty County,Planet Fitness,38,0
+Liberty County,YouFit,39,0
 Liberty County,Gold's Gym,3,0
-Liberty County,Orangetheory Fitness,51,0
-Madison County,LA Fitness,34,0
-Madison County,Planet Fitness,25,0
-Madison County,24 Hour Fitness,26,0
-Madison County,Gold's Gym,6,0
-Madison County,Orangetheory Fitness,11,1
+Liberty County,Orangetheory Fitness,52,0
+Madison County,LA Fitness,16,0
+Madison County,Planet Fitness,26,0
+Madison County,YouFit,41,0
+Madison County,Gold's Gym,1,0
+Madison County,Orangetheory Fitness,50,1
 Manatee County,LA Fitness,3,2
 Manatee County,Planet Fitness,2,2
-Manatee County,24 Hour Fitness,54,0
+Manatee County,YouFit,4,0
 Manatee County,Gold's Gym,1,1
 Manatee County,Orangetheory Fitness,1,1
-Marion County,LA Fitness,57,0
+Marion County,LA Fitness,29,0
 Marion County,Planet Fitness,3,3
-Marion County,24 Hour Fitness,37,0
+Marion County,YouFit,31,0
 Marion County,Gold's Gym,1,1
 Marion County,Orangetheory Fitness,1,1
 Martin County,LA Fitness,1,1
 Martin County,Planet Fitness,2,1
-Martin County,24 Hour Fitness,56,0
-Martin County,Gold's Gym,21,0
+Martin County,YouFit,38,0
+Martin County,Gold's Gym,19,0
 Martin County,Orangetheory Fitness,2,2
-Miami-Dade County,LA Fitness,17,16
-Miami-Dade County,Planet Fitness,17,16
-Miami-Dade County,24 Hour Fitness,60,0
-Miami-Dade County,Gold's Gym,22,0
+Miami-Dade County,LA Fitness,24,16
+Miami-Dade County,Planet Fitness,22,16
+Miami-Dade County,YouFit,24,14
+Miami-Dade County,Gold's Gym,2,0
 Miami-Dade County,Orangetheory Fitness,14,13
-Monroe County,LA Fitness,15,0
-Monroe County,Planet Fitness,19,0
-Monroe County,24 Hour Fitness,30,0
-Monroe County,Gold's Gym,17,0
-Monroe County,Orangetheory Fitness,36,0
-Nassau County,LA Fitness,8,0
-Nassau County,Planet Fitness,60,0
-Nassau County,24 Hour Fitness,15,1
-Nassau County,Gold's Gym,5,0
-Nassau County,Orangetheory Fitness,24,4
-Okaloosa County,LA Fitness,46,0
-Okaloosa County,Planet Fitness,3,2
-Okaloosa County,24 Hour Fitness,20,0
+Monroe County,LA Fitness,30,0
+Monroe County,Planet Fitness,47,0
+Monroe County,YouFit,40,0
+Monroe County,Gold's Gym,4,0
+Monroe County,Orangetheory Fitness,40,0
+Nassau County,LA Fitness,51,0
+Nassau County,Planet Fitness,52,0
+Nassau County,YouFit,37,0
+Nassau County,Gold's Gym,6,0
+Nassau County,Orangetheory Fitness,17,1
+Okaloosa County,LA Fitness,60,0
+Okaloosa County,Planet Fitness,4,2
+Okaloosa County,YouFit,29,0
 Okaloosa County,Gold's Gym,2,1
 Okaloosa County,Orangetheory Fitness,1,1
-Okeechobee County,LA Fitness,10,0
+Okeechobee County,LA Fitness,8,0
 Okeechobee County,Planet Fitness,11,0
-Okeechobee County,24 Hour Fitness,8,0
+Okeechobee County,YouFit,4,0
 Okeechobee County,Gold's Gym,4,0
-Okeechobee County,Orangetheory Fitness,21,0
-Orange County,LA Fitness,18,11
+Okeechobee County,Orangetheory Fitness,13,0
+Orange County,LA Fitness,19,11
 Orange County,Planet Fitness,30,13
-Orange County,24 Hour Fitness,12,2
-Orange County,Gold's Gym,3,0
-Orange County,Orangetheory Fitness,21,8
+Orange County,YouFit,3,2
+Orange County,Gold's Gym,4,0
+Orange County,Orangetheory Fitness,22,8
 Osceola County,LA Fitness,2,2
 Osceola County,Planet Fitness,4,2
-Osceola County,24 Hour Fitness,8,0
-Osceola County,Gold's Gym,25,0
+Osceola County,YouFit,10,0
+Osceola County,Gold's Gym,36,0
 Osceola County,Orangetheory Fitness,1,1
-Palm Beach County,LA Fitness,11,10
-Palm Beach County,Planet Fitness,15,13
-Palm Beach County,24 Hour Fitness,9,0
-Palm Beach County,Gold's Gym,3,0
-Palm Beach County,Orangetheory Fitness,13,12
+Palm Beach County,LA Fitness,14,10
+Palm Beach County,Planet Fitness,21,13
+Palm Beach County,YouFit,1,1
+Palm Beach County,Gold's Gym,42,0
+Palm Beach County,Orangetheory Fitness,15,12
 Pasco County,LA Fitness,13,0
-Pasco County,Planet Fitness,7,5
-Pasco County,24 Hour Fitness,40,0
-Pasco County,Gold's Gym,5,0
-Pasco County,Orangetheory Fitness,7,2
+Pasco County,Planet Fitness,9,5
+Pasco County,YouFit,1,0
+Pasco County,Gold's Gym,1,0
+Pasco County,Orangetheory Fitness,9,2
 Pinellas County,LA Fitness,9,7
 Pinellas County,Planet Fitness,7,6
-Pinellas County,24 Hour Fitness,44,0
-Pinellas County,Gold's Gym,3,0
+Pinellas County,YouFit,2,1
+Pinellas County,Gold's Gym,4,0
 Pinellas County,Orangetheory Fitness,9,6
 Polk County,LA Fitness,1,1
 Polk County,Planet Fitness,6,5
-Polk County,24 Hour Fitness,29,0
+Polk County,YouFit,36,0
 Polk County,Gold's Gym,1,1
 Polk County,Orangetheory Fitness,1,1
-Putnam County,LA Fitness,34,0
+Putnam County,LA Fitness,38,0
 Putnam County,Planet Fitness,4,1
-Putnam County,24 Hour Fitness,6,0
+Putnam County,YouFit,26,0
 Putnam County,Gold's Gym,2,0
-Putnam County,Orangetheory Fitness,48,0
-Santa Rosa County,LA Fitness,34,0
-Santa Rosa County,Planet Fitness,6,1
-Santa Rosa County,24 Hour Fitness,27,1
+Putnam County,Orangetheory Fitness,56,0
+Santa Rosa County,LA Fitness,48,0
+Santa Rosa County,Planet Fitness,7,1
+Santa Rosa County,YouFit,28,0
 Santa Rosa County,Gold's Gym,4,0
-Santa Rosa County,Orangetheory Fitness,3,0
+Santa Rosa County,Orangetheory Fitness,2,0
 Sarasota County,LA Fitness,3,1
-Sarasota County,Planet Fitness,3,3
-Sarasota County,24 Hour Fitness,60,0
-Sarasota County,Gold's Gym,6,0
+Sarasota County,Planet Fitness,4,4
+Sarasota County,YouFit,3,2
+Sarasota County,Gold's Gym,7,0
 Sarasota County,Orangetheory Fitness,3,2
-Seminole County,LA Fitness,16,4
-Seminole County,Planet Fitness,21,6
-Seminole County,24 Hour Fitness,47,0
-Seminole County,Gold's Gym,3,0
+Seminole County,LA Fitness,17,4
+Seminole County,Planet Fitness,20,6
+Seminole County,YouFit,3,1
+Seminole County,Gold's Gym,23,0
 Seminole County,Orangetheory Fitness,18,5
 St. Johns County,LA Fitness,4,0
-St. Johns County,Planet Fitness,6,1
-St. Johns County,24 Hour Fitness,47,0
+St. Johns County,Planet Fitness,3,1
+St. Johns County,YouFit,31,0
 St. Johns County,Gold's Gym,60,0
 St. Johns County,Orangetheory Fitness,3,3
 St. Lucie County,LA Fitness,1,1
 St. Lucie County,Planet Fitness,4,4
-St. Lucie County,24 Hour Fitness,34,0
+St. Lucie County,YouFit,47,0
 St. Lucie County,Gold's Gym,1,0
 St. Lucie County,Orangetheory Fitness,1,1
-Sumter County,LA Fitness,0,0
+Sumter County,LA Fitness,1,0
 Sumter County,Planet Fitness,1,0
-Sumter County,24 Hour Fitness,2,0
+Sumter County,YouFit,24,0
 Sumter County,Gold's Gym,2,0
 Sumter County,Orangetheory Fitness,1,1
-Suwannee County,LA Fitness,6,0
+Suwannee County,LA Fitness,3,0
 Suwannee County,Planet Fitness,1,0
-Suwannee County,24 Hour Fitness,7,0
-Suwannee County,Gold's Gym,4,0
-Suwannee County,Orangetheory Fitness,4,0
-Taylor County,LA Fitness,49,0
-Taylor County,Planet Fitness,48,0
-Taylor County,24 Hour Fitness,31,0
-Taylor County,Gold's Gym,4,0
-Taylor County,Orangetheory Fitness,27,0
-Union County,LA Fitness,13,0
-Union County,Planet Fitness,20,0
-Union County,24 Hour Fitness,33,0
+Suwannee County,YouFit,6,0
+Suwannee County,Gold's Gym,3,0
+Suwannee County,Orangetheory Fitness,5,0
+Taylor County,LA Fitness,55,0
+Taylor County,Planet Fitness,43,0
+Taylor County,YouFit,41,0
+Taylor County,Gold's Gym,5,0
+Taylor County,Orangetheory Fitness,21,0
+Union County,LA Fitness,31,0
+Union County,Planet Fitness,28,0
+Union County,YouFit,37,0
 Union County,Gold's Gym,2,0
-Union County,Orangetheory Fitness,58,0
+Union County,Orangetheory Fitness,54,0
 Volusia County,LA Fitness,6,2
 Volusia County,Planet Fitness,12,6
-Volusia County,24 Hour Fitness,60,0
+Volusia County,YouFit,8,0
 Volusia County,Gold's Gym,1,1
-Volusia County,Orangetheory Fitness,14,3
-Wakulla County,LA Fitness,9,1
-Wakulla County,Planet Fitness,6,0
-Wakulla County,24 Hour Fitness,2,1
+Volusia County,Orangetheory Fitness,16,3
+Wakulla County,LA Fitness,4,1
+Wakulla County,Planet Fitness,7,0
+Wakulla County,YouFit,6,0
 Wakulla County,Gold's Gym,7,0
-Wakulla County,Orangetheory Fitness,6,0
-Walton County,LA Fitness,60,0
+Wakulla County,Orangetheory Fitness,5,0
+Walton County,LA Fitness,47,0
 Walton County,Planet Fitness,1,0
-Walton County,24 Hour Fitness,15,0
+Walton County,YouFit,27,0
 Walton County,Gold's Gym,5,1
 Walton County,Orangetheory Fitness,2,0
-Washington County,LA Fitness,22,0
-Washington County,Planet Fitness,27,0
-Washington County,24 Hour Fitness,34,0
+Washington County,LA Fitness,10,0
+Washington County,Planet Fitness,16,0
+Washington County,YouFit,25,0
 Washington County,Gold's Gym,5,0
-Washington County,Orangetheory Fitness,59,0
+Washington County,Orangetheory Fitness,51,0

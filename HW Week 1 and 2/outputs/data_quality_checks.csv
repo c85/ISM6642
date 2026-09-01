@@ -1,6 +1,11 @@
 Check,Result,Expected,Status
-Florida county rows,67.0,67,PASS
-Unique county names,67.0,67,PASS
-Missing values in MainDataset,0.0,0,PASS
-Counties with imputed average rating,23.0,Documented,PASS
+Florida county rows,67,67,PASS
+Unique county names,67,67,PASS
+Missing values in MainDataset,0,0,PASS
+Counties with imputed average rating,23,Documented,PASS
 Rating imputation value,4.4,Statewide median of observed Google Places ratings,PASS
+Counties with observed local price offers,32,Documented in pricing_target_audit.csv,PASS
+Counties using transparent price estimates,35,Documented statewide-median estimates,PASS
+Synthetic price formula used,No,No,PASS
+Gym records with missing names,0,0,PASS
+Gym records with missing addresses,0,0,PASS

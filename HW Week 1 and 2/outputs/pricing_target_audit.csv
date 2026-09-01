@@ -1,0 +1,5 @@
+Metric,Value,Notes
+Retained local recurring club offers,232.0,One lowest recurring advertised offer per observed local club
+Counties with observed local price offers,32.0,County average is based on official local offer observations
+Counties using a transparent estimate,35.0,Statewide median only; no predictors used to construct price
+Statewide median retained offer,43.99,Used only for counties without a local public offer

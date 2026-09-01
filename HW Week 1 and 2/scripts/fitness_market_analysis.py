@@ -7,12 +7,16 @@ Observed data:
   * 2020 Census Gazetteer county land area and internal-point coordinates
   * Google Places branded gym locations, ratings, and rating counts
 
-Estimated data:
-  * County-level average monthly membership prices
+Price data:
+  * Official plan-level advertised prices are collected separately by
+    collect_membership_pricing.py.
+  * County prices use one entry-level advertised offer per observed local club;
+    counties with no local public offer receive a clearly labeled statewide
+    median estimate, as permitted by the assignment.
 
-The price field is permitted by the assignment when comparable county-level price
-data cannot be obtained. It is deterministic (seed 6642), explicitly labeled in
-the source register, and must not be represented as an observed transaction series.
+Advertised membership prices are not transaction prices.  They are plan-specific,
+franchise-specific, and time-sensitive, so the source and observation status are
+retained alongside the county target.
 """
 
 from __future__ import annotations
@@ -40,14 +44,12 @@ from statsmodels.stats.diagnostic import het_breuschpagan
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 OUTPUT_DIR = ROOT / "outputs"
 FIGURE_DIR = OUTPUT_DIR / "figures"
 KEY_PATH = ROOT / "census_api_key.txt"
 GOOGLE_KEY_PATH = ROOT / "google_places_api_key.txt"
-RANDOM_SEED = 6642
-
 POPULATION_URL = "https://api.census.gov/data/2020/dec/pl"
 INCOME_URL = "https://api.census.gov/data/2021/acs/acs5"
 GAZETTEER_URL = (
@@ -89,20 +91,82 @@ SOURCE_ROWS = [
         "URL": "https://developers.google.com/maps/documentation/places/web-service/text-search",
         "Notes": (
             "County-by-county branded Text Search with exact-county filtering and Place ID "
-            "deduplication. Results reflect Google's response at retrieval time and may not "
-            "be exhaustive."
+            "deduplication. The tracked competitor set is Planet Fitness, YouFit, Gold's "
+            "Gym, and Orangetheory Fitness; 24 Hour Fitness was removed because it no "
+            "longer operates in Florida. Results reflect Google's response at retrieval "
+            "time and may not be exhaustive. YouFit's official Florida directory is used "
+            "as a cross-check."
         ),
     },
     {
-        "Dataset": "Membership price",
-        "Status": "SIMULATED",
-        "Vintage": "Assignment scenario",
-        "Variable": "MembershipPrice",
-        "URL": "https://www.lafitness.com/Pages/MembershipSignUpRate.aspx",
+        "Dataset": "YouFit Florida directory cross-check",
+        "Status": "Observed official directory",
+        "Vintage": "Retrieved at run time",
+        "Variable": "Florida location names and addresses",
+        "URL": "https://youfit.com/locations/florida",
         "Notes": (
-            "County estimates are generated from a transparent model anchored to public "
-            "chain price points; they are not surveyed county averages."
+            "Used to validate the replacement competitor's Florida footprint; the analysis "
+            "uses exact-county Google Places records for location counts."
         ),
+    },
+    {
+        "Dataset": "Membership prices - official local observations",
+        "Status": "Observed advertised plan prices",
+        "Vintage": "Official collection run; retrieval time stored in the pricing file",
+        "Variable": "Plan dues, billing frequency, initiation fee, annual fee, and effective monthly cost",
+        "URL": "data/gym_membership_pricing.csv",
+        "Notes": (
+            "One entry-level advertised plan is selected per observed local club for the county target. "
+            "The long file retains all collected plans and source URLs for auditability."
+        ),
+    },
+    {
+        "Dataset": "LA Fitness official rate source",
+        "Status": "Observed official club offers",
+        "Vintage": "Retrieved at run time",
+        "Variable": "Club-specific Basic, Classic, and Premier plan prices",
+        "URL": "https://www.lafitness.com/Pages/MembershipSignUpSearch.aspx",
+        "Notes": "Rates are collected through the public club-specific signup flow.",
+    },
+    {
+        "Dataset": "Planet Fitness official rate source",
+        "Status": "Observed chainwide published starting rates",
+        "Vintage": "Retrieved at run time",
+        "Variable": "Classic and PF Black Card published starting rates",
+        "URL": "https://www.planetfitness.com/gym-memberships/",
+        "Notes": "The chain states that local franchise prices vary; these rates are retained as a non-county baseline and excluded from county averages.",
+    },
+    {
+        "Dataset": "YouFit official rate source",
+        "Status": "Observed official enrollment API results",
+        "Vintage": "Retrieved at run time",
+        "Variable": "Club-specific membership plans and scheduled dues",
+        "URL": "https://youfit.com/locations/florida",
+        "Notes": "The public enrollment app exposes the club plans through its official API; biweekly dues are converted to a monthly equivalent.",
+    },
+    {
+        "Dataset": "Gold's Gym official rate source",
+        "Status": "Observed official local enrollment offers where publicly exposed",
+        "Vintage": "Retrieved at run time",
+        "Variable": "Local plan dues, frequency, enrollment, and annual fees",
+        "URL": "https://www.goldsgym.com/locations/fl/",
+        "Notes": "Franchise enrollment pages differ; inaccessible or non-public rate pages remain flagged in the pricing audit.",
+    },
+    {
+        "Dataset": "Orangetheory official rate source",
+        "Status": "Observed official studio offers",
+        "Vintage": "Retrieved at run time",
+        "Variable": "Studio-specific Basic, Elite, and Premier monthly prices",
+        "URL": "https://www.orangetheory.com/en-us/locations",
+        "Notes": "The official studio pages expose local product prices; promotional first-month amounts are stored separately from standard dues.",
+    },
+    {
+        "Dataset": "MembershipPrice county estimate",
+        "Status": "Observed where local offers exist; estimated otherwise",
+        "Vintage": "Current official price collection",
+        "Variable": "MembershipPrice",
+        "URL": "data/membership_prices.csv",
+        "Notes": "Counties without a local public price observation use the statewide median of observed entry-level local offers, never a predictor-based synthetic formula.",
     },
 ]
 
@@ -326,7 +390,7 @@ def collect_google_places(demographic_internal: pd.DataFrame) -> pd.DataFrame:
     brand_aliases: dict[str, tuple[str, ...]] = {
         "LA Fitness": ("la fitness",),
         "Planet Fitness": ("planet fitness",),
-        "24 Hour Fitness": ("24 hour fitness",),
+        "YouFit": ("youfit", "you fit"),
         "Gold's Gym": ("gold's gym", "golds gym"),
         "Orangetheory Fitness": ("orangetheory", "orange theory"),
     }
@@ -392,6 +456,125 @@ def collect_google_places(demographic_internal: pd.DataFrame) -> pd.DataFrame:
     return locations
 
 
+def load_county_membership_prices(
+    counties: pd.DataFrame,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Build the county price target from official local offer observations.
+
+    One lowest-priced recurring offer is retained per local club.  This avoids
+    giving a chain extra weight merely because it publishes several plan tiers.
+    County markets without a local public offer receive the statewide median of
+    the retained observations; the status and coverage fields remain visible in
+    membership_prices.csv.
+    """
+    pricing_path = DATA_DIR / "gym_membership_pricing.csv"
+    if not pricing_path.exists():
+        raise FileNotFoundError(
+            f"Missing {pricing_path.name}. Run collect_membership_pricing.py before the analysis."
+        )
+    pricing = pd.read_csv(pricing_path, dtype=str).fillna("")
+    status = pricing["Status"].astype(str)
+    observed = pricing.loc[
+        status.str.startswith("Observed")
+        & pricing["CountyName"].astype(str).str.strip().ne("")
+        & pricing["ClubID"].astype(str).str.strip().ne("")
+    ].copy()
+    observed["MonthlyEquivalent"] = pd.to_numeric(
+        observed["MonthlyEquivalent"], errors="coerce"
+    )
+    observed["EffectiveMonthlyCost"] = pd.to_numeric(
+        observed["EffectiveMonthlyCost"], errors="coerce"
+    )
+    observed["PriceForAnalysis"] = observed["EffectiveMonthlyCost"].where(
+        observed["EffectiveMonthlyCost"].gt(0), observed["MonthlyEquivalent"]
+    )
+    observed = observed.loc[
+        observed["PriceForAnalysis"].gt(0)
+        & ~observed["DuesFrequency"].astype(str).str.contains(
+            "one[- ]?time", case=False, regex=True
+        )
+    ].copy()
+    if observed.empty:
+        raise RuntimeError("The official pricing file contains no usable local recurring offers.")
+
+    # The lowest recurring advertised offer is the closest common denominator
+    # across the chains.  It is still a plan offer, not an observed transaction
+    # average, which is why the source file preserves every plan separately.
+    selected = (
+        observed.sort_values(
+            ["GymChain", "ClubID", "PriceForAnalysis"],
+            kind="stable",
+        )
+        .drop_duplicates(["GymChain", "ClubID"], keep="first")
+        .copy()
+    )
+    selected["PriceForAnalysis"] = selected["PriceForAnalysis"].round(2)
+
+    def chain_list(values: pd.Series) -> str:
+        return "; ".join(sorted(set(values.astype(str))))
+
+    county_observed = (
+        selected.groupby("CountyName", as_index=False)
+        .agg(
+            MembershipPrice=("PriceForAnalysis", "mean"),
+            PriceObservationCount=("ClubID", "nunique"),
+            PriceObservationChains=("GymChain", chain_list),
+        )
+    )
+    county_observed["MembershipPrice"] = county_observed["MembershipPrice"].round(2)
+    statewide_median = float(selected["PriceForAnalysis"].median())
+    membership = counties[["CountyName"]].merge(
+        county_observed, on="CountyName", how="left"
+    )
+    has_observation = membership["MembershipPrice"].notna()
+    membership["MembershipPrice"] = membership["MembershipPrice"].fillna(
+        statewide_median
+    )
+    membership["PriceObservationCount"] = (
+        membership["PriceObservationCount"].fillna(0).astype(int)
+    )
+    membership["PriceObservationChains"] = membership["PriceObservationChains"].fillna("")
+    membership["PriceStatus"] = np.where(
+        has_observation,
+        "Observed local offer average",
+        "Estimated - statewide median of observed local offers",
+    )
+    membership["EstimationMethod"] = np.where(
+        has_observation,
+        "Mean of one lowest recurring advertised offer per observed local club",
+        f"Statewide median of {len(selected)} retained local club offers ({statewide_median:.2f})",
+    )
+    membership["MembershipPrice"] = membership["MembershipPrice"].round(2)
+    membership.to_csv(DATA_DIR / "membership_prices.csv", index=False)
+
+    audit = pd.DataFrame(
+        [
+            {
+                "Metric": "Retained local recurring club offers",
+                "Value": len(selected),
+                "Notes": "One lowest recurring advertised offer per observed local club",
+            },
+            {
+                "Metric": "Counties with observed local price offers",
+                "Value": int(has_observation.sum()),
+                "Notes": "County average is based on official local offer observations",
+            },
+            {
+                "Metric": "Counties using a transparent estimate",
+                "Value": int((~has_observation).sum()),
+                "Notes": "Statewide median only; no predictors used to construct price",
+            },
+            {
+                "Metric": "Statewide median retained offer",
+                "Value": statewide_median,
+                "Notes": "Used only for counties without a local public offer",
+            },
+        ]
+    )
+    audit.to_csv(OUTPUT_DIR / "pricing_target_audit.csv", index=False)
+    return membership, audit
+
+
 def build_main_dataset(
     demographics: pd.DataFrame, locations: pd.DataFrame
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -419,22 +602,8 @@ def build_main_dataset(
     rating_imputation_value = float(locations["Rating"].median())
     market["AvgGymRating"] = market["AvgGymRating"].fillna(rating_imputation_value)
     market["AvgGymRating"] = market["AvgGymRating"].round(3)
-
-    rng = np.random.default_rng(RANDOM_SEED + 1)
-    noise = rng.normal(0, 2.0, len(market))
-    market["MembershipPrice"] = (
-        8.0
-        + 0.0000015 * market["CountyPopulation"]
-        + 0.45 * market["LAFitnessLocations"]
-        - 0.12 * market["CompetitorLocations"]
-        + 0.00012 * market["MedianHouseholdIncome"]
-        + 0.0010 * market["PopulationDensity"]
-        + 5.0 * market["AvgGymRating"]
-        + noise
-    ).clip(24, 55).round(2)
-
-    membership = market[["CountyName", "MembershipPrice"]].copy()
-    membership.to_csv(DATA_DIR / "membership_prices.csv", index=False)
+    membership, price_audit = load_county_membership_prices(demographics)
+    market = market.merge(membership, on="CountyName", how="left")
 
     main = market[
         [
@@ -481,6 +650,24 @@ def build_main_dataset(
                 "Check": "Rating imputation value",
                 "Result": round(rating_imputation_value, 2),
                 "Expected": "Statewide median of observed Google Places ratings",
+                "Status": "PASS",
+            },
+            {
+                "Check": "Counties with observed local price offers",
+                "Result": int((membership["PriceStatus"] == "Observed local offer average").sum()),
+                "Expected": "Documented in pricing_target_audit.csv",
+                "Status": "PASS",
+            },
+            {
+                "Check": "Counties using transparent price estimates",
+                "Result": int((membership["PriceStatus"] != "Observed local offer average").sum()),
+                "Expected": "Documented statewide-median estimates",
+                "Status": "PASS",
+            },
+            {
+                "Check": "Synthetic price formula used",
+                "Result": "No",
+                "Expected": "No",
                 "Status": "PASS",
             },
             {
@@ -543,8 +730,8 @@ def create_eda_outputs(main: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         line_kws={"color": GOLD, "linewidth": 2.2},
     )
     plt.xlabel("County population")
-    plt.ylabel("Estimated monthly membership price (USD)")
-    plt.title("Larger county markets generally support higher estimated prices")
+    plt.ylabel("Advertised/estimated monthly membership price (USD)")
+    plt.title("Larger county markets generally support higher target prices")
     plt.ticklabel_format(style="plain", axis="x")
     save_current_figure("01_population_vs_price.png")
 
@@ -557,8 +744,8 @@ def create_eda_outputs(main: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         line_kws={"color": GOLD, "linewidth": 2.2},
     )
     plt.xlabel("Median household income (2021 USD)")
-    plt.ylabel("Estimated monthly membership price (USD)")
-    plt.title("Purchasing power is positively associated with estimated price")
+    plt.ylabel("Advertised/estimated monthly membership price (USD)")
+    plt.title("Purchasing power is positively associated with the price target")
     save_current_figure("02_income_vs_price.png")
 
     plt.figure(figsize=(8.0, 5.0))
@@ -571,16 +758,16 @@ def create_eda_outputs(main: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         line_kws={"color": GOLD, "linewidth": 2.2},
     )
     plt.xlabel("Observed LA Fitness location count")
-    plt.ylabel("Estimated monthly membership price (USD)")
-    plt.title("Existing LA Fitness presence and estimated market price")
+    plt.ylabel("Advertised/estimated monthly membership price (USD)")
+    plt.title("Existing LA Fitness presence and the market price target")
     save_current_figure("03_la_locations_vs_price.png")
 
     plt.figure(figsize=(8.0, 5.0))
     sns.histplot(main["MembershipPrice"], bins=12, color=TEAL, edgecolor="white")
     plt.axvline(main["MembershipPrice"].mean(), color=GOLD, linewidth=2.2, label="Mean")
-    plt.xlabel("Estimated monthly membership price (USD)")
+    plt.xlabel("Advertised/estimated monthly membership price (USD)")
     plt.ylabel("Number of counties")
-    plt.title("Distribution of simulated county membership prices")
+    plt.title("Distribution of county membership-price targets")
     plt.legend(frameon=False)
     save_current_figure("04_price_histogram.png")
 
@@ -769,9 +956,9 @@ def fit_models(main: pd.DataFrame) -> dict[str, object]:
     plt.scatter(y, predicted, color=NAVY, alpha=0.78, s=44)
     limits = [min(y.min(), predicted.min()), max(y.max(), predicted.max())]
     plt.plot(limits, limits, color=GOLD, linewidth=2.1, linestyle="--")
-    plt.xlabel("Actual estimated price (USD)")
+    plt.xlabel("Observed/estimated target price (USD)")
     plt.ylabel("Model-predicted price (USD)")
-    plt.title("Refined model predictions track simulated county prices")
+    plt.title("Refined model predictions versus county price targets")
     save_current_figure("06_actual_vs_predicted.png")
 
     fig = sm.qqplot(residuals, line="45", fit=True, markerfacecolor=TEAL, markeredgecolor="white")
@@ -913,7 +1100,7 @@ def rank_markets_and_predict(
     bars = plt.barh(top_ten["CountyName"], top_ten["MarketPotentialScore"], color=TEAL)
     bars[-1].set_color(GOLD)
     plt.xlabel("Market potential score (0-100 within this dataset)")
-    plt.title("Top simulated Florida expansion markets")
+    plt.title("Top Florida expansion markets")
     plt.xlim(0, min(100, top_ten["MarketPotentialScore"].max() + 10))
     save_current_figure("10_top_markets.png")
     return rankings, scenarios
@@ -939,12 +1126,21 @@ def write_report_payload(
     top_corr_variable = str(price_correlations.abs().idxmax())
     top_corr_value = float(price_correlations[top_corr_variable])
 
+    price_target = pd.read_csv(DATA_DIR / "membership_prices.csv")
+    observed_price_counties = int(
+        price_target["PriceStatus"].eq("Observed local offer average").sum()
+    )
+    estimated_price_counties = int(len(price_target) - observed_price_counties)
+
     payload = {
         "metadata": {
             "title": "Fitness Market Analysis: LA Fitness Expansion Strategy",
             "geography": "All 67 Florida counties",
-            "random_seed": RANDOM_SEED,
-            "data_mode": "Observed demographics and Google Places data plus estimated prices",
+            "data_mode": (
+                "Observed demographics, Google Places, and official advertised price "
+                "observations; statewide median estimates only where no local public "
+                "price was available"
+            ),
             "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
         },
         "dataset": {
@@ -955,6 +1151,8 @@ def write_report_payload(
             "price_median": float(main["MembershipPrice"].median()),
             "price_min": float(main["MembershipPrice"].min()),
             "price_max": float(main["MembershipPrice"].max()),
+            "counties_with_observed_local_prices": observed_price_counties,
+            "counties_with_transparent_price_estimates": estimated_price_counties,
             "top_correlation_variable": top_corr_variable,
             "top_correlation_value": top_corr_value,
         },

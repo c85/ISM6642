@@ -1,7 +1,7 @@
 Variable,VIF,FlagAbove5
-CountyPopulation,19.270442349602153,True
-LAFitnessLocations,9.7116799425341,True
-CompetitorLocations,15.69528961441901,True
-MedianHouseholdIncome,1.2513428853015536,False
-PopulationDensity,2.355483618417272,False
-AvgGymRating,1.048790455144217,False
+CountyPopulation,20.424857677564592,True
+LAFitnessLocations,11.182205791975518,True
+CompetitorLocations,17.64023069170794,True
+MedianHouseholdIncome,1.185051395404272,False
+PopulationDensity,2.3147324842168557,False
+AvgGymRating,1.0571943463900648,False

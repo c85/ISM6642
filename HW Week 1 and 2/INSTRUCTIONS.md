@@ -37,7 +37,7 @@ By completing this assignment, you will learn to:
 - **Geographic focus:** All 67 Florida counties
 - **Primary data source:** Google Maps Places API or a CSV export created through manual searches
 - **Secondary data sources:** U.S. Census Bureau data and Zillow or other relevant economic indicators
-- **Competitors to track:** Planet Fitness, 24 Hour Fitness, Gold's Gym, and Orangetheory Fitness
+- **Competitors to track:** Planet Fitness, YouFit, Gold's Gym, and Orangetheory Fitness
 
 ## Key Variables
 
@@ -66,7 +66,8 @@ By completing this assignment, you will learn to:
 
 1. Use the Google Maps Places API, or a manual search/export process, to retrieve all LA Fitness locations in Florida.
 2. Collect each location's name, latitude, longitude, address, county, Google rating, and review count.
-3. Repeat the process for Planet Fitness, 24 Hour Fitness, Gold's Gym, and Orangetheory Fitness.
+3. Repeat the process for Planet Fitness, YouFit, Gold's Gym, and Orangetheory Fitness. YouFit
+   replaces 24 Hour Fitness because 24 Hour Fitness no longer operates in Florida.
 
 **Output:** A CSV file containing the following columns:
 
