@@ -11,8 +11,9 @@ Price data:
   * Official plan-level advertised prices are collected separately by
     collect_membership_pricing.py.
   * County prices use one entry-level advertised offer per observed local club;
-    counties with no local public offer receive a clearly labeled statewide
-    median estimate, as permitted by the assignment.
+    counties with no local public offer receive a clearly labeled estimate from
+    the three nearest counties with observed local offers, as permitted by the
+    assignment.
 
 Advertised membership prices are not transaction prices.  They are plan-specific,
 franchise-specific, and time-sensitive, so the source and observation status are
@@ -121,6 +122,14 @@ SOURCE_ROWS = [
         ),
     },
     {
+        "Dataset": "County centroids for nearby price estimates",
+        "Status": "Observed",
+        "Vintage": "2020 Census Gazetteer",
+        "Variable": "CountyName, Latitude, Longitude",
+        "URL": GAZETTEER_URL,
+        "Notes": "Centroid-to-centroid distance is used to identify the three nearest counties with observed local price offers.",
+    },
+    {
         "Dataset": "LA Fitness official rate source",
         "Status": "Observed official club offers",
         "Vintage": "Retrieved at run time",
@@ -166,7 +175,7 @@ SOURCE_ROWS = [
         "Vintage": "Current official price collection",
         "Variable": "MembershipPrice",
         "URL": "data/membership_prices.csv",
-        "Notes": "Counties without a local public price observation use the statewide median of observed entry-level local offers, never a predictor-based synthetic formula.",
+        "Notes": "Counties without a local public price observation use an inverse-distance weighted estimate from the three nearest counties with observed local offers; no predictor-based synthetic formula is used.",
     },
 ]
 
@@ -299,6 +308,9 @@ def collect_demographics() -> tuple[pd.DataFrame, pd.DataFrame]:
     demographics["LandAreaSqMiles"] = demographics["LandAreaSqMiles"].round(3)
     demographics["PopulationDensity"] = demographics["PopulationDensity"].round(3)
     demographics.to_csv(DATA_DIR / "demographic_data.csv", index=False)
+    gazetteer[["CountyName", "Latitude", "Longitude"]].to_csv(
+        DATA_DIR / "county_centroids.csv", index=False
+    )
     return demographics, merged
 
 
@@ -463,9 +475,9 @@ def load_county_membership_prices(
 
     One lowest-priced recurring offer is retained per local club.  This avoids
     giving a chain extra weight merely because it publishes several plan tiers.
-    County markets without a local public offer receive the statewide median of
-    the retained observations; the status and coverage fields remain visible in
-    membership_prices.csv.
+    County markets without a local public offer receive an inverse-distance
+    weighted mean of the three nearest counties with observed local offers. The
+    source counties and distances remain visible in membership_prices.csv.
     """
     pricing_path = DATA_DIR / "gym_membership_pricing.csv"
     if not pricing_path.exists():
@@ -497,6 +509,17 @@ def load_county_membership_prices(
     if observed.empty:
         raise RuntimeError("The official pricing file contains no usable local recurring offers.")
 
+    centroid_path = DATA_DIR / "county_centroids.csv"
+    if not centroid_path.exists():
+        raise FileNotFoundError(
+            f"Missing {centroid_path.name}. Run the demographic collection before the analysis."
+        )
+    centroids = pd.read_csv(centroid_path)
+    centroids["Latitude"] = pd.to_numeric(centroids["Latitude"], errors="coerce")
+    centroids["Longitude"] = pd.to_numeric(centroids["Longitude"], errors="coerce")
+    if centroids["CountyName"].nunique() != len(centroids) or centroids[["Latitude", "Longitude"]].isna().any().any():
+        raise RuntimeError("County centroid file must contain one valid coordinate pair per county.")
+
     # The lowest recurring advertised offer is the closest common denominator
     # across the chains.  It is still a plan offer, not an observed transaction
     # average, which is why the source file preserves every plan separately.
@@ -522,27 +545,79 @@ def load_county_membership_prices(
         )
     )
     county_observed["MembershipPrice"] = county_observed["MembershipPrice"].round(2)
-    statewide_median = float(selected["PriceForAnalysis"].median())
     membership = counties[["CountyName"]].merge(
         county_observed, on="CountyName", how="left"
     )
     has_observation = membership["MembershipPrice"].notna()
-    membership["MembershipPrice"] = membership["MembershipPrice"].fillna(
-        statewide_median
-    )
     membership["PriceObservationCount"] = (
         membership["PriceObservationCount"].fillna(0).astype(int)
     )
     membership["PriceObservationChains"] = membership["PriceObservationChains"].fillna("")
+    membership["PriceEstimateSourceCounties"] = ""
+    membership["PriceEstimateSourceDistancesMiles"] = ""
+
+    observed_counties = county_observed.merge(
+        centroids[["CountyName", "Latitude", "Longitude"]],
+        on="CountyName",
+        how="left",
+        validate="one_to_one",
+    )
+
+    def haversine_miles(
+        latitude_a: float,
+        longitude_a: float,
+        latitude_b: float,
+        longitude_b: float,
+    ) -> float:
+        earth_radius_miles = 3958.7613
+        lat_a, lat_b = math.radians(latitude_a), math.radians(latitude_b)
+        delta_lat = math.radians(latitude_b - latitude_a)
+        delta_longitude = math.radians(longitude_b - longitude_a)
+        value = (
+            math.sin(delta_lat / 2) ** 2
+            + math.cos(lat_a)
+            * math.cos(lat_b)
+            * math.sin(delta_longitude / 2) ** 2
+        )
+        return 2 * earth_radius_miles * math.asin(math.sqrt(value))
+
+    estimate_distances: list[float] = []
+    for index in membership.index[~has_observation]:
+        county_name = membership.at[index, "CountyName"]
+        target = centroids.loc[centroids["CountyName"].eq(county_name)].iloc[0]
+        nearby = observed_counties.copy()
+        nearby["DistanceMiles"] = nearby.apply(
+            lambda row: haversine_miles(
+                float(target["Latitude"]),
+                float(target["Longitude"]),
+                float(row["Latitude"]),
+                float(row["Longitude"]),
+            ),
+            axis=1,
+        )
+        nearby = nearby.sort_values(["DistanceMiles", "CountyName"]).head(3).copy()
+        nearby["Weight"] = 1 / nearby["DistanceMiles"].clip(lower=1.0)
+        estimate = float(
+            np.average(nearby["MembershipPrice"], weights=nearby["Weight"])
+        )
+        membership.at[index, "MembershipPrice"] = estimate
+        membership.at[index, "PriceEstimateSourceCounties"] = "; ".join(
+            nearby["CountyName"].tolist()
+        )
+        membership.at[index, "PriceEstimateSourceDistancesMiles"] = "; ".join(
+            f"{distance:.1f}" for distance in nearby["DistanceMiles"]
+        )
+        estimate_distances.extend(nearby["DistanceMiles"].tolist())
+
     membership["PriceStatus"] = np.where(
         has_observation,
         "Observed local offer average",
-        "Estimated - statewide median of observed local offers",
+        "Estimated - three nearest observed counties",
     )
     membership["EstimationMethod"] = np.where(
         has_observation,
         "Mean of one lowest recurring advertised offer per observed local club",
-        f"Statewide median of {len(selected)} retained local club offers ({statewide_median:.2f})",
+        "Inverse-distance weighted mean of three nearest counties with observed local offers",
     )
     membership["MembershipPrice"] = membership["MembershipPrice"].round(2)
     membership.to_csv(DATA_DIR / "membership_prices.csv", index=False)
@@ -560,14 +635,19 @@ def load_county_membership_prices(
                 "Notes": "County average is based on official local offer observations",
             },
             {
-                "Metric": "Counties using a transparent estimate",
+                "Metric": "Counties using nearby-county estimates",
                 "Value": int((~has_observation).sum()),
-                "Notes": "Statewide median only; no predictors used to construct price",
+                "Notes": "Inverse-distance weighted mean of the three nearest counties with observed local offers",
             },
             {
-                "Metric": "Statewide median retained offer",
-                "Value": statewide_median,
-                "Notes": "Used only for counties without a local public offer",
+                "Metric": "Mean distance to nearby observed counties (miles)",
+                "Value": round(float(np.mean(estimate_distances)), 1) if estimate_distances else 0.0,
+                "Notes": "Centroid-to-centroid distance for the three source counties used by each estimate",
+            },
+            {
+                "Metric": "Maximum distance to a nearby observed county (miles)",
+                "Value": round(float(max(estimate_distances)), 1) if estimate_distances else 0.0,
+                "Notes": "Largest centroid-to-centroid distance among estimate source counties",
             },
         ]
     )
@@ -659,9 +739,9 @@ def build_main_dataset(
                 "Status": "PASS",
             },
             {
-                "Check": "Counties using transparent price estimates",
+                "Check": "Counties using nearby-county price estimates",
                 "Result": int((membership["PriceStatus"] != "Observed local offer average").sum()),
-                "Expected": "Documented statewide-median estimates",
+                "Expected": "Documented nearby-county estimates",
                 "Status": "PASS",
             },
             {
@@ -1138,7 +1218,7 @@ def write_report_payload(
             "geography": "All 67 Florida counties",
             "data_mode": (
                 "Observed demographics, Google Places, and official advertised price "
-                "observations; statewide median estimates only where no local public "
+                "observations; nearby-county estimates only where no local public "
                 "price was available"
             ),
             "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),

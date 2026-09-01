@@ -77,6 +77,18 @@ def p_value(value: float) -> str:
     return f"{value:.3f}" if value >= 0.001 else f"{value:.5f}"
 
 
+def pricing_coverage() -> dict[str, float]:
+    audit = pd.read_csv(OUTPUT_DIR / "pricing_target_audit.csv")
+    values = dict(zip(audit["Metric"], audit["Value"]))
+    return {
+        "retained_offers": float(values["Retained local recurring club offers"]),
+        "observed_counties": float(values["Counties with observed local price offers"]),
+        "estimated_counties": float(values["Counties using nearby-county estimates"]),
+        "mean_distance_miles": float(values["Mean distance to nearby observed counties (miles)"]),
+        "max_distance_miles": float(values["Maximum distance to a nearby observed county (miles)"]),
+    }
+
+
 def replace_media(docx_path: Path, image_paths: list[Path]) -> None:
     """Replace embedded report images while retaining their existing placement."""
     temporary = docx_path.with_suffix(".updated.docx")
@@ -105,6 +117,13 @@ def update_eda_report() -> None:
         "MembershipPrice"
     ].drop("MembershipPrice")
     outliers = pd.read_csv(OUTPUT_DIR / "outliers.csv")
+    pricing = pricing_coverage()
+
+    def correlation_sentence(variable: str) -> str:
+        value = float(correlations[variable])
+        direction = "positive" if value >= 0 else "negative"
+        strongest = "; strongest absolute association" if variable == correlations.abs().idxmax() else ""
+        return f"{variable}: r = {value:.3f} ({direction}{strongest})."
 
     set_paragraph(
         doc,
@@ -170,12 +189,20 @@ def update_eda_report() -> None:
         "MedianHouseholdIncome:",
         "MedianHouseholdIncome: 2021 ACS five-year estimate (B19013_001E).",
     )
-    set_paragraph_after(doc, "Correlation Findings", "PopulationDensity:", f"PopulationDensity: r = {correlations['PopulationDensity']:.3f} (positive).")
-    set_paragraph_after(doc, "Correlation Findings", "LAFitnessLocations:", f"LAFitnessLocations: r = {correlations['LAFitnessLocations']:.3f} (negative).")
-    set_paragraph_after(doc, "Correlation Findings", "CompetitorLocations:", f"CompetitorLocations: r = {correlations['CompetitorLocations']:.3f} (positive).")
-    set_paragraph_after(doc, "Correlation Findings", "CountyPopulation:", f"CountyPopulation: r = {correlations['CountyPopulation']:.3f} (positive).")
-    set_paragraph_after(doc, "Correlation Findings", "MedianHouseholdIncome:", f"MedianHouseholdIncome: r = {correlations['MedianHouseholdIncome']:.3f} (positive and strongest).")
-    set_paragraph_after(doc, "Correlation Findings", "AvgGymRating:", f"AvgGymRating: r = {correlations['AvgGymRating']:.3f} (positive).")
+    for variable in [
+        "PopulationDensity",
+        "LAFitnessLocations",
+        "CompetitorLocations",
+        "CountyPopulation",
+        "MedianHouseholdIncome",
+        "AvgGymRating",
+    ]:
+        set_paragraph_after(
+            doc,
+            "Correlation Findings",
+            f"{variable}:",
+            correlation_sentence(variable),
+        )
     set_paragraph(
         doc,
         "Influence diagnostics flagged",
@@ -186,12 +213,12 @@ def update_eda_report() -> None:
     set_paragraph(
         doc,
         ("Estimated price is", "The county price target is"),
-        "The county price target is based on official recurring advertised offers in 32 counties; the remaining 35 counties use a transparent statewide median estimate because no local public rate was available. No predictor-based or random synthetic price formula is used.",
+        f"The county price target is based on official recurring advertised offers in {int(pricing['observed_counties'])} counties; the remaining {int(pricing['estimated_counties'])} counties use inverse-distance weighted estimates from the three nearest counties with observed local offers. The mean source distance is {pricing['mean_distance_miles']:.1f} miles and the maximum is {pricing['max_distance_miles']:.1f} miles. No predictor-based or random synthetic price formula is used.",
     )
     set_paragraph(
         doc,
         "Business use requires",
-        "Business use requires broader comparable local price coverage, a refreshed Places pull, and direct validation of candidate trade areas.",
+        "Business use requires normalized comparable plan terms, broader local price coverage, a refreshed Places pull, and direct validation of candidate trade areas.",
     )
     set_paragraph(
         doc,
@@ -215,7 +242,7 @@ def update_eda_report() -> None:
     set_table(
         doc.tables[0],
         [[
-            "Critical limitation: MembershipPrice uses official advertised recurring offers where locally available (32 counties) and a statewide median estimate for 35 counties without a local public rate. It is not a transaction-price survey; plan terms, promotions, and franchise differences limit comparability."
+            f"Critical limitation: MembershipPrice uses official advertised recurring offers where locally available ({int(pricing['observed_counties'])} counties) and nearby-county estimates for {int(pricing['estimated_counties'])} counties without a local public rate. It is not a transaction-price survey; entry-plan terms, promotions, initiation/annual fees, and franchise differences limit comparability."
         ]],
     )
     brand_order = [
@@ -271,6 +298,7 @@ def update_predictions_report() -> None:
     path = REPORT_DIR / "Florida_Fitness_Market_Predictions_and_Insights.docx"
     doc = Document(path)
     report = json.loads((OUTPUT_DIR / "report_data.json").read_text(encoding="utf-8"))
+    pricing = pricing_coverage()
     comparison = pd.read_csv(OUTPUT_DIR / "model_comparison.csv")
     full_coefficients = pd.read_csv(OUTPUT_DIR / "regression_full_coefficients.csv")
     refined_coefficients = pd.read_csv(OUTPUT_DIR / "regression_refined_coefficients.csv")
@@ -301,7 +329,7 @@ def update_predictions_report() -> None:
     set_paragraph(
         doc,
         ("The analysis combines", "The analysis combines observed Census demographics"),
-        "The analysis combines observed Census demographics, 428 Google Places records across 67 Florida counties, and official advertised recurring price observations. Thirty-two counties have local public price observations; the remaining 35 use an explicitly labeled statewide-median estimate. The full six-variable OLS model explains 35.8% of variation in the price target; the refined three-variable model has adjusted R-squared of 0.261.",
+        f"The analysis combines observed Census demographics, {report['dataset']['location_rows']} Google Places records across 67 Florida counties, and official advertised recurring price observations. {report['dataset']['counties_with_observed_local_prices']} counties have local public price observations; the remaining {report['dataset']['counties_with_transparent_price_estimates']} use explicitly documented estimates from the three nearest observed-price counties. The full six-variable OLS model explains {report['models']['full']['r2']:.1%} of variation in the price target; the refined {len(report['models']['refined']['variables'])}-variable model has adjusted R-squared of {report['models']['refined']['adjusted_r2']:.3f}.",
     )
     set_paragraph(
         doc,
@@ -327,7 +355,7 @@ def update_predictions_report() -> None:
             "Price =",
             "For the county target, one lowest recurring advertised offer",
         ),
-        "For the county target, one lowest recurring advertised offer was selected per observed local club and averaged within county. Thirty-two counties have local observations; 35 counties use the statewide median of 232 retained local club offers ($43.99). Planet Fitness published starting rates are real but chainwide, so they are not assigned to counties. No predictor-based or random synthetic formula is used.",
+        f"For the county target, one lowest recurring advertised offer was selected per observed local club and averaged within county. {int(pricing['observed_counties'])} counties have local observations; {int(pricing['estimated_counties'])} counties use an inverse-distance weighted estimate from the three nearest observed counties. The source counties and centroid distances are retained in membership_prices.csv. Planet Fitness published starting rates are real but chainwide, so they are not assigned to counties. No predictor-based or random synthetic formula is used.",
     )
     set_paragraph(
         doc,
@@ -337,7 +365,7 @@ def update_predictions_report() -> None:
     set_paragraph(
         doc,
         ("Backward elimination", "Backward elimination removed CompetitorLocations"),
-        "Backward elimination removed CompetitorLocations (p = 0.517), AvgGymRating (p = 0.108), and PopulationDensity (p = 0.097). The refined model retains CountyPopulation, LAFitnessLocations, and MedianHouseholdIncome. This mechanical rule is used for the assignment demonstration; real strategy work should also preserve variables supported by business theory.",
+        "Backward elimination removed AvgGymRating (p = 0.986), PopulationDensity (p = 0.671), MedianHouseholdIncome (p = 0.327), CompetitorLocations (p = 0.265), and CountyPopulation (p = 0.235). The refined model retains only LAFitnessLocations. This mechanical rule is used for the assignment demonstration; real strategy work should also preserve variables supported by business theory.",
     )
     set_paragraph(
         doc,
@@ -345,12 +373,12 @@ def update_predictions_report() -> None:
             "Strongest retained factor:",
             "Strongest retained factor: LAFitnessLocations has the largest absolute",
         ),
-        "Strongest retained factor: LAFitnessLocations has the largest absolute one-standard-deviation association (-$13.57; p = 0.0004). This is an association with the price target, not evidence that opening or closing a club causes prices to change.",
+        "Strongest retained factor: LAFitnessLocations has the largest absolute one-standard-deviation association (-$3.75; p = 0.0074). This is an association with the price target, not evidence that opening or closing a club causes prices to change.",
     )
     set_paragraph(
         doc,
         ("Competition:", "Competition: the full-model coefficient is"),
-        "Competition: the full-model coefficient is -$0.350 per additional tracked competitor (p = 0.517). It was removed during refinement, so the analysis does not establish an independent competition effect after controlling for the other predictors.",
+        "Competition: the full-model coefficient is -$0.712 per additional tracked competitor (p = 0.277). It was removed during refinement, so the analysis does not establish an independent competition effect after controlling for the other predictors.",
     )
     set_paragraph(
         doc,
@@ -358,7 +386,7 @@ def update_predictions_report() -> None:
             "All interpretations are",
             "All interpretations are associations within a target",
         ),
-        "All interpretations are associations within a target that combines local official advertised offers and transparent statewide-median estimates, not causal effects on prices or expansion success.",
+        "All interpretations are associations within a target that combines local official advertised offers and transparent nearby-county estimates, not causal effects on prices or expansion success.",
     )
     set_paragraph(doc, "Figure 2.", "Figure 2. Observed/estimated county price targets versus refined-model predictions.")
     set_paragraph(
@@ -393,7 +421,7 @@ def update_predictions_report() -> None:
     set_table(
         doc.tables[1],
         [[
-            "Decision boundary: The price target uses official local advertised offers in 32 counties and transparent statewide-median estimates in 35 counties. Advertised prices are not transaction prices, and plan/franchise differences limit comparability. Do not commit capital until actual club pricing, leases, trade-area demographics, traffic, and competitor capacity are validated."
+            f"Decision boundary: The price target uses official local advertised offers in {int(pricing['observed_counties'])} counties and transparent nearby-county estimates in {int(pricing['estimated_counties'])} counties. Advertised prices are not transaction prices, and entry-plan/franchise differences limit comparability. Do not commit capital until actual club pricing, leases, trade-area demographics, traffic, zoning, site condition, and competitor capacity are validated."
         ]],
     )
 
@@ -460,9 +488,16 @@ def update_predictions_report() -> None:
         )
     set_table(doc.tables[9], ranking_rows)
 
-    for rank, (_, row) in enumerate(rankings.iterrows(), start=1):
-        old_names = ["Broward County", "St. Johns County", "Miami-Dade County", "Orange County", "Palm Beach County"]
-        prefix = (f"{rank}. {old_names[rank - 1]}", f"{rank}. {row['CountyName']}")
+    rank_paragraphs = [
+        paragraph
+        for paragraph in doc.paragraphs
+        if paragraph.text.strip().startswith(tuple(f"{rank}. " for rank in range(1, 6)))
+    ]
+    if len(rank_paragraphs) != len(rankings):
+        raise ValueError("Could not find the five ranking-heading paragraphs in the report")
+    for rank, ((_, row), paragraph) in enumerate(
+        zip(rankings.iterrows(), rank_paragraphs), start=1
+    ):
         strengths = "large demand base" if row["CountyPopulation"] >= 500000 else "favorable purchasing power"
         if row["LAFitnessLocations"] == 0:
             strengths += ", LA Fitness whitespace"
@@ -475,7 +510,7 @@ def update_predictions_report() -> None:
             f"Key screening strengths: {strengths}. Observed LA Fitness locations: {int(row['LAFitnessLocations'])}; "
             f"tracked competitors: {int(row['CompetitorLocations'])}."
         )
-        set_paragraph(doc, prefix, paragraph_text)
+        paragraph.text = paragraph_text
 
     score_paragraphs = [
         paragraph
@@ -501,9 +536,9 @@ def update_predictions_report() -> None:
     set_paragraph(doc, "Validate current club rosters", "Validate current club rosters, closures, planned openings, and public price offers in the top five counties.")
     set_paragraph(doc, "Collect observed monthly dues", "Collect observed monthly dues, initiation fees, annual fees, promotions, and contract terms for a representative sample of clubs.")
     set_paragraph(doc, "Replace county boundaries", "Replace county boundaries with 10- to 15-minute drive-time trade areas around candidate sites.")
-    set_paragraph(doc, "Add lease rates", "Add lease rates, daytime population, age mix, traffic counts, and competitor square footage before site underwriting.")
-    set_paragraph(doc, "Re-estimate the model", "Re-estimate the model with broader observed comparable prices and validate out of sample before using it for capital allocation.")
-    set_paragraph(doc, ("Estimated target:", "Price target coverage:"), "Price target coverage: 32 counties use local official advertised offers; 35 use the transparent statewide median because no local public rate was available. The target is not a transaction-price survey.")
+    set_paragraph(doc, "Add lease rates", "Add lease rates, CAM, tenant improvements, build-out and equipment capex, utilities, taxes/insurance, daytime population, age mix, traffic counts, parking/access, zoning/entitlements, and competitor square footage before site underwriting.")
+    set_paragraph(doc, "Re-estimate the model", "Build a site-level pro forma with membership ramp, dues and ancillary revenue, staffing, break-even, NPV/IRR, debt service, and downside sensitivity; then re-estimate the market model with broader observed comparable prices and validate out of sample before capital allocation.")
+    set_paragraph(doc, ("Estimated target:", "Price target coverage:"), f"Price target coverage: {int(pricing['observed_counties'])} counties use local official advertised offers; {int(pricing['estimated_counties'])} use transparent nearby-county estimates because no local public rate was available. The target is not a transaction-price survey.")
     set_paragraph(doc, "Search coverage:", "Search coverage: Google Places Text Search ranks candidates and does not guarantee a complete chain inventory.")
     set_paragraph(doc, "Temporal mismatch:", "Temporal mismatch: demographics use 2020 population and 2021 income, while locations and prices are retrieval-time snapshots.")
     set_paragraph(doc, "Aggregation:", "Aggregation: county averages mask neighborhood trade areas and cross-county customer travel.")

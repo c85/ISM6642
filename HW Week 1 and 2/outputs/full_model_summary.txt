@@ -1,29 +1,29 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:        MembershipPrice   R-squared:                       0.358
-Model:                            OLS   Adj. R-squared:                  0.294
-Method:                 Least Squares   F-statistic:                     5.586
-Date:                Mon, 31 Aug 2026   Prob (F-statistic):           0.000118
-Time:                        22:00:20   Log-Likelihood:                -240.19
-No. Observations:                  67   AIC:                             494.4
-Df Residuals:                      60   BIC:                             509.8
+Dep. Variable:        MembershipPrice   R-squared:                       0.158
+Model:                            OLS   Adj. R-squared:                  0.074
+Method:                 Least Squares   F-statistic:                     1.874
+Date:                Mon, 31 Aug 2026   Prob (F-statistic):              0.100
+Time:                        22:18:41   Log-Likelihood:                -252.87
+No. Observations:                  67   AIC:                             519.7
+Df Residuals:                      60   BIC:                             535.2
 Df Model:                           6                                         
 Covariance Type:            nonrobust                                         
 =========================================================================================
                             coef    std err          t      P>|t|      [0.025      0.975]
 -----------------------------------------------------------------------------------------
-const                   -22.1571     33.192     -0.668      0.507     -88.551      44.237
-CountyPopulation       2.921e-05   1.02e-05      2.853      0.006    8.73e-06    4.97e-05
-LAFitnessLocations       -4.3787      1.183     -3.701      0.000      -6.745      -2.012
-CompetitorLocations      -0.3499      0.536     -0.652      0.517      -1.423       0.723
-MedianHouseholdIncome     0.0003      0.000      2.473      0.016    4.95e-05       0.000
-PopulationDensity         0.0049      0.003      1.622      0.110      -0.001       0.011
-AvgGymRating             12.1246      7.466      1.624      0.110      -2.810      27.059
+const                    50.6637     40.110      1.263      0.211     -29.569     130.897
+CountyPopulation       1.686e-05   1.24e-05      1.363      0.178   -7.88e-06    4.16e-05
+LAFitnessLocations       -2.1101      1.430     -1.476      0.145      -4.970       0.750
+CompetitorLocations      -0.7119      0.648     -1.098      0.277      -2.009       0.585
+MedianHouseholdIncome     0.0001      0.000      0.864      0.391      -0.000       0.000
+PopulationDensity         0.0015      0.004      0.422      0.674      -0.006       0.009
+AvgGymRating              0.1570      9.023      0.017      0.986     -17.891      18.205
 ==============================================================================
-Omnibus:                       21.580   Durbin-Watson:                   1.886
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               62.026
-Skew:                          -0.862   Prob(JB):                     3.40e-14
-Kurtosis:                       7.387   Cond. No.                     1.79e+07
+Omnibus:                       28.882   Durbin-Watson:                   2.576
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               56.531
+Skew:                          -1.473   Prob(JB):                     5.30e-13
+Kurtosis:                       6.401   Cond. No.                     1.79e+07
 ==============================================================================
 
 Notes:

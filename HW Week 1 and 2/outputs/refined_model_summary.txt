@@ -1,29 +1,25 @@
                             OLS Regression Results
 ==============================================================================
-Dep. Variable:        MembershipPrice   R-squared:                       0.295
-Model:                            OLS   Adj. R-squared:                  0.261
-Method:                 Least Squares   F-statistic:                     8.780
-Date:                Mon, 31 Aug 2026   Prob (F-statistic):           6.00e-05
-Time:                        22:00:20   Log-Likelihood:                -243.35
-No. Observations:                  67   AIC:                             494.7
-Df Residuals:                      63   BIC:                             503.5
-Df Model:                           3
+Dep. Variable:        MembershipPrice   R-squared:                       0.105
+Model:                            OLS   Adj. R-squared:                  0.091
+Method:                 Least Squares   F-statistic:                     7.643
+Date:                Mon, 31 Aug 2026   Prob (F-statistic):            0.00741
+Time:                        22:18:41   Log-Likelihood:                -254.90
+No. Observations:                  67   AIC:                             513.8
+Df Residuals:                      65   BIC:                             518.2
+Df Model:                           1
 Covariance Type:            nonrobust
-=========================================================================================
-                            coef    std err          t      P>|t|      [0.025      0.975]
------------------------------------------------------------------------------------------
-const                    29.9844      5.761      5.205      0.000      18.472      41.497
-CountyPopulation       2.527e-05   7.37e-06      3.426      0.001    1.05e-05       4e-05
-LAFitnessLocations       -4.2322      1.132     -3.739      0.000      -6.494      -1.970
-MedianHouseholdIncome     0.0003      0.000      2.915      0.005    9.59e-05       0.001
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                 58.6765      1.460     40.181      0.000      55.760      61.593
+LAFitnessLocations    -1.1705      0.423     -2.765      0.007      -2.016      -0.325
 ==============================================================================
-Omnibus:                       15.468   Durbin-Watson:                   1.968
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               35.952
-Skew:                          -0.629   Prob(JB):                     1.56e-08
-Kurtosis:                       6.361   Cond. No.                     2.97e+06
+Omnibus:                       24.267   Durbin-Watson:                   2.525
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               41.386
+Skew:                          -1.297   Prob(JB):                     1.03e-09
+Kurtosis:                       5.846   Cond. No.                         3.79
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 2.97e+06. This might indicate that there are
-strong multicollinearity or other numerical problems.

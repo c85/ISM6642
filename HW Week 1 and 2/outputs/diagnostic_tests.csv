@@ -1,4 +1,4 @@
 Test,Statistic,pValue,Interpretation
-Shapiro-Wilk residual normality,0.8991378044296778,5.1438271625866694e-05,Residual normality concern
-Breusch-Pagan homoscedasticity,5.9508830121144065,0.114024479930342,No evidence of heteroscedasticity
-Breusch-Pagan F version,2.047016393033186,0.11628854220962856,No evidence of heteroscedasticity
+Shapiro-Wilk residual normality,0.910041919733997,0.00013870750362915833,Residual normality concern
+Breusch-Pagan homoscedasticity,1.24752186114227,0.26402631670194115,No evidence of heteroscedasticity
+Breusch-Pagan F version,1.233245092344683,0.27086813326531006,No evidence of heteroscedasticity

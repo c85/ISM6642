@@ -9,10 +9,11 @@ This folder contains the completed Week 1 and Week 2 assignment workflow for the
 - `data/MainDataset.csv`: one row for each of Florida's 67 counties and the eight required columns.
 - `data/gym_locations.csv`: 428 accepted Google Places records for LA Fitness and the four tracked competitors (Planet Fitness, YouFit, Gold's Gym, and Orangetheory Fitness), exact-county filtered and deduplicated by Place ID, with each gym's name and formatted street address.
 - `data/demographic_data.csv`: 2020 Census population, 2021 ACS income, Gazetteer land area, and calculated density.
+- `data/county_centroids.csv`: 2020 Census Gazetteer county internal-point coordinates used for nearby-county estimates.
 - `data/la_fitness_pricing.csv`: official LA Fitness club-level rate observations collected through the public membership-signup flow.
 - `data/gym_membership_pricing.csv`: long-form official plan-price observations for all five tracked chains, including dues frequency, initiation fees, annual fees, promotions, source URLs, and retrieval timestamps.
 - `data/pricing_collection_audit.csv`: per-chain coverage and non-observed source records.
-- `data/membership_prices.csv`: county membership-price target; local advertised-offer averages are retained where available and statewide-median estimates are explicitly labeled elsewhere.
+- `data/membership_prices.csv`: county membership-price target; local advertised-offer averages are retained where available and nearby-county estimates are explicitly labeled elsewhere.
 - `scripts/`: the live collectors, analysis workflow, and report updater.
 - `outputs/`: statistical tables, model summaries, diagnostics, scenarios, rankings, query audit, and figures.
 
@@ -44,6 +45,6 @@ The pricing collector uses public official enrollment or studio pages/API respon
 
 ## Important limitation
 
-Demographic, fitness-location, and raw plan-price data are observed from the cited APIs or official public enrollment pages. Advertised prices are not transaction prices and vary by plan, franchise, studio, promotion, and retrieval date. In the current run, 32 counties have local official price observations; the other 35 use a transparent statewide median only because no local public rate was available. Planet Fitness contributes real chainwide published starting rates, but its official site says local prices vary, so those rates are retained as a baseline and are not assigned to counties. The regression and county ranking should not be treated as independent evidence for a capital decision without broader comparable local price coverage.
+Demographic, fitness-location, and raw plan-price data are observed from the cited APIs or official public enrollment pages. Advertised prices are not transaction prices and vary by plan, franchise, studio, promotion, and retrieval date. In the current run, 32 counties have local official price observations; the other 35 use inverse-distance weighted estimates from the three nearest counties with observed local offers. Planet Fitness contributes real chainwide published starting rates, but its official site says local prices vary, so those rates are retained as a baseline and are not assigned to counties. The regression and county ranking should not be treated as independent evidence for a capital decision without broader comparable local price coverage.
 
 API keys are read locally and excluded from analytical outputs and version control.
