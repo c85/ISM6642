@@ -38,7 +38,6 @@ To refresh the official pricing observations before rebuilding the analysis:
 python scripts/collect_la_fitness_pricing.py --delay 0.6
 python scripts/collect_membership_pricing.py --delay 0.08
 python scripts/fitness_market_analysis.py
-python scripts/update_reports.py
 ```
 
 The pricing collector uses public official enrollment or studio pages/API responses. It records a missing or inaccessible rate instead of inventing a value.
